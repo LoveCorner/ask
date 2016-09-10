@@ -46,3 +46,13 @@ func iPhone5() -> Bool{
     //    return ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
     
 }
+
+func leftViewUI(tf: UITextField){
+    
+    let view = UIView.init(frame: CGRectMake(0, 0, 17, 40))
+    
+    tf.leftView = view
+    
+    tf.leftViewMode = UITextFieldViewMode.Always
+    
+}

@@ -8,56 +8,72 @@
 
 import UIKit
 
-class SettingController: UIViewController{
+class SettingController: BaseController{
+    
     
     @IBOutlet weak var onSwitchMsg: UISwitch!
     
-override func viewWillAppear(animated: Bool) {
     
-    super.viewWillAppear(animated)
-    //1.移除nav的线，并设置背景图
+    @IBOutlet weak var logView: UIView!
     
-    moveNavBarLine()
-    
-    //2.隐藏标签栏
-    
-    tabBarController?.tabBar.hidden = true
-    
-}
-//    override func viewWillDisappear(animated: Bool) {
-//        
-//        tabBarController?.tabBar.hidden = false
-//
-//    }
-    //移除NavBar的线条
-    private  func moveNavBarLine(){
+    override func viewDidLoad() {
         
+      //1.设置UI
         
-        navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navigitionBar"), forBarMetrics: UIBarMetrics.Default)
-        
-        navigationController?.navigationBar.shadowImage = UIImage.init()
+        setUI()
         
     }
     
+    private func setUI(){
+        
+        logView.hidden = true
+        
+        logView.layer.masksToBounds = true
+        
+        logView.layer.cornerRadius = 5
+        
+    }
     @IBAction func backClicked(sender: AnyObject) {
         
         navigationController?.popViewControllerAnimated(true)
         
     }
     
+
     @IBAction func notifacationClicked(sender: AnyObject) {
+        
+        
     }
     
     @IBAction func pushMessageClicked(sender: AnyObject) {
+        
+        
     }
     
     @IBAction func logoutClicked(sender: AnyObject) {
+        
+        logView.hidden = false
+
+
     }
     
-    @IBAction func onOrOffClicked(sender: AnyObject) {
+    
+    @IBAction func personMessageClicked(sender: AnyObject) {
+    }
+    
+    @IBAction func cancleClicked(sender: AnyObject) {
+        
+        logView.hidden = true
         
         
     }
     
     
+    @IBAction func sureClicked(sender: AnyObject) {
+        
+        //退出  回到登录界面
+        self.dismissViewControllerAnimated(false, completion: nil)
+        
+        
+    }
 }

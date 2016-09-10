@@ -151,7 +151,7 @@
                                 <outlet property="delegate" destination="faD-Jr-Vym" id="0R0-GO-3dq"/>
                             </connections>
                         </textField>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="D3x-eU-CR1">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="D3x-eU-CR1">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6Tf-76-77g">
                                 <rect key="frame" x="524" y="4" width="56" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

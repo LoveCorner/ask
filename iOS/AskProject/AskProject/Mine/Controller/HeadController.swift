@@ -67,6 +67,18 @@ class HeadController: UIViewController {
     
     @IBAction func setNameClicked(sender: AnyObject) {
         
+        pushControllerUI("SetNameController")
+        
+    }
+    
+    private func pushControllerUI(name:String){
+        
+        let  story =   UIStoryboard.init(name: name, bundle: nil)
+        
+        let   vc =  story.instantiateViewControllerWithIdentifier(name)
+        
+        navigationController?.pushViewController(vc, animated: true)
+        
         
     }
 }

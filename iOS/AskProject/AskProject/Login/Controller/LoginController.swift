@@ -101,15 +101,6 @@ class LoginController: UIViewController,UITextFieldDelegate,UIGestureRecognizerD
 
         
     }
-   private func leftViewUI(tf: UITextField){
-        
-        let view = UIView.init(frame: CGRectMake(0, 0, 17, 40))
-        
-        tf.leftView = view
-        
-        tf.leftViewMode = UITextFieldViewMode.Always
-        
-    }
     
     @IBAction func loginAction(sender: AnyObject) {
         
