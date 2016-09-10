@@ -39,8 +39,13 @@
 		457AB3701D7D5040007C7E13 /* MineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457AB36F1D7D5040007C7E13 /* MineController.swift */; };
 		457AB3721D7D5060007C7E13 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457AB3711D7D5060007C7E13 /* HomeController.swift */; };
 		457AB3781D7D5382007C7E13 /* LoginController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457AB3771D7D5382007C7E13 /* LoginController.storyboard */; };
-		458325FE1D83B71800CF7C2C /* CareQuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458325FD1D83B71800CF7C2C /* CareQuestionController.swift */; };
-		458326001D83B73900CF7C2C /* CareQuestionController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458325FF1D83B73900CF7C2C /* CareQuestionController.storyboard */; };
+		458326131D83F89000CF7C2C /* CollectAnswerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4583260F1D83F89000CF7C2C /* CollectAnswerController.swift */; };
+		458326141D83F89000CF7C2C /* CollectAnswerController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458326101D83F89000CF7C2C /* CollectAnswerController.storyboard */; };
+		458326151D83F89000CF7C2C /* CareQuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458326111D83F89000CF7C2C /* CareQuestionController.swift */; };
+		458326161D83F89000CF7C2C /* CareQuestionController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458326121D83F89000CF7C2C /* CareQuestionController.storyboard */; };
+		458326181D83F89700CF7C2C /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458326171D83F89700CF7C2C /* BaseController.swift */; };
+		4583261B1D83F8C000CF7C2C /* CollectQuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458326191D83F8C000CF7C2C /* CollectQuestionCell.swift */; };
+		4583261C1D83F8C000CF7C2C /* CareCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4583261A1D83F8C000CF7C2C /* CareCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,8 +104,13 @@
 		457AB36F1D7D5040007C7E13 /* MineController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineController.swift; sourceTree = "<group>"; };
 		457AB3711D7D5060007C7E13 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		457AB3771D7D5382007C7E13 /* LoginController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginController.storyboard; sourceTree = "<group>"; };
-		458325FD1D83B71800CF7C2C /* CareQuestionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareQuestionController.swift; sourceTree = "<group>"; };
-		458325FF1D83B73900CF7C2C /* CareQuestionController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CareQuestionController.storyboard; sourceTree = "<group>"; };
+		4583260F1D83F89000CF7C2C /* CollectAnswerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectAnswerController.swift; sourceTree = "<group>"; };
+		458326101D83F89000CF7C2C /* CollectAnswerController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CollectAnswerController.storyboard; sourceTree = "<group>"; };
+		458326111D83F89000CF7C2C /* CareQuestionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareQuestionController.swift; sourceTree = "<group>"; };
+		458326121D83F89000CF7C2C /* CareQuestionController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CareQuestionController.storyboard; sourceTree = "<group>"; };
+		458326171D83F89700CF7C2C /* BaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		458326191D83F8C000CF7C2C /* CollectQuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectQuestionCell.swift; sourceTree = "<group>"; };
+		4583261A1D83F8C000CF7C2C /* CareCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,14 +297,17 @@
 		457AB35F1D7D459F007C7E13 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				458326171D83F89700CF7C2C /* BaseController.swift */,
 				457AB36F1D7D5040007C7E13 /* MineController.swift */,
 				451D10811D7D5C5000D74664 /* MineController.storyboard */,
 				45041D411D810D03005D7DDB /* HeadController.swift */,
 				45041D3B1D810CB4005D7DDB /* HeadController.storyboard */,
 				45041D3F1D810CEF005D7DDB /* SettingController.swift */,
 				45041D3D1D810CC3005D7DDB /* SettingController.storyboard */,
-				458325FD1D83B71800CF7C2C /* CareQuestionController.swift */,
-				458325FF1D83B73900CF7C2C /* CareQuestionController.storyboard */,
+				4583260F1D83F89000CF7C2C /* CollectAnswerController.swift */,
+				458326101D83F89000CF7C2C /* CollectAnswerController.storyboard */,
+				458326111D83F89000CF7C2C /* CareQuestionController.swift */,
+				458326121D83F89000CF7C2C /* CareQuestionController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -313,6 +326,8 @@
 			isa = PBXGroup;
 			children = (
 				45631A261D7FEE1000FB7902 /* MineCell.swift */,
+				458326191D83F8C000CF7C2C /* CollectQuestionCell.swift */,
+				4583261A1D83F8C000CF7C2C /* CareCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -481,9 +496,10 @@
 				457AB3351D7D44DA007C7E13 /* LaunchScreen.storyboard in Resources */,
 				451D10821D7D5C5000D74664 /* MineController.storyboard in Resources */,
 				457AB3781D7D5382007C7E13 /* LoginController.storyboard in Resources */,
+				458326141D83F89000CF7C2C /* CollectAnswerController.storyboard in Resources */,
 				451D10881D7D5CF600D74664 /* AddController.storyboard in Resources */,
 				45041D3C1D810CB4005D7DDB /* HeadController.storyboard in Resources */,
-				458326001D83B73900CF7C2C /* CareQuestionController.storyboard in Resources */,
+				458326161D83F89000CF7C2C /* CareQuestionController.storyboard in Resources */,
 				451D10801D7D5C4700D74664 /* HomeController.storyboard in Resources */,
 				454EC4F81D7E66E600C86EAB /* MainTabBar.storyboard in Resources */,
 				457AB3321D7D44DA007C7E13 /* Assets.xcassets in Resources */,
@@ -519,12 +535,14 @@
 				451D108C1D7D5EAF00D74664 /* MainTabBar.swift in Sources */,
 				45631A231D7FC14A00FB7902 /* MineData.swift in Sources */,
 				45041D481D817092005D7DDB /* SearchCell.swift in Sources */,
+				4583261B1D83F8C000CF7C2C /* CollectQuestionCell.swift in Sources */,
 				45041D401D810CEF005D7DDB /* SettingController.swift in Sources */,
-				458325FE1D83B71800CF7C2C /* CareQuestionController.swift in Sources */,
+				458326131D83F89000CF7C2C /* CollectAnswerController.swift in Sources */,
 				454EC5021D7EACE600C86EAB /* CommonFile.swift in Sources */,
 				457AB3281D7D44DA007C7E13 /* AppDelegate.swift in Sources */,
 				45041D441D815BE6005D7DDB /* SearchController.swift in Sources */,
 				451D108A1D7D5D0700D74664 /* AddController.swift in Sources */,
+				4583261C1D83F8C000CF7C2C /* CareCell.swift in Sources */,
 				454EC4FE1D7E92C600C86EAB /* TitleButton.swift in Sources */,
 				45041D421D810D03005D7DDB /* HeadController.swift in Sources */,
 				451D108E1D7D5F3800D74664 /* UIButton+Extension.swift in Sources */,
@@ -533,6 +551,8 @@
 				451D10901D7D8ECD00D74664 /* LoginController.swift in Sources */,
 				457AB3701D7D5040007C7E13 /* MineController.swift in Sources */,
 				457AB3301D7D44DA007C7E13 /* AskProject.xcdatamodeld in Sources */,
+				458326151D83F89000CF7C2C /* CareQuestionController.swift in Sources */,
+				458326181D83F89700CF7C2C /* BaseController.swift in Sources */,
 				45631A291D801E1300FB7902 /* MineBigModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

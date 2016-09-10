@@ -1,5 +1,5 @@
 //
-//  CareQuestionController.swift
+//  CollectAnswerController.swift
 //  AskProject
 //
 //  Created by bjike on 16/9/10.
@@ -8,27 +8,30 @@
 
 import UIKit
 
-class CareQuestionController: BaseController,UITableViewDelegate,UITableViewDataSource{
+class CollectAnswerController: BaseController,UITableViewDelegate,UITableViewDataSource{
     
     
-    @IBAction func backClicked(sender: AnyObject) {
-        
-        navigationController?.popViewControllerAnimated(true)
-        
-    }
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return 10
     }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let  cell = tableView.dequeueReusableCellWithIdentifier("CareCell") as?CareCell
+        let  cell = tableView.dequeueReusableCellWithIdentifier("CollectQuestionCell") as?CollectQuestionCell
         
         
         
         return cell!
+        
+    }
+    
+    
+    @IBAction func backClicked(sender: AnyObject) {
+        
+        navigationController?.popViewControllerAnimated(true)
         
     }
     
@@ -41,6 +44,6 @@ class CareQuestionController: BaseController,UITableViewDelegate,UITableViewData
         return array
         
     }()
-    
+
     
 }

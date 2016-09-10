@@ -119,11 +119,19 @@ class MineController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         if indexPath.row == 4 {
             
-            let  story =   UIStoryboard.init(name: "SettingController", bundle: nil)
             
-            let   set =  story.instantiateViewControllerWithIdentifier("SettingController")
+            pushControllerUI("SettingController")
             
-            navigationController?.pushViewController(set, animated: true)
+            
+        }else if indexPath.row == 2{
+            
+            pushControllerUI("CareQuestionController")
+            
+            
+        }else if indexPath.row == 1{
+            
+            pushControllerUI("CollectAnswerController")
+            
             
         }
         
@@ -140,15 +148,20 @@ class MineController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     @IBAction func headClicked(sender: AnyObject) {
         
-        let  story =   UIStoryboard.init(name: "HeadController", bundle: nil)
-        
-        let   head =  story.instantiateViewControllerWithIdentifier("HeadController")
-        
-        navigationController?.pushViewController(head, animated: true)
+        pushControllerUI("HeadController")
  
         
     }
-    
+    private func pushControllerUI(name:String){
+        
+        let  story =   UIStoryboard.init(name: name, bundle: nil)
+        
+        let   vc =  story.instantiateViewControllerWithIdentifier(name)
+        
+        navigationController?.pushViewController(vc, animated: true)
+        
+        
+    }
     //懒加载
     
     private lazy var dataArr: NSMutableArray = {
