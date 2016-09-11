@@ -18,17 +18,17 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     override func viewWillAppear(animated: Bool) {
         
+        //1.移除nav的线
+        
+        moveNavBarLine()
+        
         tabBarController?.tabBar.hidden = false
+        
 
     }
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-      
-        //1.移除nav的线
-
-        moveNavBarLine()
         
         //2.设置button的图片
         
@@ -93,10 +93,16 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
 //        cell?.showCellUI(self.dataArr[indexPath.row] as? MineModel)
         
+        cell?.blockProperty = { (vc) in
+            
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+       }
         return cell!
         
     }
 
+   
     //移除NavBar的线条
    private func moveNavBarLine(){
         

@@ -2,18 +2,30 @@
 //  MessageController.swift
 //  AskProject
 //
-//  Created by bjike on 16/9/10.
+//  Created by bjike on 16/9/11.
 //  Copyright © 2016年 bjike. All rights reserved.
 //
 
 import UIKit
 
-class MessageController: BaseController {
+class MessageController: BaseController,UITableViewDelegate,UITableViewDataSource {
     
     
-    @IBOutlet weak var answerSwitch: UISwitch!
     
-    @IBOutlet weak var pushSwitch: UISwitch!
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 4
+        
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let  cell = tableView.dequeueReusableCellWithIdentifier("MessageCell") as?MessageCell
+        
+        
+        return cell!
+        
+    }
     
     
     @IBAction func backClicked(sender: AnyObject) {
@@ -22,14 +34,13 @@ class MessageController: BaseController {
         
     }
     
-    @IBAction func answerChanged(sender: AnyObject) {
-        
-        
-    }
+    //懒加载
     
-    
-    @IBAction func pushChanged(sender: AnyObject) {
+    private lazy var dataArr: NSMutableArray = {
         
+        var array = NSMutableArray()
         
-    }
+        return array
+        
+    }()
 }

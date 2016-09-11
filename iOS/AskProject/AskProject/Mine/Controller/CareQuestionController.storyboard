@@ -82,12 +82,25 @@
                                                             <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COo-wd-XB4">
+                                                            <rect key="frame" x="549" y="-5" width="25" height="25"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="25" id="ZiK-d2-CRB"/>
+                                                                <constraint firstAttribute="width" constant="25" id="fSd-V9-OBZ"/>
+                                                            </constraints>
+                                                            <state key="normal" backgroundImage="delect"/>
+                                                            <connections>
+                                                                <action selector="delectClicked:" destination="niY-r8-K9Y" eventType="touchUpInside" id="Xpo-Hh-M6r"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="eza-cJ-4Rl" secondAttribute="trailing" constant="12" id="3M4-8e-Aoh"/>
                                                         <constraint firstAttribute="trailing" secondItem="mAu-JC-Gn3" secondAttribute="trailing" constant="12" id="IHk-xb-ANJ"/>
                                                         <constraint firstItem="amB-WM-hh1" firstAttribute="leading" secondItem="K2z-bC-Ezg" secondAttribute="leading" constant="10" id="Ka1-Hb-n67"/>
+                                                        <constraint firstAttribute="trailing" secondItem="COo-wd-XB4" secondAttribute="trailing" constant="-10" id="L9T-bm-bdN"/>
+                                                        <constraint firstItem="COo-wd-XB4" firstAttribute="top" secondItem="K2z-bC-Ezg" secondAttribute="top" constant="-5" id="NsG-nJ-EuF"/>
                                                         <constraint firstAttribute="bottom" secondItem="eza-cJ-4Rl" secondAttribute="bottom" constant="5" id="Qvd-zu-6bW"/>
                                                         <constraint firstItem="mAu-JC-Gn3" firstAttribute="top" secondItem="K2z-bC-Ezg" secondAttribute="top" constant="14" id="T2X-zO-ypq"/>
                                                         <constraint firstAttribute="bottom" secondItem="amB-WM-hh1" secondAttribute="bottom" constant="5" id="Wcl-XU-jpb"/>
@@ -105,6 +118,7 @@
                                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="answerLabel" destination="eza-cJ-4Rl" id="ffT-MG-g6V"/>
+                                            <outlet property="delectBtn" destination="COo-wd-XB4" id="q8b-61-aTZ"/>
                                             <outlet property="questionLabel" destination="mAu-JC-Gn3" id="PHZ-0U-A1i"/>
                                             <outlet property="recommentLabel" destination="amB-WM-hh1" id="JN0-D8-vah"/>
                                         </connections>
@@ -144,5 +158,6 @@
     </scenes>
     <resources>
         <image name="back_gocus" width="11" height="19"/>
+        <image name="delect" width="25" height="25"/>
     </resources>
 </document>

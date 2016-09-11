@@ -14,6 +14,7 @@ class SettingController: BaseController{
     @IBOutlet weak var onSwitchMsg: UISwitch!
     
     
+    @IBOutlet weak var backView: UIView!
     @IBOutlet weak var logView: UIView!
     
     override func viewDidLoad() {
@@ -26,8 +27,10 @@ class SettingController: BaseController{
     
     private func setUI(){
         
-        logView.hidden = true
+        backView.hidden = true
         
+        logView.hidden = true
+
         logView.layer.masksToBounds = true
         
         logView.layer.cornerRadius = 5
@@ -52,19 +55,34 @@ class SettingController: BaseController{
     
     @IBAction func logoutClicked(sender: AnyObject) {
         
-        logView.hidden = false
+        backView.hidden = false
 
+        logView.hidden = false
 
     }
     
     
     @IBAction func personMessageClicked(sender: AnyObject) {
+        
+        pushControllerUI("PersonMessageController")
+        
     }
-    
+    private func pushControllerUI(name:String){
+        
+        let  story =   UIStoryboard.init(name: name, bundle: nil)
+        
+        let   vc =  story.instantiateViewControllerWithIdentifier(name)
+        
+        navigationController?.pushViewController(vc, animated: true)
+        
+        
+    }
     @IBAction func cancleClicked(sender: AnyObject) {
         
-        logView.hidden = true
+        backView.hidden = true
         
+        logView.hidden = true
+
         
     }
     

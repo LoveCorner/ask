@@ -11,6 +11,8 @@ import UIKit
 class CareQuestionController: BaseController,UITableViewDelegate,UITableViewDataSource{
     
     
+    
+    
     @IBAction func backClicked(sender: AnyObject) {
         
         navigationController?.popViewControllerAnimated(true)
@@ -32,6 +34,8 @@ class CareQuestionController: BaseController,UITableViewDelegate,UITableViewData
         
     }
     
+    
+     
     //懒加载
     
     private lazy var dataArr: NSMutableArray = {

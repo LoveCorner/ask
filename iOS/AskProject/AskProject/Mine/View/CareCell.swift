@@ -20,4 +20,20 @@ class CareCell: UITableViewCell {
     
     @IBOutlet weak var answerLabel: UILabel!
     
+    
+    @IBOutlet weak var delectBtn: UIButton!
+    
+    override func awakeFromNib() {
+        
+        delectBtn.hidden = true
+        
+    }
+    
+    @IBAction func delectClicked(sender: AnyObject) {
+        
+        
+    }
+    
+    
+    
 }

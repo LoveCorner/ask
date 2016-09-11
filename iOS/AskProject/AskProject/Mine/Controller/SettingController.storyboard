@@ -112,6 +112,17 @@
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egZ-I4-bC1">
+                                <rect key="frame" x="135" y="270" width="330" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="I9o-Pi-aGy"/>
+                                    <constraint firstAttribute="width" constant="330" id="Vka-9x-dYp"/>
+                                </constraints>
+                                <state key="normal" title="退出账号" backgroundImage="out-bottom"/>
+                                <connections>
+                                    <action selector="logoutClicked:" destination="eQj-0x-fal" eventType="touchUpInside" id="e8W-MP-bmo"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="go" translatesAutoresizingMaskIntoConstraints="NO" id="ed6-Vp-EoB">
                                 <rect key="frame" x="573" y="166" width="10" height="17"/>
                                 <constraints>
@@ -129,8 +140,12 @@
                                     <action selector="notifacationClicked:" destination="eQj-0x-fal" eventType="valueChanged" id="FNv-np-qyr"/>
                                 </connections>
                             </switch>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j8h-Kt-uD2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZN-Xc-DPL">
-                                <rect key="frame" x="172" y="194.5" width="256" height="131"/>
+                                <rect key="frame" x="172" y="194" width="256" height="131"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="确认退出账号吗？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaS-vy-392">
                                         <rect key="frame" x="53" y="39" width="150" height="15"/>
@@ -179,17 +194,6 @@
                                     <constraint firstAttribute="width" constant="256" id="pyg-Fp-2Gy"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egZ-I4-bC1">
-                                <rect key="frame" x="135" y="270" width="330" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="I9o-Pi-aGy"/>
-                                    <constraint firstAttribute="width" constant="330" id="Vka-9x-dYp"/>
-                                </constraints>
-                                <state key="normal" title="退出账号" backgroundImage="out-bottom"/>
-                                <connections>
-                                    <action selector="logoutClicked:" destination="eQj-0x-fal" eventType="touchUpInside" id="e8W-MP-bmo"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -198,8 +202,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="nMz-lR-lay" secondAttribute="trailing" constant="-20" id="DyX-bU-hFk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5nn-Gk-JJb" secondAttribute="trailing" constant="-20" id="EjQ-Hb-qQt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vSD-cT-HuP" secondAttribute="trailing" constant="-20" id="FMp-lo-mYw"/>
+                            <constraint firstItem="j8h-Kt-uD2" firstAttribute="top" secondItem="yAw-Yf-JNr" secondAttribute="topMargin" id="Fpo-NM-jZn"/>
                             <constraint firstItem="cZw-a1-dtw" firstAttribute="leading" secondItem="yAw-Yf-JNr" secondAttribute="leadingMargin" constant="-20" id="H0q-CK-Ph1"/>
                             <constraint firstItem="egZ-I4-bC1" firstAttribute="centerX" secondItem="yAw-Yf-JNr" secondAttribute="centerX" id="IAV-Nz-CQ4"/>
+                            <constraint firstItem="j8h-Kt-uD2" firstAttribute="leading" secondItem="yAw-Yf-JNr" secondAttribute="leadingMargin" constant="-20" id="IJU-uh-i64"/>
                             <constraint firstItem="MfG-gU-STI" firstAttribute="top" secondItem="Xtn-4A-2VY" secondAttribute="bottom" constant="35" id="IYQ-14-B3H"/>
                             <constraint firstItem="W7R-a5-1lN" firstAttribute="leading" secondItem="yAw-Yf-JNr" secondAttribute="leadingMargin" constant="3" id="JhD-fu-5BU"/>
                             <constraint firstItem="srF-UZ-Mey" firstAttribute="top" secondItem="rlN-fR-TGg" secondAttribute="bottom" constant="5" id="Jxw-jY-qlf"/>
@@ -212,7 +218,9 @@
                             <constraint firstItem="bZN-Xc-DPL" firstAttribute="centerX" secondItem="yAw-Yf-JNr" secondAttribute="centerX" id="U9b-3G-Phc"/>
                             <constraint firstItem="vSD-cT-HuP" firstAttribute="top" secondItem="rlN-fR-TGg" secondAttribute="bottom" id="Zzw-tc-RqX"/>
                             <constraint firstItem="ed6-Vp-EoB" firstAttribute="top" secondItem="nMz-lR-lay" secondAttribute="bottom" constant="17" id="cP7-9V-GFD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="j8h-Kt-uD2" secondAttribute="trailing" constant="-20" id="cQF-YN-bhg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ed6-Vp-EoB" secondAttribute="trailing" constant="-3" id="fkf-r4-6ED"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="j8h-Kt-uD2" secondAttribute="bottom" id="hKN-05-KCp"/>
                             <constraint firstItem="nMz-lR-lay" firstAttribute="top" secondItem="cZw-a1-dtw" secondAttribute="bottom" id="huI-nC-Ufx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rlN-fR-TGg" secondAttribute="trailing" constant="-7" id="iHe-A6-1wP"/>
                             <constraint firstItem="5nn-Gk-JJb" firstAttribute="top" secondItem="nMz-lR-lay" secondAttribute="bottom" id="k0q-w5-314"/>
@@ -239,6 +247,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="backView" destination="j8h-Kt-uD2" id="Ocy-0h-jYl"/>
                         <outlet property="logView" destination="bZN-Xc-DPL" id="lde-gB-9KX"/>
                         <outlet property="onSwitchMsg" destination="srF-UZ-Mey" id="08G-2p-CpU"/>
                     </connections>

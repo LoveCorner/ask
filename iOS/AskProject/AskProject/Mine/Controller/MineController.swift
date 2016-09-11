@@ -42,72 +42,100 @@ class MineController: BaseController,UITableViewDelegate,UITableViewDataSource {
 
     private func getListData(){
         
+//        
+//        let data = MineData()
+//        //4个
+//        for dic in data.getMineData() {
+//            
+//            let big = MineBigModel.init(dict: dic as![String : AnyObject])
+//            
+//            self.numArr.addObject(big)
+//            
+//            let arr: NSArray = dic["dataSources"]as!NSArray
+//                    
+//                    for subDic in arr {
+//                        
+//                        let  mine = MineModel.init(dict: subDic as! [String : AnyObject])
+//                        
+//                        self.dataArr.addObject(mine)
+//                        
+//                    }
+//        }
         
         let data = MineData()
         //4个
-        for dic in data.getMineData() {
-            
-            let big = MineBigModel.init(dict: dic as![String : AnyObject])
-            
-            self.numArr.addObject(big)
-            
-            let arr: NSArray = dic["dataSources"]as!NSArray
-                    
-                    for subDic in arr {
-                        
-                        let  mine = MineModel.init(dict: subDic as! [String : AnyObject])
-                        
-                        self.dataArr.addObject(mine)
-                        
-                    }
-        }
+        for dic in data.getMeData() {
         
+          let  mine = MineModel.init(dict: dic as! [String : AnyObject])
+            
+          self.dataArr.addObject(mine)
+            
+        }
+
         self.MineTableView.reloadData()
         
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-//        let big = self.numArr[section]
         
-        return self.dataArr.count
+        return 1
         
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
-        return self.numArr.count
+        return self.dataArr.count
     }
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let headview = UIView()
+
+        if section == 2 {
+          
+            headview.frame = CGRectMake(0, 0, ScreenWidth(), 1)
+            
+            headview.backgroundColor = UIColor.whiteColor()
+            
+//            let lineView = UIView.init(frame: CGRectMake(26, 0, ScreenWidth()-38, 0.5))
+//            
+//            lineView.backgroundColor = RGBA(247, g: 247, b: 247, a: 1.0)
+//            
+//            headview.addSubview(lineView)
+
+            
+        }else{
         
         headview.frame = CGRectMake(0, 0, ScreenWidth(), 20)
  
         headview.backgroundColor = RGBA(247, g: 247, b: 247, a: 1.0)
         
+            
+        }
         return headview
-        
+
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-        if section == 0 {
+        switch section {
+        case 0:
+            return 10.0
             
-            return 10
-        }else{
+        case 2:
+            return 1.0
             
-          return 20
+        default:
+            return 20.0
+            
         }
-        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let  cell = tableView.dequeueReusableCellWithIdentifier("MineCell") as?MineCell
         
-        
-        cell?.showCellUI(self.dataArr[indexPath.row] as? MineModel)
+        cell?.showCellUI(self.dataArr[indexPath.section] as? MineModel)
         
         return cell!
         
@@ -115,27 +143,23 @@ class MineController: BaseController,UITableViewDelegate,UITableViewDataSource {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        if indexPath.row == 4 {
-            
-            
-            pushControllerUI("SettingController")
-            
-            
-        }else if indexPath.row == 2{
-            
-            pushControllerUI("CareQuestionController")
-            
-            
-        }else if indexPath.row == 1{
-            
-            pushControllerUI("CollectAnswerController")
-            
-            
-        }else if indexPath.row == 0{
-            
+        switch indexPath.section {
+        case 0:
             pushControllerUI("MessageController")
-            
-            
+            break
+        case 1:
+            pushControllerUI("CollectAnswerController")
+            break
+        case 2:
+            pushControllerUI("CareQuestionController")
+            break
+        case 3:
+            pushControllerUI("MyExamController")
+            break
+        default:
+           
+            pushControllerUI("SettingController")
+            break
         }
         
     }
@@ -167,12 +191,5 @@ class MineController: BaseController,UITableViewDelegate,UITableViewDataSource {
         
     }()
     
-    private lazy var numArr: NSMutableArray = {
-        
-        var array = NSMutableArray()
-        
-        return array
-        
-    }()
     
 }

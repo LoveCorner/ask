@@ -12,7 +12,10 @@ class CollectQuestionCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+         delectBtn.hidden = true
+        
+    
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -33,4 +36,15 @@ class CollectQuestionCell: UITableViewCell {
     
     
     @IBOutlet weak var nameLabel: UILabel!
+    
+    
+    @IBOutlet weak var delectBtn: UIButton!
+    
+    
+    
+    @IBAction func delectClicked(sender: AnyObject) {
+        
+        
+    }
+    
 }
