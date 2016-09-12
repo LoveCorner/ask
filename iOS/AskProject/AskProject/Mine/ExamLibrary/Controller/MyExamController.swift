@@ -11,6 +11,13 @@ import UIKit
 class MyExamController: BaseController,UITableViewDelegate,UITableViewDataSource {
     
     
+    override func viewWillAppear(animated: Bool) {
+        
+        navigationController?.navigationBar.hidden = false
+
+        tabBarController?.tabBar.hidden = true
+
+    }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return 4
@@ -24,7 +31,11 @@ class MyExamController: BaseController,UITableViewDelegate,UITableViewDataSource
         return cell!
     }
     
-    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        pushControllerUI("ExamDetailController")
+        
+    }
     
     @IBAction func addClicked(sender: AnyObject) {
         

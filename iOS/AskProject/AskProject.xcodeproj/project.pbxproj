@@ -21,6 +21,13 @@
 		451D108C1D7D5EAF00D74664 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451D108B1D7D5EAF00D74664 /* MainTabBar.swift */; };
 		451D108E1D7D5F3800D74664 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451D108D1D7D5F3800D74664 /* UIButton+Extension.swift */; };
 		451D10901D7D8ECD00D74664 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451D108F1D7D8ECD00D74664 /* LoginController.swift */; };
+		4523333D1D864D1900031B0A /* ExamDetailController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4523333C1D864D1900031B0A /* ExamDetailController.storyboard */; };
+		4523333F1D864D2200031B0A /* ExamDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4523333E1D864D2200031B0A /* ExamDetailController.swift */; };
+		452333441D86625C00031B0A /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452333421D86625C00031B0A /* CommentCell.swift */; };
+		452333451D86625C00031B0A /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452333431D86625C00031B0A /* CommentCell.xib */; };
+		452333491D86B34500031B0A /* AlertView+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452333481D86B34500031B0A /* AlertView+Category.swift */; };
+		4523334B1D86B87600031B0A /* PresentAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4523334A1D86B87600031B0A /* PresentAlertView.swift */; };
+		4523334D1D86B88200031B0A /* PresentAlertView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4523334C1D86B88200031B0A /* PresentAlertView.storyboard */; };
 		454EC4F81D7E66E600C86EAB /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 454EC4F71D7E66E600C86EAB /* MainTabBar.storyboard */; };
 		454EC4FE1D7E92C600C86EAB /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454EC4FD1D7E92C600C86EAB /* TitleButton.swift */; };
 		454EC5021D7EACE600C86EAB /* CommonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454EC5011D7EACE600C86EAB /* CommonFile.swift */; };
@@ -94,6 +101,13 @@
 		451D108B1D7D5EAF00D74664 /* MainTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		451D108D1D7D5F3800D74664 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		451D108F1D7D8ECD00D74664 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		4523333C1D864D1900031B0A /* ExamDetailController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ExamDetailController.storyboard; sourceTree = "<group>"; };
+		4523333E1D864D2200031B0A /* ExamDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamDetailController.swift; sourceTree = "<group>"; };
+		452333421D86625C00031B0A /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		452333431D86625C00031B0A /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		452333481D86B34500031B0A /* AlertView+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlertView+Category.swift"; sourceTree = "<group>"; };
+		4523334A1D86B87600031B0A /* PresentAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PresentAlertView.swift; path = AskProject/Common/View/PresentAlertView.swift; sourceTree = SOURCE_ROOT; };
+		4523334C1D86B88200031B0A /* PresentAlertView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PresentAlertView.storyboard; path = AskProject/Common/View/PresentAlertView.storyboard; sourceTree = SOURCE_ROOT; };
 		454EC4F71D7E66E600C86EAB /* MainTabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
 		454EC4FD1D7E92C600C86EAB /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
 		454EC5011D7EACE600C86EAB /* CommonFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonFile.swift; sourceTree = "<group>"; };
@@ -217,6 +231,8 @@
 				45501C7A1D8543250080B780 /* MyExamController.storyboard */,
 				45A78CA31D8589C100E840C5 /* AddExamController.swift */,
 				45A78CA51D8589CE00E840C5 /* AddExamController.storyboard */,
+				4523333E1D864D2200031B0A /* ExamDetailController.swift */,
+				4523333C1D864D1900031B0A /* ExamDetailController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -232,6 +248,8 @@
 			isa = PBXGroup;
 			children = (
 				45501C7C1D8543C60080B780 /* MineExamCell.swift */,
+				452333421D86625C00031B0A /* CommentCell.swift */,
+				452333431D86625C00031B0A /* CommentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -429,6 +447,8 @@
 		457AB3641D7D4675007C7E13 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4523334A1D86B87600031B0A /* PresentAlertView.swift */,
+				4523334C1D86B88200031B0A /* PresentAlertView.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -445,6 +465,7 @@
 			children = (
 				451D108D1D7D5F3800D74664 /* UIButton+Extension.swift */,
 				454EC4FD1D7E92C600C86EAB /* TitleButton.swift */,
+				452333481D86B34500031B0A /* AlertView+Category.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -572,7 +593,9 @@
 				451D10821D7D5C5000D74664 /* MineController.storyboard in Resources */,
 				45A78CA61D8589CE00E840C5 /* AddExamController.storyboard in Resources */,
 				457AB3781D7D5382007C7E13 /* LoginController.storyboard in Resources */,
+				4523333D1D864D1900031B0A /* ExamDetailController.storyboard in Resources */,
 				458326141D83F89000CF7C2C /* CollectAnswerController.storyboard in Resources */,
+				452333451D86625C00031B0A /* CommentCell.xib in Resources */,
 				451D10881D7D5CF600D74664 /* AddController.storyboard in Resources */,
 				45041D3C1D810CB4005D7DDB /* HeadController.storyboard in Resources */,
 				45F9C9B81D84379C009552E3 /* AnswerQuestionController.storyboard in Resources */,
@@ -580,6 +603,7 @@
 				451D10801D7D5C4700D74664 /* HomeController.storyboard in Resources */,
 				458326201D83FC3500CF7C2C /* PersonMessageController.storyboard in Resources */,
 				454EC4F81D7E66E600C86EAB /* MainTabBar.storyboard in Resources */,
+				4523334D1D86B88200031B0A /* PresentAlertView.storyboard in Resources */,
 				45501C7B1D8543250080B780 /* MyExamController.storyboard in Resources */,
 				457AB3321D7D44DA007C7E13 /* Assets.xcassets in Resources */,
 				458326221D83FED300CF7C2C /* SetNameController.storyboard in Resources */,
@@ -620,6 +644,8 @@
 				45041D481D817092005D7DDB /* SearchCell.swift in Sources */,
 				4583261B1D83F8C000CF7C2C /* CollectQuestionCell.swift in Sources */,
 				45041D401D810CEF005D7DDB /* SettingController.swift in Sources */,
+				4523334B1D86B87600031B0A /* PresentAlertView.swift in Sources */,
+				452333441D86625C00031B0A /* CommentCell.swift in Sources */,
 				458326131D83F89000CF7C2C /* CollectAnswerController.swift in Sources */,
 				45A78CA41D8589C100E840C5 /* AddExamController.swift in Sources */,
 				454EC5021D7EACE600C86EAB /* CommonFile.swift in Sources */,
@@ -639,7 +665,9 @@
 				451D10901D7D8ECD00D74664 /* LoginController.swift in Sources */,
 				457AB3701D7D5040007C7E13 /* MineController.swift in Sources */,
 				45501C711D8518D00080B780 /* MessageController.swift in Sources */,
+				452333491D86B34500031B0A /* AlertView+Category.swift in Sources */,
 				457AB3301D7D44DA007C7E13 /* AskProject.xcdatamodeld in Sources */,
+				4523333F1D864D2200031B0A /* ExamDetailController.swift in Sources */,
 				458326151D83F89000CF7C2C /* CareQuestionController.swift in Sources */,
 				458326181D83F89700CF7C2C /* BaseController.swift in Sources */,
 				45631A291D801E1300FB7902 /* MineBigModel.swift in Sources */,

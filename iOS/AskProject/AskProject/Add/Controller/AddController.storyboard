@@ -116,6 +116,19 @@
                                     <constraint firstAttribute="width" constant="256" id="Wgu-yN-CO5"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Lq-0P-3cb">
+                                <rect key="frame" x="530" y="31" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="KOT-o2-3NB"/>
+                                    <constraint firstAttribute="height" constant="30" id="dbk-JW-NyZ"/>
+                                </constraints>
+                                <state key="normal" title="发布">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="releaseClicked:" destination="bMG-jz-FtG" eventType="touchUpInside" id="MSg-bd-ab2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -131,6 +144,8 @@
                             <constraint firstItem="6ZG-Z7-K1r" firstAttribute="top" secondItem="zY8-9n-7xP" secondAttribute="bottom" constant="11" id="ecY-zK-BF2"/>
                             <constraint firstItem="6ZG-Z7-K1r" firstAttribute="leading" secondItem="Kh6-Pd-dRW" secondAttribute="leadingMargin" constant="-20" id="erT-Iz-jYB"/>
                             <constraint firstItem="zY8-9n-7xP" firstAttribute="centerX" secondItem="Kh6-Pd-dRW" secondAttribute="centerX" id="jK0-2C-vLI"/>
+                            <constraint firstItem="6ZG-Z7-K1r" firstAttribute="top" secondItem="3Lq-0P-3cb" secondAttribute="bottom" constant="5" id="uPe-Vq-BDL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Lq-0P-3cb" secondAttribute="trailing" constant="-10" id="vIc-h1-6Kj"/>
                             <constraint firstItem="Joe-R1-k36" firstAttribute="top" secondItem="6ZG-Z7-K1r" secondAttribute="bottom" constant="10" id="xdi-tv-LXL"/>
                             <constraint firstItem="r8l-LN-Fc0" firstAttribute="leading" secondItem="Kh6-Pd-dRW" secondAttribute="leadingMargin" constant="-20" id="yDf-7l-h9s"/>
                         </constraints>

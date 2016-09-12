@@ -113,10 +113,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egZ-I4-bC1">
-                                <rect key="frame" x="135" y="270" width="330" height="40"/>
+                                <rect key="frame" x="175" y="270" width="250" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="I9o-Pi-aGy"/>
-                                    <constraint firstAttribute="width" constant="330" id="Vka-9x-dYp"/>
+                                    <constraint firstAttribute="width" constant="250" id="Vka-9x-dYp"/>
                                 </constraints>
                                 <state key="normal" title="退出账号" backgroundImage="out-bottom"/>
                                 <connections>

@@ -88,21 +88,23 @@ class AddExamController: BaseController,UITextFieldDelegate,UITextViewDelegate {
     }
     @IBAction func cancleClicked(sender: AnyObject) {
         
-        backView.hidden = true
 
-        view.backgroundColor = UIColor.whiteColor()
-
-        view.alpha = 1.0
-        
-        questionTF.alpha = 1.0
-        
-        answerTV.alpha = 1.0
-        
-        navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navigitionBar"), forBarMetrics: UIBarMetrics.Default)
-
+        backColorUI(true, viewBackColor: UIColor.whiteColor(), questionAlpha: 1.0, answerAlpha: 1.0, imageName: "navigitionBar")
 
     }
-    
+    private func backColorUI(isHide: Bool,viewBackColor: UIColor,questionAlpha: CGFloat,answerAlpha: CGFloat,imageName: String){
+        
+        backView.hidden = isHide
+        
+        view.backgroundColor = viewBackColor
+        
+        questionTF.alpha = questionAlpha
+        
+        answerTV.alpha = answerAlpha
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(named: imageName), forBarMetrics: UIBarMetrics.Default)
+        
+    }
     @IBAction func sureClicked(sender: AnyObject) {
         
         navigationController?.popViewControllerAnimated(true)
@@ -112,16 +114,8 @@ class AddExamController: BaseController,UITextFieldDelegate,UITextViewDelegate {
     
     @IBAction func exitClicked(sender: AnyObject) {
         
-        backView.hidden = false
-        
-        view.backgroundColor = RGBA(157, g: 157, b: 157, a: 0.83)
-        
-        questionTF.alpha = 0
-        
-        answerTV.alpha = 0
-        
-        navigationController?.navigationBar.setBackgroundImage(UIImage(named: "tabBarBackImage"), forBarMetrics: UIBarMetrics.Default)
-        
+        backColorUI(false, viewBackColor: RGBA(157, g: 157, b: 157, a: 0.83), questionAlpha: 0, answerAlpha: 0, imageName: "tabBarBackImage")
+
     }
     @IBAction func finishClicked(sender: AnyObject) {
         

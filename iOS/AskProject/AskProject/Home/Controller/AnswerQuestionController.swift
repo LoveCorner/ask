@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AnswerQuestionController: BaseController {
+class AnswerQuestionController: BaseController,UITextViewDelegate {
     
     
     @IBOutlet weak var whiteView: UIView!
@@ -30,12 +30,30 @@ class AnswerQuestionController: BaseController {
     private func setUI(){
         
         backView.hidden = true
-
-        whiteView.layer.masksToBounds = true
         
         whiteView.layer.cornerRadius = 5
+        //2.回收键盘
+        tapUI()
         
+    }
+    private func tapUI(){
         
+        let tap =  UITapGestureRecognizer.init(target: self, action: #selector(LoginController.tapAction))
+        
+        self.view.addGestureRecognizer(tap)
+        
+    }
+    
+    func tapAction(){
+        
+        answerTV.resignFirstResponder()
+        
+    }
+    
+    func textViewShouldBeginEditing(textView: UITextView) -> Bool {
+        
+        placeLabel.text = ""
+        return true
     }
     @IBAction func backClicked(sender: AnyObject) {
         

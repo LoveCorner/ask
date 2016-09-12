@@ -40,8 +40,6 @@ class AddController: UIViewController,UITextViewDelegate {
     private func backViewUI(){
         
         backView.hidden = true
-
-        backView.layer.masksToBounds = true
         
         backView.layer.cornerRadius = 5
         
@@ -78,33 +76,46 @@ class AddController: UIViewController,UITextViewDelegate {
     }
     @IBAction func cancleClicked(sender: AnyObject) {
         
-        backView.hidden = false
+               
+        backColorUI(false, viewBackColor: RGBA(157, g: 157, b: 157, a: 0.83), lineColor: RGBA(157, g: 157, b: 157, a: 1), contentAlpha: 0)
         
-        view.backgroundColor = RGBA(157, g: 157, b: 157, a: 0.83)
-        
-        contentTV.alpha = 0
-        
-        lineView.backgroundColor = RGBA(157, g: 157, b: 157, a: 1)
         
     }
     
     @IBAction func exitClicked(sender: AnyObject) {
         
-        backView.hidden = true
-        
-        view.backgroundColor = UIColor.whiteColor()
-        
-        contentTV.alpha = 1
+       
+        backColorUI(true, viewBackColor: UIColor.whiteColor(), lineColor: RGB(0xededed), contentAlpha: 1)
 
-        lineView.backgroundColor = RGB(0xededed)
+    }
+    
+    private func backColorUI(isHide: Bool,viewBackColor: UIColor, lineColor: UIColor,contentAlpha: CGFloat){
+        
+        backView.hidden = isHide
+        
+        view.backgroundColor = viewBackColor
+        
+        contentTV.alpha = contentAlpha
+        
+        lineView.backgroundColor = lineColor
 
+        
     }
     
     @IBAction func sureClicked(sender: AnyObject) {
         
-        //网络提交请求
         self.dismissViewControllerAnimated(false, completion: nil)
         
     }
+    @IBAction func releaseClicked(sender: AnyObject) {
+        
+        //网络提交请求
+        
+        self.dismissViewControllerAnimated(false, completion: nil)
+
+        
+    }
+    
+    
     
 }

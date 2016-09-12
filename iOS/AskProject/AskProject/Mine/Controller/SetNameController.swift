@@ -92,11 +92,9 @@ class SetNameController: BaseController {
     
     
     func timerAction(){
-        
-        
+    
         setUI(true)
-        
-        
+    
     }
     @IBAction func backClicked(sender: AnyObject) {
         
