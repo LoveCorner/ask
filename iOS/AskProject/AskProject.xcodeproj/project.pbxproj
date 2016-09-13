@@ -21,10 +21,6 @@
 		451D108C1D7D5EAF00D74664 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451D108B1D7D5EAF00D74664 /* MainTabBar.swift */; };
 		451D108E1D7D5F3800D74664 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451D108D1D7D5F3800D74664 /* UIButton+Extension.swift */; };
 		451D10901D7D8ECD00D74664 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451D108F1D7D8ECD00D74664 /* LoginController.swift */; };
-		4523333D1D864D1900031B0A /* ExamDetailController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4523333C1D864D1900031B0A /* ExamDetailController.storyboard */; };
-		4523333F1D864D2200031B0A /* ExamDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4523333E1D864D2200031B0A /* ExamDetailController.swift */; };
-		452333441D86625C00031B0A /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452333421D86625C00031B0A /* CommentCell.swift */; };
-		452333451D86625C00031B0A /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452333431D86625C00031B0A /* CommentCell.xib */; };
 		452333491D86B34500031B0A /* AlertView+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452333481D86B34500031B0A /* AlertView+Category.swift */; };
 		4523334B1D86B87600031B0A /* PresentAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4523334A1D86B87600031B0A /* PresentAlertView.swift */; };
 		4523334D1D86B88200031B0A /* PresentAlertView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4523334C1D86B88200031B0A /* PresentAlertView.storyboard */; };
@@ -34,14 +30,25 @@
 		45501C6F1D85135C0080B780 /* MessageController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45501C6E1D85135C0080B780 /* MessageController.storyboard */; };
 		45501C711D8518D00080B780 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45501C701D8518D00080B780 /* MessageController.swift */; };
 		45501C771D851BAB0080B780 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45501C761D851BAB0080B780 /* MessageCell.swift */; };
-		45501C791D8543160080B780 /* MyExamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45501C781D8543160080B780 /* MyExamController.swift */; };
-		45501C7B1D8543250080B780 /* MyExamController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45501C7A1D8543250080B780 /* MyExamController.storyboard */; };
-		45501C7D1D8543C60080B780 /* MineExamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45501C7C1D8543C60080B780 /* MineExamCell.swift */; };
 		45631A231D7FC14A00FB7902 /* MineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45631A221D7FC14A00FB7902 /* MineData.swift */; };
 		45631A251D7FC53300FB7902 /* MineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45631A241D7FC53300FB7902 /* MineModel.swift */; };
 		45631A271D7FEE1000FB7902 /* MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45631A261D7FEE1000FB7902 /* MineCell.swift */; };
 		45631A291D801E1300FB7902 /* MineBigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45631A281D801E1300FB7902 /* MineBigModel.swift */; };
 		45631A2B1D8030B800FB7902 /* RecommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45631A2A1D8030B800FB7902 /* RecommentCell.swift */; };
+		456B72151D87EC3B006740D2 /* AddExamController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456B720A1D87EC3B006740D2 /* AddExamController.storyboard */; };
+		456B72161D87EC3B006740D2 /* AddExamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B720B1D87EC3B006740D2 /* AddExamController.swift */; };
+		456B72171D87EC3B006740D2 /* ExamDetailController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456B720C1D87EC3B006740D2 /* ExamDetailController.storyboard */; };
+		456B72181D87EC3B006740D2 /* ExamDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B720D1D87EC3B006740D2 /* ExamDetailController.swift */; };
+		456B72191D87EC3B006740D2 /* MyExamController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456B720E1D87EC3B006740D2 /* MyExamController.storyboard */; };
+		456B721A1D87EC3B006740D2 /* MyExamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B720F1D87EC3B006740D2 /* MyExamController.swift */; };
+		456B721B1D87EC3B006740D2 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B72121D87EC3B006740D2 /* CommentCell.swift */; };
+		456B721C1D87EC3B006740D2 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 456B72131D87EC3B006740D2 /* CommentCell.xib */; };
+		456B721D1D87EC3B006740D2 /* MineExamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B72141D87EC3B006740D2 /* MineExamCell.swift */; };
+		456B72231D87EF95006740D2 /* HomeAnswerController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456B72221D87EF95006740D2 /* HomeAnswerController.storyboard */; };
+		456B72251D87EFA9006740D2 /* HomeAnswerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B72241D87EFA9006740D2 /* HomeAnswerController.swift */; };
+		456B72281D87EFCE006740D2 /* AnswerDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B72261D87EFCE006740D2 /* AnswerDetailController.swift */; };
+		456B72291D87EFCE006740D2 /* AnswerDetailController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456B72271D87EFCE006740D2 /* AnswerDetailController.storyboard */; };
+		456B722B1D880C70006740D2 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B722A1D880C70006740D2 /* AnswerCell.swift */; };
 		457AB3281D7D44DA007C7E13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457AB3271D7D44DA007C7E13 /* AppDelegate.swift */; };
 		457AB32D1D7D44DA007C7E13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457AB32B1D7D44DA007C7E13 /* Main.storyboard */; };
 		457AB3301D7D44DA007C7E13 /* AskProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 457AB32E1D7D44DA007C7E13 /* AskProject.xcdatamodeld */; };
@@ -63,8 +70,6 @@
 		458326201D83FC3500CF7C2C /* PersonMessageController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4583261F1D83FC3500CF7C2C /* PersonMessageController.storyboard */; };
 		458326221D83FED300CF7C2C /* SetNameController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458326211D83FED300CF7C2C /* SetNameController.storyboard */; };
 		458326241D83FEDD00CF7C2C /* SetNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458326231D83FEDD00CF7C2C /* SetNameController.swift */; };
-		45A78CA41D8589C100E840C5 /* AddExamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A78CA31D8589C100E840C5 /* AddExamController.swift */; };
-		45A78CA61D8589CE00E840C5 /* AddExamController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45A78CA51D8589CE00E840C5 /* AddExamController.storyboard */; };
 		45F9C9B61D843791009552E3 /* AnswerQuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F9C9B51D843791009552E3 /* AnswerQuestionController.swift */; };
 		45F9C9B81D84379C009552E3 /* AnswerQuestionController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45F9C9B71D84379C009552E3 /* AnswerQuestionController.storyboard */; };
 /* End PBXBuildFile section */
@@ -101,10 +106,6 @@
 		451D108B1D7D5EAF00D74664 /* MainTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		451D108D1D7D5F3800D74664 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		451D108F1D7D8ECD00D74664 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		4523333C1D864D1900031B0A /* ExamDetailController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ExamDetailController.storyboard; sourceTree = "<group>"; };
-		4523333E1D864D2200031B0A /* ExamDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamDetailController.swift; sourceTree = "<group>"; };
-		452333421D86625C00031B0A /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
-		452333431D86625C00031B0A /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		452333481D86B34500031B0A /* AlertView+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlertView+Category.swift"; sourceTree = "<group>"; };
 		4523334A1D86B87600031B0A /* PresentAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PresentAlertView.swift; path = AskProject/Common/View/PresentAlertView.swift; sourceTree = SOURCE_ROOT; };
 		4523334C1D86B88200031B0A /* PresentAlertView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PresentAlertView.storyboard; path = AskProject/Common/View/PresentAlertView.storyboard; sourceTree = SOURCE_ROOT; };
@@ -114,14 +115,25 @@
 		45501C6E1D85135C0080B780 /* MessageController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MessageController.storyboard; sourceTree = "<group>"; };
 		45501C701D8518D00080B780 /* MessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
 		45501C761D851BAB0080B780 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
-		45501C781D8543160080B780 /* MyExamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyExamController.swift; sourceTree = "<group>"; };
-		45501C7A1D8543250080B780 /* MyExamController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyExamController.storyboard; sourceTree = "<group>"; };
-		45501C7C1D8543C60080B780 /* MineExamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineExamCell.swift; sourceTree = "<group>"; };
 		45631A221D7FC14A00FB7902 /* MineData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineData.swift; sourceTree = "<group>"; };
 		45631A241D7FC53300FB7902 /* MineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineModel.swift; sourceTree = "<group>"; };
 		45631A261D7FEE1000FB7902 /* MineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineCell.swift; sourceTree = "<group>"; };
 		45631A281D801E1300FB7902 /* MineBigModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineBigModel.swift; sourceTree = "<group>"; };
 		45631A2A1D8030B800FB7902 /* RecommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommentCell.swift; sourceTree = "<group>"; };
+		456B720A1D87EC3B006740D2 /* AddExamController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddExamController.storyboard; sourceTree = "<group>"; };
+		456B720B1D87EC3B006740D2 /* AddExamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExamController.swift; sourceTree = "<group>"; };
+		456B720C1D87EC3B006740D2 /* ExamDetailController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ExamDetailController.storyboard; sourceTree = "<group>"; };
+		456B720D1D87EC3B006740D2 /* ExamDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamDetailController.swift; sourceTree = "<group>"; };
+		456B720E1D87EC3B006740D2 /* MyExamController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyExamController.storyboard; sourceTree = "<group>"; };
+		456B720F1D87EC3B006740D2 /* MyExamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyExamController.swift; sourceTree = "<group>"; };
+		456B72121D87EC3B006740D2 /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		456B72131D87EC3B006740D2 /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		456B72141D87EC3B006740D2 /* MineExamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineExamCell.swift; sourceTree = "<group>"; };
+		456B72221D87EF95006740D2 /* HomeAnswerController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeAnswerController.storyboard; sourceTree = "<group>"; };
+		456B72241D87EFA9006740D2 /* HomeAnswerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeAnswerController.swift; sourceTree = "<group>"; };
+		456B72261D87EFCE006740D2 /* AnswerDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerDetailController.swift; sourceTree = "<group>"; };
+		456B72271D87EFCE006740D2 /* AnswerDetailController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AnswerDetailController.storyboard; sourceTree = "<group>"; };
+		456B722A1D880C70006740D2 /* AnswerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
 		457AB3241D7D44DA007C7E13 /* AskProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AskProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		457AB3271D7D44DA007C7E13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		457AB32C1D7D44DA007C7E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -149,8 +161,6 @@
 		4583261F1D83FC3500CF7C2C /* PersonMessageController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PersonMessageController.storyboard; sourceTree = "<group>"; };
 		458326211D83FED300CF7C2C /* SetNameController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SetNameController.storyboard; sourceTree = "<group>"; };
 		458326231D83FEDD00CF7C2C /* SetNameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetNameController.swift; sourceTree = "<group>"; };
-		45A78CA31D8589C100E840C5 /* AddExamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExamController.swift; sourceTree = "<group>"; };
-		45A78CA51D8589CE00E840C5 /* AddExamController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddExamController.storyboard; sourceTree = "<group>"; };
 		45F9C9B51D843791009552E3 /* AnswerQuestionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerQuestionController.swift; sourceTree = "<group>"; };
 		45F9C9B71D84379C009552E3 /* AnswerQuestionController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AnswerQuestionController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -213,43 +223,42 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		45501C721D851A5E0080B780 /* ExamLibrary */ = {
+		456B72081D87EC3B006740D2 /* ExamLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				45501C731D851A5E0080B780 /* Controller */,
-				45501C741D851A5E0080B780 /* Model */,
-				45501C751D851A5E0080B780 /* View */,
+				456B72091D87EC3B006740D2 /* Controller */,
+				456B72101D87EC3B006740D2 /* Model */,
+				456B72111D87EC3B006740D2 /* View */,
 			);
-			name = ExamLibrary;
-			path = Mine/ExamLibrary;
+			path = ExamLibrary;
 			sourceTree = "<group>";
 		};
-		45501C731D851A5E0080B780 /* Controller */ = {
+		456B72091D87EC3B006740D2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				45501C781D8543160080B780 /* MyExamController.swift */,
-				45501C7A1D8543250080B780 /* MyExamController.storyboard */,
-				45A78CA31D8589C100E840C5 /* AddExamController.swift */,
-				45A78CA51D8589CE00E840C5 /* AddExamController.storyboard */,
-				4523333E1D864D2200031B0A /* ExamDetailController.swift */,
-				4523333C1D864D1900031B0A /* ExamDetailController.storyboard */,
+				456B720F1D87EC3B006740D2 /* MyExamController.swift */,
+				456B720E1D87EC3B006740D2 /* MyExamController.storyboard */,
+				456B720B1D87EC3B006740D2 /* AddExamController.swift */,
+				456B720A1D87EC3B006740D2 /* AddExamController.storyboard */,
+				456B720D1D87EC3B006740D2 /* ExamDetailController.swift */,
+				456B720C1D87EC3B006740D2 /* ExamDetailController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		45501C741D851A5E0080B780 /* Model */ = {
+		456B72101D87EC3B006740D2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		45501C751D851A5E0080B780 /* View */ = {
+		456B72111D87EC3B006740D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				45501C7C1D8543C60080B780 /* MineExamCell.swift */,
-				452333421D86625C00031B0A /* CommentCell.swift */,
-				452333431D86625C00031B0A /* CommentCell.xib */,
+				456B72121D87EC3B006740D2 /* CommentCell.swift */,
+				456B72131D87EC3B006740D2 /* CommentCell.xib */,
+				456B72141D87EC3B006740D2 /* MineExamCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -277,6 +286,7 @@
 		457AB3261D7D44DA007C7E13 /* AskProject */ = {
 			isa = PBXGroup;
 			children = (
+				456B72081D87EC3B006740D2 /* ExamLibrary */,
 				457AB3631D7D4675007C7E13 /* Common */,
 				457AB3671D7D4675007C7E13 /* HeaderFile */,
 				457AB3681D7D4675007C7E13 /* ThirdLibrary */,
@@ -284,7 +294,6 @@
 				457AB35C1D7D459F007C7E13 /* Login */,
 				457AB3581D7D459F007C7E13 /* Home */,
 				451D10831D7D5C9D00D74664 /* Add */,
-				45501C721D851A5E0080B780 /* ExamLibrary */,
 				457AB35E1D7D459F007C7E13 /* Mine */,
 				457AB3311D7D44DA007C7E13 /* Assets.xcassets */,
 				457AB3331D7D44DA007C7E13 /* LaunchScreen.storyboard */,
@@ -331,6 +340,10 @@
 				45041D451D815BF4005D7DDB /* SearchController.storyboard */,
 				45F9C9B51D843791009552E3 /* AnswerQuestionController.swift */,
 				45F9C9B71D84379C009552E3 /* AnswerQuestionController.storyboard */,
+				456B72241D87EFA9006740D2 /* HomeAnswerController.swift */,
+				456B72221D87EF95006740D2 /* HomeAnswerController.storyboard */,
+				456B72261D87EFCE006740D2 /* AnswerDetailController.swift */,
+				456B72271D87EFCE006740D2 /* AnswerDetailController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -347,6 +360,7 @@
 			children = (
 				45631A2A1D8030B800FB7902 /* RecommentCell.swift */,
 				45041D471D817092005D7DDB /* SearchCell.swift */,
+				456B722A1D880C70006740D2 /* AnswerCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -591,11 +605,10 @@
 			files = (
 				457AB3351D7D44DA007C7E13 /* LaunchScreen.storyboard in Resources */,
 				451D10821D7D5C5000D74664 /* MineController.storyboard in Resources */,
-				45A78CA61D8589CE00E840C5 /* AddExamController.storyboard in Resources */,
+				456B72151D87EC3B006740D2 /* AddExamController.storyboard in Resources */,
 				457AB3781D7D5382007C7E13 /* LoginController.storyboard in Resources */,
-				4523333D1D864D1900031B0A /* ExamDetailController.storyboard in Resources */,
+				456B72171D87EC3B006740D2 /* ExamDetailController.storyboard in Resources */,
 				458326141D83F89000CF7C2C /* CollectAnswerController.storyboard in Resources */,
-				452333451D86625C00031B0A /* CommentCell.xib in Resources */,
 				451D10881D7D5CF600D74664 /* AddController.storyboard in Resources */,
 				45041D3C1D810CB4005D7DDB /* HeadController.storyboard in Resources */,
 				45F9C9B81D84379C009552E3 /* AnswerQuestionController.storyboard in Resources */,
@@ -604,11 +617,14 @@
 				458326201D83FC3500CF7C2C /* PersonMessageController.storyboard in Resources */,
 				454EC4F81D7E66E600C86EAB /* MainTabBar.storyboard in Resources */,
 				4523334D1D86B88200031B0A /* PresentAlertView.storyboard in Resources */,
-				45501C7B1D8543250080B780 /* MyExamController.storyboard in Resources */,
 				457AB3321D7D44DA007C7E13 /* Assets.xcassets in Resources */,
 				458326221D83FED300CF7C2C /* SetNameController.storyboard in Resources */,
 				45041D461D815BF4005D7DDB /* SearchController.storyboard in Resources */,
+				456B72191D87EC3B006740D2 /* MyExamController.storyboard in Resources */,
+				456B72231D87EF95006740D2 /* HomeAnswerController.storyboard in Resources */,
 				457AB32D1D7D44DA007C7E13 /* Main.storyboard in Resources */,
+				456B721C1D87EC3B006740D2 /* CommentCell.xib in Resources */,
+				456B72291D87EFCE006740D2 /* AnswerDetailController.storyboard in Resources */,
 				45041D3E1D810CC3005D7DDB /* SettingController.storyboard in Resources */,
 				45501C6F1D85135C0080B780 /* MessageController.storyboard in Resources */,
 			);
@@ -636,7 +652,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				457AB3721D7D5060007C7E13 /* HomeController.swift in Sources */,
-				45501C7D1D8543C60080B780 /* MineExamCell.swift in Sources */,
+				456B721D1D87EC3B006740D2 /* MineExamCell.swift in Sources */,
 				45631A2B1D8030B800FB7902 /* RecommentCell.swift in Sources */,
 				451D108C1D7D5EAF00D74664 /* MainTabBar.swift in Sources */,
 				458326241D83FEDD00CF7C2C /* SetNameController.swift in Sources */,
@@ -645,18 +661,19 @@
 				4583261B1D83F8C000CF7C2C /* CollectQuestionCell.swift in Sources */,
 				45041D401D810CEF005D7DDB /* SettingController.swift in Sources */,
 				4523334B1D86B87600031B0A /* PresentAlertView.swift in Sources */,
-				452333441D86625C00031B0A /* CommentCell.swift in Sources */,
 				458326131D83F89000CF7C2C /* CollectAnswerController.swift in Sources */,
-				45A78CA41D8589C100E840C5 /* AddExamController.swift in Sources */,
+				456B72161D87EC3B006740D2 /* AddExamController.swift in Sources */,
 				454EC5021D7EACE600C86EAB /* CommonFile.swift in Sources */,
 				457AB3281D7D44DA007C7E13 /* AppDelegate.swift in Sources */,
 				45041D441D815BE6005D7DDB /* SearchController.swift in Sources */,
+				456B72251D87EFA9006740D2 /* HomeAnswerController.swift in Sources */,
 				451D108A1D7D5D0700D74664 /* AddController.swift in Sources */,
 				4583261C1D83F8C000CF7C2C /* CareCell.swift in Sources */,
+				456B721A1D87EC3B006740D2 /* MyExamController.swift in Sources */,
 				454EC4FE1D7E92C600C86EAB /* TitleButton.swift in Sources */,
 				45F9C9B61D843791009552E3 /* AnswerQuestionController.swift in Sources */,
-				45501C791D8543160080B780 /* MyExamController.swift in Sources */,
 				45041D421D810D03005D7DDB /* HeadController.swift in Sources */,
+				456B721B1D87EC3B006740D2 /* CommentCell.swift in Sources */,
 				451D108E1D7D5F3800D74664 /* UIButton+Extension.swift in Sources */,
 				45501C771D851BAB0080B780 /* MessageCell.swift in Sources */,
 				45631A271D7FEE1000FB7902 /* MineCell.swift in Sources */,
@@ -667,9 +684,11 @@
 				45501C711D8518D00080B780 /* MessageController.swift in Sources */,
 				452333491D86B34500031B0A /* AlertView+Category.swift in Sources */,
 				457AB3301D7D44DA007C7E13 /* AskProject.xcdatamodeld in Sources */,
-				4523333F1D864D2200031B0A /* ExamDetailController.swift in Sources */,
+				456B72181D87EC3B006740D2 /* ExamDetailController.swift in Sources */,
 				458326151D83F89000CF7C2C /* CareQuestionController.swift in Sources */,
 				458326181D83F89700CF7C2C /* BaseController.swift in Sources */,
+				456B722B1D880C70006740D2 /* AnswerCell.swift in Sources */,
+				456B72281D87EFCE006740D2 /* AnswerDetailController.swift in Sources */,
 				45631A291D801E1300FB7902 /* MineBigModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

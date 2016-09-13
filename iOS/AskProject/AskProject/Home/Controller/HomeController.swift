@@ -24,6 +24,7 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         tabBarController?.tabBar.hidden = false
         
+        navigationController?.navigationBar.hidden = false
 
     }
     override func viewDidLoad() {
@@ -101,7 +102,13 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return cell!
         
     }
-
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        
+        pushController("HomeAnswerController")
+        
+        
+    }
    
     //移除NavBar的线条
    private func moveNavBarLine(){
@@ -141,12 +148,16 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     @IBAction func searchClicked(sender: AnyObject) {
         
-        let  story =   UIStoryboard.init(name: "SearchController", bundle: nil)
+        pushController("SearchController")
+    }
+    
+    private func pushController(nameStr: String){
         
-        let   head =  story.instantiateViewControllerWithIdentifier("SearchController")
+        let  story =   UIStoryboard.init(name: nameStr, bundle: nil)
         
-        navigationController?.pushViewController(head, animated: true)
- 
+        let   vc =  story.instantiateViewControllerWithIdentifier(nameStr)
+        
+        navigationController?.pushViewController(vc, animated: true)
         
     }
 }

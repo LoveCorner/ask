@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ExamDetailController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class AnswerDetailController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextViewDelegate {
+    
+    @IBOutlet weak var answerTableView: UITableView!
     
     @IBOutlet weak var bottomView: UIView!
     
@@ -28,16 +30,12 @@ class ExamDetailController: UIViewController,UITableViewDelegate,UITableViewData
     
     @IBOutlet weak var zanLabel: UILabel!
     
-    @IBOutlet weak var backImageView: UIImageView!
-
-    @IBOutlet weak var recomentLabel: UILabel!
+    @IBOutlet weak var starBtn: UIButton!
+    
+    @IBOutlet weak var placeLabel: UILabel!
     
     
-    @IBOutlet weak var showView: UIView!
-    
-    @IBOutlet weak var bigView: UIView!
-    
-    @IBOutlet weak var lineView: UIView!
+    @IBOutlet weak var recommentTV: UITextView!
     
     override func viewWillAppear(animated: Bool) {
         
@@ -56,40 +54,42 @@ class ExamDetailController: UIViewController,UITableViewDelegate,UITableViewData
     
     private func setUI(){
         
-        setBackColorUI(true, backColor: UIColor.whiteColor())
         
-        showView.layer.cornerRadius = 5
+        answerTableView.registerNib(UINib.init(nibName: "CommentCell", bundle: nil), forCellReuseIdentifier: "CommentCell")
+        
         //3.设置阴影
         
-        setShadowViewUI(whiteView, size: CGSizeMake(0, 20))
+        setShadowViewUI(whiteView, size: CGSizeMake(0, 10))
         
         setShadowViewUI(bottomView, size: CGSizeMake(0, 0))
         
-        isHideOrNot(true)
+        starBtn.setImage(UIImage(named: "star_click"), forState: UIControlState.Selected)
+        
+        starBtn.setImage(UIImage(named: "star"), forState: UIControlState.Normal)
+        
+        //4.手势点击回收键盘
+        tapUI()
+        
+    }
+    private func tapUI(){
+        
+        let tap =  UITapGestureRecognizer.init(target: self, action: #selector(LoginController.tapAction))
+        
+        self.view.addGestureRecognizer(tap)
+        
     }
     
-    private func setShadowViewUI(backView: UIView,size: CGSize){
+    func tapAction(){
         
-        backView.layer.shadowOffset = size
+        recommentTV.resignFirstResponder()
         
-        backView.layer.shadowOpacity = 1
-        
-        backView.layer.shadowColor = RGBA(239, g: 239, b: 239, a: 1.0).CGColor
-        
-        backView.layer.shadowRadius = 4
+        view.frame = CGRectMake(0, 0, ScreenWidth(), ScreenHeight())
         
         
-    }
-    private func isHideOrNot(isHide: Bool){
-        
-        backImageView.hidden = isHide
-        
-        recomentLabel.hidden = isHide
-
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 0
+        return 2
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -99,22 +99,26 @@ class ExamDetailController: UIViewController,UITableViewDelegate,UITableViewData
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-       let label = UILabel.init(frame: CGRectMake(0, 0, ScreenWidth(), 40))
+        let view1 = UIView.init(frame: CGRectMake(0, 0, ScreenWidth(), 30))
+
+       let label = UILabel.init(frame: CGRectMake(0, 10, ScreenWidth(), 20))
         
         label.textColor = RGB(0x999999)
         
         label.font = UIFont.systemFontOfSize(12)
         
-        label.text = "      评论（1）"
+        label.text = "      评论（2）"
         
         label.backgroundColor = RGB(0xF5F5F5)
         
-        return label
+        view1.addSubview(label)
+        
+        return view1
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
-       return 40
+       return 30
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -135,44 +139,28 @@ class ExamDetailController: UIViewController,UITableViewDelegate,UITableViewData
         navigationController?.popViewControllerAnimated(true)
 
     }
-    @IBAction func editClicked(sender: AnyObject) {
+    
+    
+    @IBAction func starClicked(sender: AnyObject) {
+        
+        starBtn.selected = !starBtn.selected
+
+        
+    }
+    
+    @IBAction func sendClicked(sender: AnyObject) {
         
         
     }
     
-    @IBAction func cancleClicked(sender: AnyObject) {
+    func textViewShouldBeginEditing(textView: UITextView) -> Bool {
         
+        placeLabel.text = ""
+        //view  frame变化简单 获取键盘高度 bottonView没有上去
         
-        setBackColorUI(true, backColor: UIColor.whiteColor())
-
-    }
-    @IBAction func sureClicked(sender: AnyObject) {
+        view.frame = CGRectMake(0, -500, ScreenWidth(), ScreenHeight()+500)
         
-        setBackColorUI(true, backColor: UIColor.whiteColor())
-        
-        isHideOrNot(false)
-        
-        NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: #selector(SetNameController.timerAction), userInfo: nil, repeats: false)
-        
-
-        
-    }
-    @IBAction func recommetClicked(sender: AnyObject) {
-        
-     setBackColorUI(false, backColor: RGBA(173, g: 173, b: 173, a: 1.0))
-    }
-    
-    private func setBackColorUI(isHiden: Bool,backColor: UIColor){
-        
-        bigView.hidden = isHiden
-        
-        bottomView.backgroundColor = backColor
-
-    }
-    
-    func timerAction(){
-        
-        isHideOrNot(true)
+        return true
         
     }
     //懒加载

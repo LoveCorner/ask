@@ -56,3 +56,15 @@ func leftViewUI(tf: UITextField){
     tf.leftViewMode = UITextFieldViewMode.Always
     
 }
+func setShadowViewUI(backView: UIView,size: CGSize){
+    
+    backView.layer.shadowOffset = size
+    
+    backView.layer.shadowOpacity = 1
+    
+    backView.layer.shadowColor = RGBA(239, g: 239, b: 239, a: 1.0).CGColor
+    
+    backView.layer.shadowRadius = 2
+    
+    
+}
