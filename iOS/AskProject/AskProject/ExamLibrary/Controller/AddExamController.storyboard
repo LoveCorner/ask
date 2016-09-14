@@ -65,7 +65,7 @@
                                     <constraint firstAttribute="height" constant="20" id="YJp-aq-WUG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="在这里输入你的回答" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doM-xq-rTs">
@@ -88,7 +88,7 @@
                                             <constraint firstAttribute="width" constant="150" id="vUB-yN-vFa"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fU9-dG-PAk">
@@ -146,9 +146,9 @@
                     <navigationItem key="navigationItem" title="添加" id="vn1-cz-7py">
                         <barButtonItem key="leftBarButtonItem" style="done" id="fy2-Du-yR5">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2qh-sR-MgF">
-                                <rect key="frame" x="20" y="11" width="11" height="22"/>
+                                <rect key="frame" x="20" y="11" width="20" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="cancel"/>
+                                <state key="normal" image="darkcancel"/>
                                 <connections>
                                     <action selector="exitClicked:" destination="lcL-aP-LnI" eventType="touchUpInside" id="yeZ-yp-bNz"/>
                                 </connections>
@@ -182,8 +182,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cancel" width="17" height="17"/>
         <image name="cancel_bottom" width="95" height="30"/>
+        <image name="darkcancel" width="14" height="14"/>
         <image name="sure_bottom" width="95" height="30"/>
     </resources>
 </document>

@@ -143,9 +143,13 @@ class HomeAnswerController: UIViewController,UITableViewDataSource,UITableViewDe
         
         careBtn.selected = !careBtn.selected
         
-        blackView.hidden = false
-        
-        NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: #selector(HomeAnswerController.timerActionUI), userInfo: nil, repeats: false)
+        if careBtn.selected {
+            
+            blackView.hidden = false
+            
+            NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: #selector(HomeAnswerController.timerActionUI), userInfo: nil, repeats: false)
+        }
+       
         
         
     }

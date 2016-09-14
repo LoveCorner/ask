@@ -112,7 +112,7 @@
                     <navigationItem key="navigationItem" title="消息" id="JuC-xh-lG9">
                         <barButtonItem key="leftBarButtonItem" style="done" id="zP4-j0-x9H">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qrR-be-0jz">
-                                <rect key="frame" x="20" y="11" width="11" height="22"/>
+                                <rect key="frame" x="20" y="11" width="20" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back_gocus"/>
                                 <connections>

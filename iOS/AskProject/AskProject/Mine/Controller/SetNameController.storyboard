@@ -95,7 +95,7 @@
                     <navigationItem key="navigationItem" title="修改昵称" id="yEf-P0-oc1">
                         <barButtonItem key="leftBarButtonItem" style="done" id="DkL-5T-YoD">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="20a-lN-oZS">
-                                <rect key="frame" x="20" y="11" width="11" height="22"/>
+                                <rect key="frame" x="20" y="11" width="20" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back_gocus"/>
                                 <connections>

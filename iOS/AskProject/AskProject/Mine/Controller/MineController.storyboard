@@ -6,13 +6,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--我的-->
+        <!--Navigation Controller-->
         <scene sceneID="dZX-fa-b64">
             <objects>
                 <navigationController id="Xlx-HU-81C" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的" image="my" selectedImage="my_click" id="21R-RE-tJl">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="20"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="" image="my" selectedImage="my_click" id="21R-RE-tJl"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="GUk-yL-6Xe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

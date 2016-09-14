@@ -204,7 +204,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnswerCell" id="U46-jY-0Io" customClass="AnswerCell" customModule="AskProject" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AnswerCell" id="U46-jY-0Io" customClass="AnswerCell" customModule="AskProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="216.5" width="600" height="214"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U46-jY-0Io" id="d5g-mG-lgS">
@@ -247,11 +247,12 @@ Cocoa 本身由 Objective-C 语言写成，Objective-C 又是 C 语言的严格�
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYA-is-3oS">
-                                                    <rect key="frame" x="422" y="165" width="150" height="30"/>
+                                                    <rect key="frame" x="492" y="165" width="80" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="150" id="DCr-nj-36n"/>
+                                                        <constraint firstAttribute="width" constant="80" id="DCr-nj-36n"/>
                                                         <constraint firstAttribute="height" constant="30" id="KXw-OW-1nM"/>
                                                     </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <state key="normal" title="评论15">
                                                         <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>

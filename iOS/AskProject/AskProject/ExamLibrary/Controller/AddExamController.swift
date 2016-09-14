@@ -89,10 +89,10 @@ class AddExamController: BaseController,UITextFieldDelegate,UITextViewDelegate {
     @IBAction func cancleClicked(sender: AnyObject) {
         
 
-        backColorUI(true, viewBackColor: UIColor.whiteColor(), questionAlpha: 1.0, answerAlpha: 1.0, imageName: "navigitionBar")
+        backColorUI(true, viewBackColor: UIColor.whiteColor(), questionAlpha: 1.0, answerAlpha: 1.0)
 
     }
-    private func backColorUI(isHide: Bool,viewBackColor: UIColor,questionAlpha: CGFloat,answerAlpha: CGFloat,imageName: String){
+    private func backColorUI(isHide: Bool,viewBackColor: UIColor,questionAlpha: CGFloat,answerAlpha: CGFloat){
         
         backView.hidden = isHide
         
@@ -101,8 +101,6 @@ class AddExamController: BaseController,UITextFieldDelegate,UITextViewDelegate {
         questionTF.alpha = questionAlpha
         
         answerTV.alpha = answerAlpha
-        
-        navigationController?.navigationBar.setBackgroundImage(UIImage(named: imageName), forBarMetrics: UIBarMetrics.Default)
         
     }
     @IBAction func sureClicked(sender: AnyObject) {
@@ -114,7 +112,7 @@ class AddExamController: BaseController,UITextFieldDelegate,UITextViewDelegate {
     
     @IBAction func exitClicked(sender: AnyObject) {
         
-        backColorUI(false, viewBackColor: RGBA(157, g: 157, b: 157, a: 0.83), questionAlpha: 0, answerAlpha: 0, imageName: "tabBarBackImage")
+        backColorUI(false, viewBackColor: RGBA(157, g: 157, b: 157, a: 0.83), questionAlpha: 0, answerAlpha: 0)
 
     }
     @IBAction func finishClicked(sender: AnyObject) {

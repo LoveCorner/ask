@@ -30,6 +30,10 @@
 		45501C6F1D85135C0080B780 /* MessageController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45501C6E1D85135C0080B780 /* MessageController.storyboard */; };
 		45501C711D8518D00080B780 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45501C701D8518D00080B780 /* MessageController.swift */; };
 		45501C771D851BAB0080B780 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45501C761D851BAB0080B780 /* MessageCell.swift */; };
+		455B7F341D88F54D004FF211 /* EditExamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B7F331D88F54D004FF211 /* EditExamController.swift */; };
+		455B7F361D88F559004FF211 /* EditExamController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455B7F351D88F559004FF211 /* EditExamController.storyboard */; };
+		455B7F381D893D01004FF211 /* LookController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455B7F371D893D01004FF211 /* LookController.storyboard */; };
+		455B7F3A1D893D0A004FF211 /* LookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B7F391D893D0A004FF211 /* LookController.swift */; };
 		45631A231D7FC14A00FB7902 /* MineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45631A221D7FC14A00FB7902 /* MineData.swift */; };
 		45631A251D7FC53300FB7902 /* MineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45631A241D7FC53300FB7902 /* MineModel.swift */; };
 		45631A271D7FEE1000FB7902 /* MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45631A261D7FEE1000FB7902 /* MineCell.swift */; };
@@ -115,6 +119,10 @@
 		45501C6E1D85135C0080B780 /* MessageController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MessageController.storyboard; sourceTree = "<group>"; };
 		45501C701D8518D00080B780 /* MessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
 		45501C761D851BAB0080B780 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		455B7F331D88F54D004FF211 /* EditExamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditExamController.swift; sourceTree = "<group>"; };
+		455B7F351D88F559004FF211 /* EditExamController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditExamController.storyboard; sourceTree = "<group>"; };
+		455B7F371D893D01004FF211 /* LookController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LookController.storyboard; sourceTree = "<group>"; };
+		455B7F391D893D0A004FF211 /* LookController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookController.swift; sourceTree = "<group>"; };
 		45631A221D7FC14A00FB7902 /* MineData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineData.swift; sourceTree = "<group>"; };
 		45631A241D7FC53300FB7902 /* MineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineModel.swift; sourceTree = "<group>"; };
 		45631A261D7FEE1000FB7902 /* MineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineCell.swift; sourceTree = "<group>"; };
@@ -242,6 +250,10 @@
 				456B720A1D87EC3B006740D2 /* AddExamController.storyboard */,
 				456B720D1D87EC3B006740D2 /* ExamDetailController.swift */,
 				456B720C1D87EC3B006740D2 /* ExamDetailController.storyboard */,
+				455B7F331D88F54D004FF211 /* EditExamController.swift */,
+				455B7F351D88F559004FF211 /* EditExamController.storyboard */,
+				455B7F391D893D0A004FF211 /* LookController.swift */,
+				455B7F371D893D01004FF211 /* LookController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -604,6 +616,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				457AB3351D7D44DA007C7E13 /* LaunchScreen.storyboard in Resources */,
+				455B7F361D88F559004FF211 /* EditExamController.storyboard in Resources */,
 				451D10821D7D5C5000D74664 /* MineController.storyboard in Resources */,
 				456B72151D87EC3B006740D2 /* AddExamController.storyboard in Resources */,
 				457AB3781D7D5382007C7E13 /* LoginController.storyboard in Resources */,
@@ -615,6 +628,7 @@
 				458326161D83F89000CF7C2C /* CareQuestionController.storyboard in Resources */,
 				451D10801D7D5C4700D74664 /* HomeController.storyboard in Resources */,
 				458326201D83FC3500CF7C2C /* PersonMessageController.storyboard in Resources */,
+				455B7F381D893D01004FF211 /* LookController.storyboard in Resources */,
 				454EC4F81D7E66E600C86EAB /* MainTabBar.storyboard in Resources */,
 				4523334D1D86B88200031B0A /* PresentAlertView.storyboard in Resources */,
 				457AB3321D7D44DA007C7E13 /* Assets.xcassets in Resources */,
@@ -667,12 +681,14 @@
 				457AB3281D7D44DA007C7E13 /* AppDelegate.swift in Sources */,
 				45041D441D815BE6005D7DDB /* SearchController.swift in Sources */,
 				456B72251D87EFA9006740D2 /* HomeAnswerController.swift in Sources */,
+				455B7F341D88F54D004FF211 /* EditExamController.swift in Sources */,
 				451D108A1D7D5D0700D74664 /* AddController.swift in Sources */,
 				4583261C1D83F8C000CF7C2C /* CareCell.swift in Sources */,
 				456B721A1D87EC3B006740D2 /* MyExamController.swift in Sources */,
 				454EC4FE1D7E92C600C86EAB /* TitleButton.swift in Sources */,
 				45F9C9B61D843791009552E3 /* AnswerQuestionController.swift in Sources */,
 				45041D421D810D03005D7DDB /* HeadController.swift in Sources */,
+				455B7F3A1D893D0A004FF211 /* LookController.swift in Sources */,
 				456B721B1D87EC3B006740D2 /* CommentCell.swift in Sources */,
 				451D108E1D7D5F3800D74664 /* UIButton+Extension.swift in Sources */,
 				45501C771D851BAB0080B780 /* MessageCell.swift in Sources */,

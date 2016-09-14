@@ -123,6 +123,17 @@ class ExamDetailController: UIViewController,UITableViewDelegate,UITableViewData
     
    
     @IBAction func editClicked(sender: AnyObject) {
+       
+      pushControllerUI("EditExamController")
+        
+    }
+    private func pushControllerUI(name:String){
+        
+        let  story =   UIStoryboard.init(name: name, bundle: nil)
+        
+        let   vc =  story.instantiateViewControllerWithIdentifier(name)
+        
+        navigationController?.pushViewController(vc, animated: true)
         
         
     }

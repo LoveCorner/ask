@@ -37,6 +37,9 @@ class AnswerDetailController: UIViewController,UITableViewDelegate,UITableViewDa
     
     @IBOutlet weak var recommentTV: UITextView!
     
+    
+    @IBOutlet weak var smallView: UIView!
+    
     override func viewWillAppear(animated: Bool) {
         
         //1.隐藏导航栏和标签栏
@@ -54,6 +57,9 @@ class AnswerDetailController: UIViewController,UITableViewDelegate,UITableViewDa
     
     private func setUI(){
         
+        smallView.hidden = true
+        
+        smallView.layer.cornerRadius = 20
         
         answerTableView.registerNib(UINib.init(nibName: "CommentCell", bundle: nil), forCellReuseIdentifier: "CommentCell")
         
@@ -146,8 +152,21 @@ class AnswerDetailController: UIViewController,UITableViewDelegate,UITableViewDa
         starBtn.selected = !starBtn.selected
 
         
+        if starBtn.selected {
+            
+            smallView.hidden = false
+
+            NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: #selector(AnswerDetailController.timerClicked), userInfo: nil, repeats: false)
+            
+
+        }
     }
     
+    func timerClicked(){
+        
+        smallView.hidden = true
+        
+    }
     @IBAction func sendClicked(sender: AnyObject) {
         
         

@@ -90,7 +90,7 @@
                                                     <constraint firstAttribute="height" constant="20" id="tyc-2T-mb0"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llT-Z4-ylq">
@@ -158,7 +158,7 @@
                                 <rect key="frame" x="20" y="11" width="71" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="55" maxY="0.0"/>
-                                <state key="normal" image="cancel"/>
+                                <state key="normal" image="darkcancel"/>
                                 <connections>
                                     <action selector="backClicked:" destination="5oD-0a-6Gx" eventType="touchUpInside" id="hS3-Y3-YD4"/>
                                 </connections>
@@ -192,8 +192,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cancel" width="17" height="17"/>
         <image name="cancel_bottom" width="95" height="30"/>
+        <image name="darkcancel" width="14" height="14"/>
         <image name="sure_bottom" width="95" height="30"/>
     </resources>
 </document>
