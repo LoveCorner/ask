@@ -24,6 +24,7 @@ class HomeAnswerController: UIViewController,UITableViewDataSource,UITableViewDe
     
     @IBOutlet weak var blackView: UIView!
     
+    @IBOutlet weak var whiteView: UIView!
     
     override func viewWillAppear(animated: Bool) {
         
@@ -40,7 +41,7 @@ class HomeAnswerController: UIViewController,UITableViewDataSource,UITableViewDe
     }
     private func setUI(){
         
-        careBtn.setImage(UIImage(named: ""), forState: UIControlState.Normal)
+        careBtn.setImage(UIImage(named: "focus_click"), forState: UIControlState.Normal)
         
         careBtn.setImage(UIImage(named: "focus"), forState: UIControlState.Selected)
         
@@ -48,6 +49,10 @@ class HomeAnswerController: UIViewController,UITableViewDataSource,UITableViewDe
         
         blackView.layer.cornerRadius = 20
         
+        blackView.alpha = 0.9
+        
+        //2.1.设置阴影
+        setShadowViewUI(whiteView, size: CGSizeMake(0, 5))
 
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -77,19 +82,19 @@ class HomeAnswerController: UIViewController,UITableViewDataSource,UITableViewDe
         
         if section == 0 {
             
-            let imageView = UIImageView.init(frame: CGRectMake(20, 10, 25, 25))
+            let imageView = UIImageView.init(frame: CGRectMake(20, 15, 17, 17))
             
-            imageView.image = UIImage(named: "")
+            imageView.image = UIImage(named: "campion")
             
             backView.addSubview(imageView)
             
-            let titleLabel = UILabel.init(frame: CGRectMake(55, 10, 100, 30))
+            let titleLabel = UILabel.init(frame: CGRectMake(43, 10, 100, 30))
             
             titleLabel.text = "推荐答案"
             
             titleLabel.textColor = UIColor.blackColor()
             
-            titleLabel.font = UIFont.systemFontOfSize(20)
+            titleLabel.font = UIFont.systemFontOfSize(16)
             
             backView.addSubview(titleLabel)
             
@@ -100,7 +105,7 @@ class HomeAnswerController: UIViewController,UITableViewDataSource,UITableViewDe
             
             titleLabel.textColor = RGB(0x666666)
             
-            titleLabel.font = UIFont.systemFontOfSize(15)
+            titleLabel.font = UIFont.systemFontOfSize(14)
             
             backView.addSubview(titleLabel)
             
@@ -167,9 +172,40 @@ class HomeAnswerController: UIViewController,UITableViewDataSource,UITableViewDe
     }
     
     @IBAction func editContentClicked(sender: AnyObject) {
+//        
+//        if let edit = self.storyboard?.instantiateViewControllerWithIdentifier("EditExamController") {
+//           
+//            let vc = edit as! EditExamController
+//
+//            vc.questionStr = questionLabel.text
+//            
+//   self.presentViewController(UINavigationController.init(rootViewController: vc), animated: true, completion: nil)
+        
+        let  story =   UIStoryboard.init(name: "EditExamController", bundle: nil)
+        
+        let   vc =  story.instantiateViewControllerWithIdentifier("EditExamController")
+        
+//        vc.questionStr = questionLabel.text
+        
+        navigationController?.pushViewController(vc, animated: true)
+
+        
+        
+//        }
         
         
     }
-    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        
+//        if segue.identifier == "EditExamController" {
+//            
+//            let edit = segue.destinationViewController as! EditExamController
+//            
+//            edit.questionStr = questionLabel.text
+//            
+//            
+//        }
+//    }
+
     
 }

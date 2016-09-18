@@ -9,7 +9,9 @@
 import UIKit
 class EditExamController: BaseController {
     
-   
+    var questionStr: String?
+        
+    
     @IBOutlet weak var questionTV: UITextView!
   
     
