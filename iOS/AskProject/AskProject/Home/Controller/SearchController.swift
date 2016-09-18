@@ -10,16 +10,14 @@ import UIKit
 
 class SearchController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate {
     
+    
     @IBOutlet weak var searchTF: UITextField!
     
     @IBOutlet weak var searchTableView: UITableView!
     
     override func viewWillAppear(animated: Bool) {
         
-        //1.设置导航栏风格
-        moveNavBarLine()
-        
-        navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
+        //1.设置标签栏风格
         
         tabBarController?.tabBar.hidden = true
         
@@ -37,6 +35,16 @@ class SearchController: UIViewController,UITableViewDelegate,UITableViewDataSour
         
     }
     
+    @IBAction func leftButtonClicked(sender: AnyObject) {
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    @IBAction func rightButtonClicked(sender: AnyObject) {
+        
+         print(#function)
+        
+    }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
         return 1
@@ -119,17 +127,6 @@ class SearchController: UIViewController,UITableViewDelegate,UITableViewDataSour
         navigationController?.navigationBar.setBackgroundImage(UIImage(named: "tabBarBackImage"), forBarMetrics: UIBarMetrics.Default)
         
         navigationController?.navigationBar.shadowImage = UIImage.init()
-        
-    }
-    
-    @IBAction func backClicked(sender: AnyObject) {
-        
-        navigationController?.popViewControllerAnimated(true)
-        
-    }
-    
-    @IBAction func searchClicked(sender: AnyObject) {
-        
         
     }
     

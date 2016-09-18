@@ -92,8 +92,6 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let  cell = tableView.dequeueReusableCellWithIdentifier("RecommentCell") as?RecommentCell
         
         
-//        cell?.showCellUI(self.dataArr[indexPath.row] as? MineModel)
-        
         cell?.blockProperty = { (vc) in
             
         self.navigationController?.pushViewController(vc, animated: true)
@@ -102,13 +100,13 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return cell!
         
     }
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        
-        pushController("HomeAnswerController")
-        
-        
-    }
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        
+//        
+//        pushController("HomeAnswerController")
+//        
+//        
+//    }
    
     //移除NavBar的线条
    private func moveNavBarLine(){
@@ -148,16 +146,16 @@ class HomeController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     @IBAction func searchClicked(sender: AnyObject) {
         
-        pushController("SearchController")
+//        pushController("SearchController")
     }
     
-    private func pushController(nameStr: String){
-        
-        let  story =   UIStoryboard.init(name: nameStr, bundle: nil)
-        
-        let   vc =  story.instantiateViewControllerWithIdentifier(nameStr)
-        
-        navigationController?.pushViewController(vc, animated: true)
-        
-    }
+//    private func pushController(nameStr: String){
+//        
+//        let  story =   UIStoryboard.init(name: nameStr, bundle: nil)
+//        
+//        let   vc =  story.instantiateViewControllerWithIdentifier(nameStr)
+//        
+//        navigationController?.pushViewController(vc, animated: true)
+//        
+//    }
 }

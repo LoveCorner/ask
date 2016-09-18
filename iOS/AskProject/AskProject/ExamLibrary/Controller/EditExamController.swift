@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class EditExamController: BaseController {
+class EditExamController: UIViewController {
     
     var questionStr: String?
         
@@ -27,8 +27,19 @@ class EditExamController: BaseController {
     override func viewWillAppear(animated: Bool) {
         
         navigationController?.navigationBar.hidden = false
+        
+        moveNavBarLine()
+        
     }
-    
+    //移除NavBar的线条
+    private func moveNavBarLine(){
+        
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navigitionBar"), forBarMetrics: UIBarMetrics.Default)
+        
+        navigationController?.navigationBar.shadowImage = UIImage.init()
+        
+    }
     override func viewDidLoad() {
         
         //1.初始化ui
@@ -39,6 +50,8 @@ class EditExamController: BaseController {
     private func setUI(){
         //回收键盘
         tapUI()
+        
+        questionTV.text = questionStr
         
     }
     

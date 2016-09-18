@@ -19,7 +19,7 @@ class AnswerQuestionController: BaseController,UITextViewDelegate {
     
     @IBOutlet weak var answerTV: UITextView!
     
-
+    
     override func viewDidLoad() {
         
         //1.初始化UI
@@ -29,11 +29,41 @@ class AnswerQuestionController: BaseController,UITextViewDelegate {
     
     private func setUI(){
         
+        self.title = "回答"
+        
         backView.hidden = true
         
         whiteView.layer.cornerRadius = 5
         //2.回收键盘
         tapUI()
+        
+        //3.初始化导航条
+        setNaviUI()
+        
+
+        
+    }
+    private func setNaviUI(){
+    
+            navigationItem.leftBarButtonItem = UIBarButtonItem.createBarButtonItem("darkcancel",target: self,action: #selector(AnswerQuestionController.leftButtonClicked))
+    
+            navigationItem.rightBarButtonItem = UIBarButtonItem.createTitleBarButtonItem("提交",target: self,action: #selector(AnswerQuestionController.rightButtonClicked))
+    
+    
+            
+        }
+
+    func leftButtonClicked(){
+        
+ 
+        backView.hidden = false
+
+    }
+    
+    func rightButtonClicked(){
+        
+        navigationController?.popViewControllerAnimated(true)
+ 
         
     }
     private func tapUI(){
@@ -55,14 +85,8 @@ class AnswerQuestionController: BaseController,UITextViewDelegate {
         placeLabel.text = ""
         return true
     }
-    @IBAction func backClicked(sender: AnyObject) {
-        
-        backView.hidden = false
-    }
-    @IBAction func submitClicked(sender: AnyObject) {
-        
-        
-    }
+  
+
     
     @IBAction func sureClicked(sender: AnyObject) {
         

@@ -130,20 +130,20 @@ class HomeAnswerController: UIViewController,UITableViewDataSource,UITableViewDe
         
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        pushController("AnswerDetailController")
-    }
-    
-    private func pushController(nameStr: String){
-        
-        let  story =   UIStoryboard.init(name: nameStr, bundle: nil)
-        
-        let   vc =  story.instantiateViewControllerWithIdentifier(nameStr)
-        
-        navigationController?.pushViewController(vc, animated: true)
-        
-    }
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        
+//        pushController("AnswerDetailController")
+//    }
+//    
+//    private func pushController(nameStr: String){
+//        
+//        let  story =   UIStoryboard.init(name: nameStr, bundle: nil)
+//        
+//        let   vc =  story.instantiateViewControllerWithIdentifier(nameStr)
+//        
+//        navigationController?.pushViewController(vc, animated: true)
+//        
+//    }
     @IBAction func careClicked(sender: AnyObject) {
         
         careBtn.selected = !careBtn.selected
@@ -167,45 +167,21 @@ class HomeAnswerController: UIViewController,UITableViewDataSource,UITableViewDe
     }
     @IBAction func backClicked(sender: AnyObject) {
         
-        navigationController?.popViewControllerAnimated(true)
+      navigationController?.popViewControllerAnimated(true)
         
     }
     
     @IBAction func editContentClicked(sender: AnyObject) {
-//        
-//        if let edit = self.storyboard?.instantiateViewControllerWithIdentifier("EditExamController") {
-//           
-//            let vc = edit as! EditExamController
-//
-//            vc.questionStr = questionLabel.text
-//            
-//   self.presentViewController(UINavigationController.init(rootViewController: vc), animated: true, completion: nil)
         
-        let  story =   UIStoryboard.init(name: "EditExamController", bundle: nil)
+        let  story =   UIStoryboard.init(name: "Home", bundle: nil)
         
-        let   vc =  story.instantiateViewControllerWithIdentifier("EditExamController")
+        let   vc =  story.instantiateViewControllerWithIdentifier("HomeEditController") as! (HomeEditController)
         
-//        vc.questionStr = questionLabel.text
-        
-        navigationController?.pushViewController(vc, animated: true)
-
-        
-        
-//        }
+        vc.questionStr = questionLabel.text
+                
+       navigationController?.pushViewController(vc, animated: true)
         
         
     }
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        
-//        if segue.identifier == "EditExamController" {
-//            
-//            let edit = segue.destinationViewController as! EditExamController
-//            
-//            edit.questionStr = questionLabel.text
-//            
-//            
-//        }
-//    }
-
     
 }
