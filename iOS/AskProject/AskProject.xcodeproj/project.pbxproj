@@ -26,6 +26,8 @@
 		45501C771D851BAB0080B780 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45501C761D851BAB0080B780 /* MessageCell.swift */; };
 		455B7F341D88F54D004FF211 /* EditExamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B7F331D88F54D004FF211 /* EditExamController.swift */; };
 		455B7F3A1D893D0A004FF211 /* LookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455B7F391D893D0A004FF211 /* LookController.swift */; };
+		456143911D8FE53500D490F1 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561438F1D8FE53500D490F1 /* SearchResultCell.swift */; };
+		456143921D8FE53500D490F1 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 456143901D8FE53500D490F1 /* SearchResultCell.xib */; };
 		45631A231D7FC14A00FB7902 /* MineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45631A221D7FC14A00FB7902 /* MineData.swift */; };
 		45631A251D7FC53300FB7902 /* MineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45631A241D7FC53300FB7902 /* MineModel.swift */; };
 		45631A271D7FEE1000FB7902 /* MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45631A261D7FEE1000FB7902 /* MineCell.swift */; };
@@ -42,6 +44,7 @@
 		456B722B1D880C70006740D2 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B722A1D880C70006740D2 /* AnswerCell.swift */; };
 		4579FC031D8F794B006503AF /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4579FC021D8F794B006503AF /* UIButton+Extension.swift */; };
 		4579FC051D8F8994006503AF /* Exam.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4579FC041D8F8994006503AF /* Exam.storyboard */; };
+		4579FC071D8F99BF006503AF /* VoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4579FC061D8F99BF006503AF /* VoiceController.swift */; };
 		457AB3281D7D44DA007C7E13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457AB3271D7D44DA007C7E13 /* AppDelegate.swift */; };
 		457AB32D1D7D44DA007C7E13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457AB32B1D7D44DA007C7E13 /* Main.storyboard */; };
 		457AB3301D7D44DA007C7E13 /* AskProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 457AB32E1D7D44DA007C7E13 /* AskProject.xcdatamodeld */; };
@@ -102,6 +105,8 @@
 		45501C761D851BAB0080B780 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		455B7F331D88F54D004FF211 /* EditExamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditExamController.swift; sourceTree = "<group>"; };
 		455B7F391D893D0A004FF211 /* LookController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LookController.swift; sourceTree = "<group>"; };
+		4561438F1D8FE53500D490F1 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		456143901D8FE53500D490F1 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		45631A221D7FC14A00FB7902 /* MineData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineData.swift; sourceTree = "<group>"; };
 		45631A241D7FC53300FB7902 /* MineModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineModel.swift; sourceTree = "<group>"; };
 		45631A261D7FEE1000FB7902 /* MineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineCell.swift; sourceTree = "<group>"; };
@@ -118,6 +123,7 @@
 		456B722A1D880C70006740D2 /* AnswerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
 		4579FC021D8F794B006503AF /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		4579FC041D8F8994006503AF /* Exam.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Exam.storyboard; sourceTree = "<group>"; };
+		4579FC061D8F99BF006503AF /* VoiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceController.swift; sourceTree = "<group>"; };
 		457AB3241D7D44DA007C7E13 /* AskProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AskProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		457AB3271D7D44DA007C7E13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		457AB32C1D7D44DA007C7E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -324,6 +330,7 @@
 				456B72261D87EFCE006740D2 /* AnswerDetailController.swift */,
 				451C47EC1D8E9086003B7978 /* HomeEditController.swift */,
 				451C47F01D8EA1DF003B7978 /* HomeLookController.swift */,
+				4579FC061D8F99BF006503AF /* VoiceController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -341,6 +348,8 @@
 				45631A2A1D8030B800FB7902 /* RecommentCell.swift */,
 				45041D471D817092005D7DDB /* SearchCell.swift */,
 				456B722A1D880C70006740D2 /* AnswerCell.swift */,
+				4561438F1D8FE53500D490F1 /* SearchResultCell.swift */,
+				456143901D8FE53500D490F1 /* SearchResultCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -586,6 +595,7 @@
 				4523334D1D86B88200031B0A /* PresentAlertView.storyboard in Resources */,
 				457AB3321D7D44DA007C7E13 /* Assets.xcassets in Resources */,
 				457AB32D1D7D44DA007C7E13 /* Main.storyboard in Resources */,
+				456143921D8FE53500D490F1 /* SearchResultCell.xib in Resources */,
 				456B721C1D87EC3B006740D2 /* CommentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -637,6 +647,7 @@
 				45F9C9B61D843791009552E3 /* AnswerQuestionController.swift in Sources */,
 				45041D421D810D03005D7DDB /* HeadController.swift in Sources */,
 				455B7F3A1D893D0A004FF211 /* LookController.swift in Sources */,
+				4579FC071D8F99BF006503AF /* VoiceController.swift in Sources */,
 				456B721B1D87EC3B006740D2 /* CommentCell.swift in Sources */,
 				45501C771D851BAB0080B780 /* MessageCell.swift in Sources */,
 				45C295A01D8E731100D2F367 /* NagivationBar.category.swift in Sources */,
@@ -644,6 +655,7 @@
 				4583261E1D83FC2900CF7C2C /* PersonMessageController.swift in Sources */,
 				45631A251D7FC53300FB7902 /* MineModel.swift in Sources */,
 				451D10901D7D8ECD00D74664 /* LoginController.swift in Sources */,
+				456143911D8FE53500D490F1 /* SearchResultCell.swift in Sources */,
 				457AB3701D7D5040007C7E13 /* MineController.swift in Sources */,
 				45501C711D8518D00080B780 /* MessageController.swift in Sources */,
 				452333491D86B34500031B0A /* AlertView+Category.swift in Sources */,

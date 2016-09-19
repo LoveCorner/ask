@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="198" id="KGk-i7-Jjw" customClass="SearchResultCell" customModule="AskProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="518" height="198"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="518" height="197.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="question" translatesAutoresizingMaskIntoConstraints="NO" id="eJy-GF-id6">
+                        <rect key="frame" x="31" y="23" width="19" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="19" id="EfX-LV-nSi"/>
+                            <constraint firstAttribute="height" constant="19" id="nSa-Qc-7b9"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="他们的区别是什么？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1x-kO-ijC">
+                        <rect key="frame" x="56" y="27" width="200" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="MGJ-QC-bRh"/>
+                            <constraint firstAttribute="height" constant="15" id="viG-w2-5m7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p9I-nX-DLG">
+                        <rect key="frame" x="31" y="52" width="456" height="115"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="systemHead" translatesAutoresizingMaskIntoConstraints="NO" id="UFI-gZ-buG">
+                                <rect key="frame" x="10" y="10" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="rqF-IX-6bX"/>
+                                    <constraint firstAttribute="width" constant="24" id="sKk-pc-paW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="熊本蜀黍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdK-vW-7hs">
+                                <rect key="frame" x="44" y="19" width="100" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="XpF-lx-XtL"/>
+                                    <constraint firstAttribute="width" constant="100" id="yGT-kx-On3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="  调用结束就开始播放动画，如果需要用户指定何时播放的话，只需要把timer的开始放到合适的位置。通过对CFDictonaryRaf 也就是gifProperties的改变，我们还可以控制动画是否循环播放以及循环多少次停止。" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bp6-hc-aGM">
+                                <rect key="frame" x="40" y="44" width="393" height="62.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="60" constant="15" id="U7D-uc-qRW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="UFI-gZ-buG" firstAttribute="top" secondItem="p9I-nX-DLG" secondAttribute="top" constant="10" id="5ri-l8-8tN"/>
+                            <constraint firstAttribute="height" constant="115" id="CJU-sh-EeA"/>
+                            <constraint firstAttribute="trailing" secondItem="Bp6-hc-aGM" secondAttribute="trailing" constant="23" id="J3P-ZA-NTM"/>
+                            <constraint firstItem="Bp6-hc-aGM" firstAttribute="leading" secondItem="p9I-nX-DLG" secondAttribute="leading" constant="40" id="PIp-O8-kox"/>
+                            <constraint firstItem="MdK-vW-7hs" firstAttribute="leading" secondItem="UFI-gZ-buG" secondAttribute="trailing" constant="10" id="jLz-vw-lH6"/>
+                            <constraint firstItem="UFI-gZ-buG" firstAttribute="leading" secondItem="p9I-nX-DLG" secondAttribute="leading" constant="10" id="ppH-Cd-G6R"/>
+                            <constraint firstItem="MdK-vW-7hs" firstAttribute="top" secondItem="p9I-nX-DLG" secondAttribute="top" constant="19" id="tUQ-UA-whK"/>
+                            <constraint firstItem="Bp6-hc-aGM" firstAttribute="top" secondItem="MdK-vW-7hs" secondAttribute="bottom" constant="10" id="ubJ-jD-cwg"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyk-RL-Zfe">
+                        <rect key="frame" x="470" y="18" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="5lX-vs-1EH"/>
+                            <constraint firstAttribute="width" constant="30" id="XKl-3f-wWF"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="get"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="eJy-GF-id6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="49u-bG-k6G"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="jyk-RL-Zfe" secondAttribute="trailing" constant="10" id="8pz-oJ-RxO"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="p9I-nX-DLG" secondAttribute="trailing" constant="23" id="Caw-da-dAe"/>
+                    <constraint firstItem="jyk-RL-Zfe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="RA5-ze-JX7"/>
+                    <constraint firstItem="eJy-GF-id6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="23" id="Sbf-NP-0CN"/>
+                    <constraint firstItem="F1x-kO-ijC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="19" id="acQ-BW-FPE"/>
+                    <constraint firstItem="p9I-nX-DLG" firstAttribute="top" secondItem="F1x-kO-ijC" secondAttribute="bottom" constant="10" id="j6B-th-8pU"/>
+                    <constraint firstItem="F1x-kO-ijC" firstAttribute="leading" secondItem="eJy-GF-id6" secondAttribute="trailing" constant="6" id="kC0-J4-XqI"/>
+                    <constraint firstItem="p9I-nX-DLG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="23" id="lhi-i7-WEW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="350" y="570"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="get" width="39" height="39"/>
+        <image name="question" width="19" height="19"/>
+        <image name="systemHead" width="24" height="24"/>
+    </resources>
+</document>
