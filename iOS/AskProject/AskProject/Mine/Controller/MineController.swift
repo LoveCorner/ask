@@ -154,7 +154,7 @@ class MineController: BaseController,UITableViewDelegate,UITableViewDataSource {
             pushControllerUI("Mine",identify:"CareQuestionController")
             break
         case 3:
-            pushControllerUI("MyExamController",identify:"MyExamController")
+            pushControllerUI("Exam",identify:"MyExamController")
             break
         default:
            

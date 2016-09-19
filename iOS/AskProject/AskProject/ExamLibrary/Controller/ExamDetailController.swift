@@ -121,22 +121,32 @@ class ExamDetailController: UIViewController,UITableViewDelegate,UITableViewData
 
     }
     
-   
-    @IBAction func editClicked(sender: AnyObject) {
-       
-      pushControllerUI("EditExamController")
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
+        if segue.identifier == "editExam" {
+            
+            let edit = segue.destinationViewController as! EditExamController
+            
+            edit.questionStr = questionLabel.text
+            
+           
+        }
     }
-    private func pushControllerUI(name:String){
-        
-        let  story =   UIStoryboard.init(name: name, bundle: nil)
-        
-        let   vc =  story.instantiateViewControllerWithIdentifier(name)
-        
-        navigationController?.pushViewController(vc, animated: true)
-        
-        
-    }
+//    @IBAction func editClicked(sender: AnyObject) {
+//       
+//      pushControllerUI("EditExamController")
+//        
+//    }
+//    private func pushControllerUI(name:String){
+//        
+//        let  story =   UIStoryboard.init(name: name, bundle: nil)
+//        
+//        let   vc =  story.instantiateViewControllerWithIdentifier(name)
+//        
+//        navigationController?.pushViewController(vc, animated: true)
+//        
+//        
+//    }
     @IBAction func recommentClicked(sender: AnyObject) {
         
         isHidedOrNot(false)

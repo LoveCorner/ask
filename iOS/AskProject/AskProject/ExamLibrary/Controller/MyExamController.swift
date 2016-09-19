@@ -31,33 +31,33 @@ class MyExamController: BaseController,UITableViewDelegate,UITableViewDataSource
         return cell!
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        pushControllerUI("ExamDetailController")
-        
-    }
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        
+//        pushControllerUI("ExamDetailController")
+//        
+//    }
     
-    @IBAction func addClicked(sender: AnyObject) {
-        
-        pushControllerUI("AddExamController")
-        
-    }
+//    @IBAction func addClicked(sender: AnyObject) {
+//        
+//        pushControllerUI("AddExamController")
+//        
+//    }
     @IBAction func backClicked(sender: AnyObject) {
         
         self.navigationController?.popViewControllerAnimated(true)
         
     }
     
-    private func pushControllerUI(name:String){
-        
-        let  story =   UIStoryboard.init(name: name, bundle: nil)
-        
-        let   vc =  story.instantiateViewControllerWithIdentifier(name)
-        
-        navigationController?.pushViewController(vc, animated: true)
-        
-        
-    }
+//    private func pushControllerUI(name:String){
+//        
+//        let  story =   UIStoryboard.init(name: name, bundle: nil)
+//        
+//        let   vc =  story.instantiateViewControllerWithIdentifier(name)
+//        
+//        navigationController?.pushViewController(vc, animated: true)
+//        
+//        
+//    }
     //懒加载
     
     private lazy var dataArr: NSMutableArray = {
