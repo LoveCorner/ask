@@ -11,7 +11,10 @@ import UIKit
 class CollectAnswerController: BaseController,UITableViewDelegate,UITableViewDataSource{
     
     
-    
+    override func viewDidLoad() {
+        
+        
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         

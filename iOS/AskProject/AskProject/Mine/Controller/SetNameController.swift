@@ -44,8 +44,7 @@ class SetNameController: BaseController {
     }
     
     private func setBtnUI(){
-        
-        
+
         saveBtn.layer.cornerRadius = 5
         
         saveBtn.layer.masksToBounds = true

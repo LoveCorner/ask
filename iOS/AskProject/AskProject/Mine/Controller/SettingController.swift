@@ -36,6 +36,7 @@ class SettingController: BaseController{
         logView.layer.cornerRadius = 5
         
     }
+
     @IBAction func backClicked(sender: AnyObject) {
         
         navigationController?.popViewControllerAnimated(true)
@@ -62,11 +63,11 @@ class SettingController: BaseController{
     }
     
     
-    @IBAction func personMessageClicked(sender: AnyObject) {
-        
-        pushControllerUI("PersonMessageController")
-        
-    }
+//    @IBAction func personMessageClicked(sender: AnyObject) {
+//        
+//        pushControllerUI("PersonMessageController")
+//        
+//    }
     private func pushControllerUI(name:String){
         
         let  story =   UIStoryboard.init(name: name, bundle: nil)

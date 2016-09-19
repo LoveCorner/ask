@@ -73,12 +73,19 @@ class HeadController: UIViewController {
     
     private func pushControllerUI(name:String){
         
-        let  story =   UIStoryboard.init(name: name, bundle: nil)
+        let  story =   UIStoryboard.init(name: "Mine", bundle: nil)
         
         let   vc =  story.instantiateViewControllerWithIdentifier(name)
         
         navigationController?.pushViewController(vc, animated: true)
         
+        
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        
+        navigationController?.navigationBar.hidden = false
+ 
         
     }
 }

@@ -43,7 +43,6 @@ class HomeEditController: UIViewController {
     override func viewDidLoad() {
         
         //1.初始化ui
-        self.title = "回答"
         
         setUI()
         
@@ -62,41 +61,22 @@ class HomeEditController: UIViewController {
     
     private func setNaviUI(){
         
-        navigationController?.navigationBar.tintColor = RGB(0x333333)
+        self.title = "回答"
         
+       navigationItem.leftBarButtonItem = UIBarButtonItem.createBarButtonItem("darkcancel", target: self, action: #selector(HomeEditController.leftButtonClicked))
         
-        navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem.createBarButtonItem("darkcancel", target: self, action: #selector(HomeEditController.leftButtonClicked))
+        let lookItem = UIBarButtonItem.createTitleBarButtonItem("预览", target: self, action: #selector(HomeEditController.lookClicked))
         
-        
-//        let lookBtn = UIButton.createButtonItem("预览", target: self, action: #selector(HomeEditController.lookClicked))
-//        
-//        lookBtn.frame = CGRectMake(60, 5, 40, 30)
-//        
-//        let submitBtn = UIButton.createButtonItem("提交", target: self, action: #selector(HomeEditController.submitClicked))
-//        
-//        submitBtn.frame = CGRectMake(110, 5, 40, 30)
-        
-       let lookItem = UIBarButtonItem.init(title: "预览", style: UIBarButtonItemStyle.Done, target: self, action:#selector(HomeEditController.lookClicked))
-        
-        let submitItem = UIBarButtonItem.init(title: "提交", style: UIBarButtonItemStyle.Done, target: self, action:#selector(HomeEditController.submitClicked))
-
-        
-//        let rightView = UIView.init(frame: CGRectMake(0, 0, 140, 40))
-//        
-//        rightView.addSubview(lookBtn)
-//        
-//        rightView.addSubview(submitBtn)
-        
+        let submitItem = UIBarButtonItem.createTitleBarButtonItem("提交", target: self, action: #selector(HomeEditController.submitClicked))
+    
         let items = [submitItem,lookItem]
         
-//       let rightItem = UIBarButtonItem.init(customView: rightView)
-        
         navigationItem.rightBarButtonItems = items
-        
+                
     }
     
     func lookClicked(){
-        
+
         let  story =   UIStoryboard.init(name: "Home", bundle: nil)
         
         let   vc =  story.instantiateViewControllerWithIdentifier("HomeLook") as! (HomeLookController)
@@ -116,6 +96,7 @@ class HomeEditController: UIViewController {
     
     func submitClicked(){
         
+        navigationController?.popViewControllerAnimated(true)
 
         
     }

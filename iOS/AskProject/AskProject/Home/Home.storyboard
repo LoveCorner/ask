@@ -445,7 +445,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="60n-se-D7J">
-                                <rect key="frame" x="20" y="35" width="560" height="50"/>
+                                <rect key="frame" x="20" y="79" width="560" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="设计费hiUS四儿及覅就送谁的富士康看似而非上课就放开手舍得开始克服客户发生可恢复蛇复古水库额意思苏二姨夫客户说客岁亏损以" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmo-gx-WKD">
                                         <rect key="frame" x="10" y="8" width="538" height="31.5"/>
@@ -466,7 +466,7 @@
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gQ7-tN-RMp">
-                                <rect key="frame" x="30" y="92" width="540" height="250"/>
+                                <rect key="frame" x="30" y="136" width="540" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="uKw-Jv-ABA"/>
@@ -478,7 +478,7 @@
                                 </connections>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="在这里输入你的回答" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vU5-zv-42D">
-                                <rect key="frame" x="33" y="100" width="150" height="15"/>
+                                <rect key="frame" x="33" y="144" width="150" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="Rai-n6-19R"/>
                                     <constraint firstAttribute="width" constant="150" id="xdD-BZ-ATO"/>
@@ -488,10 +488,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LKA-oG-338">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDb-Kd-uWj">
-                                        <rect key="frame" x="172" y="224" width="256" height="131"/>
+                                        <rect key="frame" x="172" y="177.5" width="256" height="131"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="确认退出编辑吗？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRi-sI-dlv">
                                                 <rect key="frame" x="53" y="39" width="150" height="20"/>

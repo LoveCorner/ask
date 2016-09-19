@@ -15,6 +15,12 @@ class PersonMessageController: BaseController {
     
     @IBOutlet weak var pushSwitch: UISwitch!
     
+    override func viewDidLoad() {
+        
+    
+        
+        
+    }
     
     @IBAction func backClicked(sender: AnyObject) {
         

@@ -145,37 +145,37 @@ class MineController: BaseController,UITableViewDelegate,UITableViewDataSource {
         
         switch indexPath.section {
         case 0:
-            pushControllerUI("MessageController")
+            pushControllerUI("Mine",identify:"MessageController" )
             break
         case 1:
-            pushControllerUI("CollectAnswerController")
+            pushControllerUI("Mine",identify:"CollectAnswerController")
             break
         case 2:
-            pushControllerUI("CareQuestionController")
+            pushControllerUI("Mine",identify:"CareQuestionController")
             break
         case 3:
-            pushControllerUI("MyExamController")
+            pushControllerUI("MyExamController",identify:"MyExamController")
             break
         default:
            
-            pushControllerUI("SettingController")
+            pushControllerUI("Mine",identify:"SettingController")
             break
         }
         
     }
    
     
-    @IBAction func headClicked(sender: AnyObject) {
-        
-        pushControllerUI("HeadController")
- 
-        
-    }
-    private func pushControllerUI(name:String){
+//    @IBAction func headClicked(sender: AnyObject) {
+//        
+//        pushControllerUI("HeadController")
+// 
+//        
+//    }
+    private func pushControllerUI(name:String, identify: String){
         
         let  story =   UIStoryboard.init(name: name, bundle: nil)
         
-        let   vc =  story.instantiateViewControllerWithIdentifier(name)
+        let   vc =  story.instantiateViewControllerWithIdentifier(identify)
         
         navigationController?.pushViewController(vc, animated: true)
         

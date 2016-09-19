@@ -10,7 +10,11 @@ import UIKit
 
 class CareQuestionController: BaseController,UITableViewDelegate,UITableViewDataSource{
     
-    
+    override func viewDidLoad() {
+        
+        
+        
+    }
     
     
     @IBAction func backClicked(sender: AnyObject) {
