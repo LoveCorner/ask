@@ -75,12 +75,15 @@
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyk-RL-Zfe">
-                        <rect key="frame" x="470" y="18" width="30" height="30"/>
+                        <rect key="frame" x="475" y="18" width="25" height="25"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="5lX-vs-1EH"/>
-                            <constraint firstAttribute="width" constant="30" id="XKl-3f-wWF"/>
+                            <constraint firstAttribute="height" constant="25" id="5lX-vs-1EH"/>
+                            <constraint firstAttribute="width" constant="25" id="XKl-3f-wWF"/>
                         </constraints>
-                        <state key="normal" backgroundImage="get"/>
+                        <state key="normal" backgroundImage="unclick"/>
+                        <connections>
+                            <action selector="selectedClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="RgD-4Q-Vhz"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -95,12 +98,19 @@
                     <constraint firstItem="p9I-nX-DLG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="23" id="lhi-i7-WEW"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="answerLabel" destination="Bp6-hc-aGM" id="irB-kg-2tv"/>
+                <outlet property="headImage" destination="UFI-gZ-buG" id="9hg-H0-kld"/>
+                <outlet property="nameLabel" destination="MdK-vW-7hs" id="5kz-2d-UZo"/>
+                <outlet property="questionLabel" destination="F1x-kO-ijC" id="bsu-hw-tI2"/>
+                <outlet property="selectBtn" destination="jyk-RL-Zfe" id="LAA-Qq-BJo"/>
+            </connections>
             <point key="canvasLocation" x="350" y="570"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="get" width="39" height="39"/>
         <image name="question" width="19" height="19"/>
         <image name="systemHead" width="24" height="24"/>
+        <image name="unclick" width="25" height="25"/>
     </resources>
 </document>

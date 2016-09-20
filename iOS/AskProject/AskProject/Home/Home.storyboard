@@ -289,7 +289,7 @@
                                 <color key="separatorColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="13" minY="0.0" maxX="13" maxY="0.0"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="gGY-aU-oOs">
-                                    <rect key="frame" x="0.0" y="113.5" width="600" height="70"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1CZ-Xv-UsN">
@@ -314,45 +314,6 @@
                                         <constraint firstItem="1CZ-Xv-UsN" firstAttribute="centerX" secondItem="gGY-aU-oOs" secondAttribute="centerX" id="axq-DR-EJF"/>
                                     </constraints>
                                 </view>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SearchCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCell" id="Xkc-bv-ePK" customClass="SearchCell" customModule="AskProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="49.5" width="600" height="46"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xkc-bv-ePK" id="hmg-cO-ZoO">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="46"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS swift学习" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFC-FB-LSe">
-                                                    <rect key="frame" x="21" y="15" width="551" height="15"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="15" id="kiI-K6-3qb"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u10-T7-ZUF">
-                                                    <rect key="frame" x="21" y="45" width="558" height="1"/>
-                                                    <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="1" id="yfM-cH-zhF"/>
-                                                    </constraints>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="LFC-FB-LSe" secondAttribute="trailing" constant="20" id="Ca0-Vf-GCN"/>
-                                                <constraint firstItem="u10-T7-ZUF" firstAttribute="leading" secondItem="hmg-cO-ZoO" secondAttribute="leadingMargin" constant="13" id="MWu-Af-a83"/>
-                                                <constraint firstItem="LFC-FB-LSe" firstAttribute="centerY" secondItem="hmg-cO-ZoO" secondAttribute="centerY" id="N3C-sB-hs7"/>
-                                                <constraint firstItem="u10-T7-ZUF" firstAttribute="top" secondItem="LFC-FB-LSe" secondAttribute="bottom" constant="15" id="V0t-Ri-Yee"/>
-                                                <constraint firstItem="LFC-FB-LSe" firstAttribute="leading" secondItem="hmg-cO-ZoO" secondAttribute="leadingMargin" constant="13" id="dE9-aa-EOR"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="u10-T7-ZUF" secondAttribute="trailing" constant="13" id="w2Y-rf-zud"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="recordLabel" destination="LFC-FB-LSe" id="ow9-7K-Vbv"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="3h7-QG-wJz" id="C5E-JR-mXG"/>
                                     <outlet property="delegate" destination="3h7-QG-wJz" id="a1W-PK-EfU"/>
@@ -965,7 +926,7 @@ Cocoa 本身由 Objective-C 语言写成，Objective-C 又是 C 语言的严格�
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERe-gE-KBg">
                                         <rect key="frame" x="0.0" y="5" width="554" height="30"/>
                                         <connections>
-                                            <segue destination="9OO-L9-ePe" kind="show" id="4fd-ec-QBn"/>
+                                            <segue destination="3h7-QG-wJz" kind="presentation" id="LaS-5r-M2T"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darklink" translatesAutoresizingMaskIntoConstraints="NO" id="E7y-Ac-4Yw">
@@ -1038,6 +999,12 @@ Cocoa 本身由 Objective-C 语言写成，Objective-C 又是 C 语言的严格�
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sBd-DV-giD">
                                 <rect key="frame" x="23" y="250" width="554" height="40"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQG-5v-Edh">
+                                        <rect key="frame" x="0.0" y="5" width="554" height="30"/>
+                                        <connections>
+                                            <segue destination="9OO-L9-ePe" kind="show" id="ucv-TT-Wte"/>
+                                        </connections>
+                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="voice" translatesAutoresizingMaskIntoConstraints="NO" id="SWi-eX-jm3">
                                         <rect key="frame" x="10" y="10" width="22" height="19"/>
                                         <constraints>
@@ -1071,11 +1038,15 @@ Cocoa 本身由 Objective-C 语言写成，Objective-C 又是 C 语言的严格�
                                     <constraint firstItem="wNT-7F-9fW" firstAttribute="leading" secondItem="SWi-eX-jm3" secondAttribute="trailing" constant="10" id="5Ap-aO-pyc"/>
                                     <constraint firstItem="SWi-eX-jm3" firstAttribute="leading" secondItem="sBd-DV-giD" secondAttribute="leading" constant="10" id="CAL-pv-F1F"/>
                                     <constraint firstAttribute="height" constant="40" id="IRC-YI-bun"/>
+                                    <constraint firstItem="XQG-5v-Edh" firstAttribute="top" secondItem="sBd-DV-giD" secondAttribute="top" constant="5" id="SVo-oD-9Fp"/>
                                     <constraint firstItem="SWi-eX-jm3" firstAttribute="centerY" secondItem="sBd-DV-giD" secondAttribute="centerY" id="TrY-0P-zgu"/>
                                     <constraint firstItem="ph5-A3-7Ta" firstAttribute="leading" secondItem="wNT-7F-9fW" secondAttribute="trailing" constant="10" id="Zin-Az-hpd"/>
+                                    <constraint firstAttribute="trailing" secondItem="XQG-5v-Edh" secondAttribute="trailing" id="Zlv-Ft-Zw5"/>
                                     <constraint firstAttribute="trailing" secondItem="ph5-A3-7Ta" secondAttribute="trailing" constant="20" id="aiy-BN-4x8"/>
                                     <constraint firstItem="wNT-7F-9fW" firstAttribute="centerY" secondItem="sBd-DV-giD" secondAttribute="centerY" id="euw-9Q-qXM"/>
+                                    <constraint firstItem="XQG-5v-Edh" firstAttribute="leading" secondItem="sBd-DV-giD" secondAttribute="leading" id="kvh-2l-rNy"/>
                                     <constraint firstItem="ph5-A3-7Ta" firstAttribute="centerY" secondItem="sBd-DV-giD" secondAttribute="centerY" id="odS-0u-QUc"/>
+                                    <constraint firstAttribute="bottom" secondItem="XQG-5v-Edh" secondAttribute="bottom" constant="5" id="zrZ-HI-VCT"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="希望你能解决问题！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fh6-YU-HpW">
@@ -1224,6 +1195,9 @@ Cocoa 本身由 Objective-C 语言写成，Objective-C 又是 C 语言的严格�
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="delectBtn" destination="zBG-Ug-3Kd" id="tuU-6F-icB"/>
+                        <outlet property="playBtn" destination="m9N-qB-MUV" id="LMu-ze-Spf"/>
+                        <outlet property="recordBtn" destination="1fo-Me-yL3" id="HzR-hK-ZmL"/>
                         <outlet property="timeLabel" destination="C1Z-im-0nT" id="eF2-v2-TdK"/>
                         <outlet property="voiceImageView" destination="Bia-WZ-4XL" id="Mcz-KA-LjQ"/>
                         <outlet property="voiceWebView" destination="Hzs-XC-Ms5" id="DIa-Q5-ZCG"/>
@@ -1889,4 +1863,7 @@ Cocoa 本身由 Objective-C 语言写成，Objective-C 又是 C 语言的严格�
         <image name="voice" width="22" height="19"/>
         <image name="zan" width="15" height="15"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="LaS-5r-M2T"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -1,8 +1,8 @@
 //
-//  SearchCell.swift
+//  SearCell.swift
 //  AskProject
 //
-//  Created by bjike on 16/9/8.
+//  Created by bjike on 16/9/20.
 //  Copyright © 2016年 bjike. All rights reserved.
 //
 
@@ -10,7 +10,6 @@ import UIKit
 
 class SearchCell: UITableViewCell {
 
-    
     @IBOutlet weak var recordLabel: UILabel!
     
     override func awakeFromNib() {
@@ -23,5 +22,5 @@ class SearchCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }
