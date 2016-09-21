@@ -8,15 +8,23 @@
 
 import UIKit
 
+typealias DelectBlock = () ->()
+
 class CollectQuestionCell: UITableViewCell {
 
+    var dltBlock: DelectBlock?
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
-         delectBtn.hidden = true
         
-    
+        
+        delectBtn.hidden = true
+
+        
     }
+
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -43,7 +51,9 @@ class CollectQuestionCell: UITableViewCell {
     
     
     @IBAction func delectClicked(sender: AnyObject) {
+      //删除cell和数据
         
+        dltBlock!()
         
     }
     

@@ -553,6 +553,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="msgTableView" destination="6sX-lX-Kgm" id="z9A-gB-lgs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lVF-uT-6y9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -768,6 +771,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectTableView" destination="6Gs-DH-1po" id="l5Z-Xd-t1u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YcI-kA-f7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -901,6 +907,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="careTableView" destination="4zs-Zn-KRa" id="FZn-uy-xyI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hmn-DL-DYJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

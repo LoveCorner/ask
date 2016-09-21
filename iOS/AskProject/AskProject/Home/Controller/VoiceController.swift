@@ -11,9 +11,9 @@ import AVFoundation
 
 class VoiceController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDelegate {
     //录音
-    var recorder: AVAudioRecorder?
+    var recorder: AVAudioRecorder!
     //播放
-    var player: AVAudioPlayer?
+    var player: AVAudioPlayer!
     
     var url: NSURL!
     
@@ -59,9 +59,23 @@ class VoiceController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDel
         playBtn.setBackgroundImage(UIImage(named: "play"), forState: UIControlState.Normal)
         
         playBtn.setBackgroundImage(UIImage(named: "zanting"), forState: UIControlState.Selected)
-        
+        //4.初始化录音
         createFileDir()
+        do{
+            
+            //kAudioFormatMPEG4AAC录音格式  kAudioFormatMPEGLayer3 mp3格式,AVEncoderBitRateKey:128000
+            recorder = try AVAudioRecorder.init(URL: self.url, settings: [AVFormatIDKey:NSNumber(int:Int32(kAudioFormatMPEG4AAC)),AVNumberOfChannelsKey:NSNumber(int:1),AVSampleRateKey:NSNumber(float: Float(44100.0)),AVLinearPCMBitDepthKey:NSNumber(unsignedInt:16),AVEncoderAudioQualityKey:NSNumber(int:Int32( AVAudioQuality.Medium.rawValue))])
+            //开启音量检测
+            recorder?.meteringEnabled = true
+    
+            recorder?.delegate = self
+            
+        }catch{
+            
+            print(error)
+        }
         
+
         //定时器计时
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(VoiceController.timerAction), userInfo: nil, repeats: true)
         
@@ -70,19 +84,10 @@ class VoiceController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDel
     }
     private func createFileDir(){
         
-        //let date = NSDate.init(timeIntervalSince1970: 1431024488)
-
-        let formatter = NSDateFormatter()
         
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let path =  NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).last! + "/voice.aac"
         
-        let dateStr = formatter.stringFromDate(NSDate())
-        
-        let name = dateStr+".aiff"
-        
-        let path =  NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true).first! + name
-        
-        url = NSURL.fileURLWithPath(path)
+       self.url = NSURL.fileURLWithPath(path)
 
     }
     private func setNavagiUI(){
@@ -127,6 +132,11 @@ class VoiceController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDel
         
         
         if !recordBtn.selected {
+            //删除录音文件和终止录音
+//            recorder?.deleteRecording()
+ 
+            recorder?.stop()
+            
             //取消定时器
 //            timer.invalidate()
 //            
@@ -136,66 +146,40 @@ class VoiceController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDel
             
             isHided(true)
             
-            recorder?.stop()
-            
             playBtn.enabled = true
-            
-            recorder = nil
-            
-            do{
-                
-            player = try AVAudioPlayer.init(contentsOfURL: url)
-             
-            player?.delegate = self
-                
-            }catch{
-                
-                if player == nil {
-                    
-                    print(error)
-                }
-            }
-            
+    
             return
         }
        
-        
-        do{
-            
             playBtn.enabled = false
-
-            recorder = try AVAudioRecorder.init(URL: url, settings: [AVNumberOfChannelsKey:2,AVSampleRateKey:44100,AVLinearPCMBitDepthKey:32,AVEncoderAudioQualityKey:String(AVAudioQuality.Max),AVEncoderBitRateKey:128000])
+        
+            //准备录音
+        if ((recorder?.prepareToRecord()) != nil) {
             
-            recorder?.prepareToRecord()
-            
+            //录音
             recorder?.record()
-            
-            recorder?.delegate = self
             //打开定时器
             timer.fireDate = NSDate.distantPast()
-
-            player = nil
             //读取沙盒文件里的gif文件
             
             readGifFile()
             
-        }catch{
-            
-            print(error)
-        }
 
+        }
+        
+        
         
     }
+    var hour: Int = 0
+    
+    var minuter: Int = 0
+    
+    var second: Int = 0
     
     func timerAction(){
         
-        var hour = 0
-        
-        var minuter = 0
-        
-        var second = 0
-
-        second += 1
+        //获取音量最大值
+        recorder?.peakPowerForChannel(0)
         
         if second == 60 {
             
@@ -219,11 +203,9 @@ class VoiceController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDel
             
         }
         
-//        timeLabel.text = "\(hour)"+"\(minuter)"+"\(second)"
-        
         timeLabel.text = NSString(format: "%02d:%02d:%02d",hour,minuter,second) as String
 
-        print(timeLabel.text)
+        second += 1
         
     }
     private func readGifFile(){
@@ -252,58 +234,63 @@ class VoiceController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDel
         
         voiceImageView.hidden = !isHide
     }
-    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
-        
-        player.pause()
-        
-    }
-    //录音完成
-    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
-        
-        let manager = NSFileManager.defaultManager()
-        
-        let path =  NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true).last!
-        
-        let array = manager.subpathsAtPath(path)
-        
-        let muArray = NSMutableArray()
-        
-        for audioStr:String in array! {
-            
-            
-            if audioStr.hasSuffix("aiff") {
-                
-                muArray.addObject(audioStr)
-                
-            }
-        }
-        
-        
-        
-    }
+   
     @IBAction func playClicked(sender: AnyObject) {
         
         playBtn.selected = !playBtn.selected
         
         if playBtn.selected {
             
-            if player != nil {
+            do{
+                
+                player = try AVAudioPlayer.init(contentsOfURL: self.url)
+                
+                player.delegate = self
+                
+            }catch{
+                
+                print(error)
+            }
                 
                 player?.play()
- 
-            }
+
+            isHided(false)
+            
+            readGifFile()
             
         }else{
             
-            player?.pause()
+            player?.stop()
+            
+            isHided(true)
+
+            return
             
         }
         
     }
-    
-    
+    //播放完毕
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
+        
+       playBtn.selected = false
+        
+        isHided(true)
+        
+        player.stop()
+        
+    }
     @IBAction func revoiceClicked(sender: AnyObject) {
         
+       //删除录制文件
+        recorder?.deleteRecording()
+        
+        timeLabel.text = "00:00:00"
+        
+        hour = 0
+        
+        minuter = 0
+        
+        second = 0
         
     }
 }
