@@ -1012,15 +1012,6 @@ Cocoa 本身由 Objective-C 语言写成，Objective-C 又是 C 语言的严格�
                                             <constraint firstAttribute="height" constant="19" id="VRl-Xs-ILb"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016/09/15  时长5：00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNT-7F-9fW">
-                                        <rect key="frame" x="42" y="10" width="465" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="Si7-YP-234"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ph5-A3-7Ta">
                                         <rect key="frame" x="517" y="11" width="17" height="17"/>
                                         <constraints>
@@ -1032,20 +1023,32 @@ Cocoa 本身由 Objective-C 语言写成，Objective-C 又是 C 语言的严格�
                                             <action selector="cleanTwoClicked:" destination="yeg-Gg-nWc" eventType="touchUpInside" id="Moe-4y-cMz"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2016/09/15  时长5：00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XlK-js-Wm7">
+                                        <rect key="frame" x="42" y="10" width="465" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="l21-bF-l29"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="yeg-Gg-nWc" id="nye-jK-g3g"/>
+                                        </connections>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99607843139999996" green="0.76078431369999999" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="wNT-7F-9fW" firstAttribute="leading" secondItem="SWi-eX-jm3" secondAttribute="trailing" constant="10" id="5Ap-aO-pyc"/>
+                                    <constraint firstItem="ph5-A3-7Ta" firstAttribute="leading" secondItem="XlK-js-Wm7" secondAttribute="trailing" constant="10" id="1Ei-qk-14e"/>
                                     <constraint firstItem="SWi-eX-jm3" firstAttribute="leading" secondItem="sBd-DV-giD" secondAttribute="leading" constant="10" id="CAL-pv-F1F"/>
                                     <constraint firstAttribute="height" constant="40" id="IRC-YI-bun"/>
                                     <constraint firstItem="XQG-5v-Edh" firstAttribute="top" secondItem="sBd-DV-giD" secondAttribute="top" constant="5" id="SVo-oD-9Fp"/>
                                     <constraint firstItem="SWi-eX-jm3" firstAttribute="centerY" secondItem="sBd-DV-giD" secondAttribute="centerY" id="TrY-0P-zgu"/>
-                                    <constraint firstItem="ph5-A3-7Ta" firstAttribute="leading" secondItem="wNT-7F-9fW" secondAttribute="trailing" constant="10" id="Zin-Az-hpd"/>
                                     <constraint firstAttribute="trailing" secondItem="XQG-5v-Edh" secondAttribute="trailing" id="Zlv-Ft-Zw5"/>
                                     <constraint firstAttribute="trailing" secondItem="ph5-A3-7Ta" secondAttribute="trailing" constant="20" id="aiy-BN-4x8"/>
-                                    <constraint firstItem="wNT-7F-9fW" firstAttribute="centerY" secondItem="sBd-DV-giD" secondAttribute="centerY" id="euw-9Q-qXM"/>
                                     <constraint firstItem="XQG-5v-Edh" firstAttribute="leading" secondItem="sBd-DV-giD" secondAttribute="leading" id="kvh-2l-rNy"/>
+                                    <constraint firstItem="XlK-js-Wm7" firstAttribute="centerY" secondItem="sBd-DV-giD" secondAttribute="centerY" id="n50-za-eqV"/>
                                     <constraint firstItem="ph5-A3-7Ta" firstAttribute="centerY" secondItem="sBd-DV-giD" secondAttribute="centerY" id="odS-0u-QUc"/>
+                                    <constraint firstItem="XlK-js-Wm7" firstAttribute="leading" secondItem="SWi-eX-jm3" secondAttribute="trailing" constant="10" id="xHB-aH-TiW"/>
                                     <constraint firstAttribute="bottom" secondItem="XQG-5v-Edh" secondAttribute="bottom" constant="5" id="zrZ-HI-VCT"/>
                                 </constraints>
                             </view>
@@ -1073,6 +1076,13 @@ Cocoa 本身由 Objective-C 语言写成，Objective-C 又是 C 语言的严格�
                                     <outlet property="delegate" destination="yeg-Gg-nWc" id="HyB-y4-t5v"/>
                                 </connections>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aVS-cf-z8y">
+                                <rect key="frame" x="23" y="345" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="YAH-uP-CsC"/>
+                                    <constraint firstAttribute="width" constant="240" id="vFw-rN-30A"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1089,18 +1099,20 @@ Cocoa 本身由 Objective-C 语言写成，Objective-C 又是 C 语言的严格�
                             <constraint firstAttribute="trailingMargin" secondItem="b4N-pu-GYX" secondAttribute="trailing" constant="3" id="ace-Rg-qia"/>
                             <constraint firstItem="Fh6-YU-HpW" firstAttribute="leading" secondItem="Abg-Ki-uwk" secondAttribute="leadingMargin" constant="3" id="dKZ-Vl-U7J"/>
                             <constraint firstItem="0yL-IK-0eU" firstAttribute="leading" secondItem="Abg-Ki-uwk" secondAttribute="leadingMargin" constant="3" id="g3L-Gj-OmN"/>
+                            <constraint firstItem="aVS-cf-z8y" firstAttribute="top" secondItem="Fh6-YU-HpW" secondAttribute="bottom" constant="20" id="l2P-6b-jpu"/>
                             <constraint firstItem="0yL-IK-0eU" firstAttribute="top" secondItem="b4N-pu-GYX" secondAttribute="bottom" constant="10" id="mcV-QO-f8L"/>
                             <constraint firstItem="VcK-G5-5FP" firstAttribute="top" secondItem="mzh-mk-b01" secondAttribute="bottom" constant="10" id="mkf-tO-eDz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="but-eO-5y6" secondAttribute="trailing" constant="3" id="o3q-Py-YR1"/>
                             <constraint firstItem="sBd-DV-giD" firstAttribute="top" secondItem="VcK-G5-5FP" secondAttribute="bottom" constant="10" id="o4C-gX-F0c"/>
                             <constraint firstItem="mzh-mk-b01" firstAttribute="top" secondItem="0yL-IK-0eU" secondAttribute="bottom" constant="10" id="sH1-YR-KXc"/>
+                            <constraint firstItem="aVS-cf-z8y" firstAttribute="leading" secondItem="Abg-Ki-uwk" secondAttribute="leadingMargin" constant="3" id="zd2-PT-cRX"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="answerTV" destination="b4N-pu-GYX" id="0vI-w7-LlY"/>
                         <outlet property="linkTF" destination="H0R-9f-VD7" id="cFx-Mh-b6o"/>
                         <outlet property="questionLabel" destination="rLS-5o-CTq" id="5KK-dm-fE4"/>
-                        <outlet property="timeLabel" destination="wNT-7F-9fW" id="duO-El-EKT"/>
+                        <outlet property="timeTF" destination="XlK-js-Wm7" id="vJv-4P-Die"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Lt-sm-YfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1711,10 +1723,10 @@ Cocoa 本身由 Objective-C 语言写成，Objective-C 又是 C 语言的严格�
                                                     <constraint firstAttribute="height" constant="19" id="skY-oW-5Zr"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016/09/15 时长5：00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcM-3f-3VJ">
-                                                <rect key="frame" x="42" y="12" width="488" height="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016/09/15 时长5：00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSC-hW-ocp">
+                                                <rect key="frame" x="42" y="9.5" width="488" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="15" id="A4y-RY-A6R"/>
+                                                    <constraint firstAttribute="height" constant="20" id="BLK-DL-Qyo"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1725,14 +1737,14 @@ Cocoa 本身由 Objective-C 语言写成，Objective-C 又是 C 语言的严格�
                                         <constraints>
                                             <constraint firstItem="SdS-To-Cx8" firstAttribute="leading" secondItem="03c-Ts-bFz" secondAttribute="leading" id="5V4-aV-14S"/>
                                             <constraint firstAttribute="height" constant="40" id="8VD-bc-B4U"/>
-                                            <constraint firstItem="LcM-3f-3VJ" firstAttribute="centerY" secondItem="03c-Ts-bFz" secondAttribute="centerY" id="Jpc-KH-nL1"/>
                                             <constraint firstItem="gMJ-dY-VTY" firstAttribute="leading" secondItem="03c-Ts-bFz" secondAttribute="leading" constant="10" id="ML6-s1-Ci9"/>
-                                            <constraint firstAttribute="trailing" secondItem="LcM-3f-3VJ" secondAttribute="trailing" constant="10" id="RE5-GB-3uZ"/>
                                             <constraint firstAttribute="bottom" secondItem="SdS-To-Cx8" secondAttribute="bottom" id="VeR-rE-2u2"/>
                                             <constraint firstItem="gMJ-dY-VTY" firstAttribute="centerY" secondItem="03c-Ts-bFz" secondAttribute="centerY" id="YCM-xT-7Z7"/>
                                             <constraint firstAttribute="trailing" secondItem="SdS-To-Cx8" secondAttribute="trailing" id="ezC-Sc-OOF"/>
                                             <constraint firstItem="SdS-To-Cx8" firstAttribute="top" secondItem="03c-Ts-bFz" secondAttribute="top" id="k1F-ej-igd"/>
-                                            <constraint firstItem="LcM-3f-3VJ" firstAttribute="leading" secondItem="gMJ-dY-VTY" secondAttribute="trailing" constant="10" id="qgK-gn-IpL"/>
+                                            <constraint firstItem="wSC-hW-ocp" firstAttribute="leading" secondItem="gMJ-dY-VTY" secondAttribute="trailing" constant="10" id="k5F-J0-ynh"/>
+                                            <constraint firstAttribute="trailing" secondItem="wSC-hW-ocp" secondAttribute="trailing" constant="10" id="sBc-o7-tGb"/>
+                                            <constraint firstItem="wSC-hW-ocp" firstAttribute="centerY" secondItem="03c-Ts-bFz" secondAttribute="centerY" id="yZE-dj-uCX"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="希望你能解决问题！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJB-Qq-Nzk">
@@ -1825,7 +1837,7 @@ Cocoa 本身由 Objective-C 语言写成，Objective-C 又是 C 语言的严格�
                         <outlet property="linkLabel" destination="fEA-iq-QSy" id="KgT-MW-sgx"/>
                         <outlet property="nameLabel" destination="X7Y-mt-Kmv" id="diz-Vh-tFA"/>
                         <outlet property="questionLabel" destination="IUH-4a-BXo" id="niZ-jO-BsQ"/>
-                        <outlet property="timeLabel" destination="LcM-3f-3VJ" id="fIj-aW-MrW"/>
+                        <outlet property="timeLabel" destination="wSC-hW-ocp" id="WSl-cH-FO0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WO2-46-NES" userLabel="First Responder" sceneMemberID="firstResponder"/>

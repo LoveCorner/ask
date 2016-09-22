@@ -35,7 +35,7 @@ func ScreenHeight() ->CGFloat{
 func iPhone4() -> Bool{
     
     return false
-//    return UIScreen.instancesRespondToSelector(UIScreenMode)?;CGSizeEqualToSize(CGSizeMake(640, 1136),UIScreen.mainScreen().currentMode?.size); : false)
+//    return (UIScreen.instancesRespondToSelector("currentMode")? CGSizeEqualToSize(CGSizeMake(320, 480), CGSizeMake(UIScreen.mainScreen.currentMode.size)) :false)
     
 }
 
@@ -43,7 +43,7 @@ func iPhone5() -> Bool{
     
     
     return false
-    //    return ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+//        return ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
     
 }
 

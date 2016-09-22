@@ -35,20 +35,28 @@ class AddExamController: BaseController,UITextFieldDelegate,UITextViewDelegate {
     
     private func setUI(){
         
-        //1.隐藏backView
+        //1.1隐藏backView
         
         backView.hidden = true
         
         backView.layer.cornerRadius = 5
         
         leftViewUI(questionTF)
+        //1.2设置
+        questionTF.inputAccessoryView = UIView.createBoardView(self, action: #selector(AddExamController.boardButtonClicked))
         
-        //2.手势隐藏键盘
+        answerTV.inputAccessoryView = UIView.createBoardView(self, action: #selector(AddExamController.boardButtonClicked))
+        //1.3手势隐藏键盘
         
          tapUI()
         
     }
     
+    func boardButtonClicked(){
+        
+        print(#function)
+        
+    }
     private func tapUI(){
         
       let tap =  UITapGestureRecognizer.init(target: self, action: #selector(AddExamController.tapAction))
@@ -113,6 +121,11 @@ class AddExamController: BaseController,UITextFieldDelegate,UITextViewDelegate {
     @IBAction func exitClicked(sender: AnyObject) {
         
         backColorUI(false, viewBackColor: RGBA(157, g: 157, b: 157, a: 0.83), questionAlpha: 0, answerAlpha: 0)
+        
+        questionTF.resignFirstResponder()
+        
+        answerTV.resignFirstResponder()
+
 
     }
     @IBAction func finishClicked(sender: AnyObject) {

@@ -19,8 +19,7 @@ class HomeEditController: UIViewController {
     @IBOutlet weak var linkTF: UITextField!
     
     
-    
-    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var timeTF: UITextField!
     
     
     override func viewWillAppear(animated: Bool) {
@@ -56,9 +55,23 @@ class HomeEditController: UIViewController {
         //1.1设置导航条
         
         setNaviUI()
+        //设置键盘
+        
+        answerTV.inputAccessoryView = UIView.createBoardView(self, action: #selector(HomeEditController.boardClicked(_:)))
+        
+        linkTF.inputAccessoryView = UIView.createBoardView(self, action: #selector(HomeEditController.boardClicked(_:)))
+        
+        timeTF.inputAccessoryView = UIView.createBoardView(self, action: #selector(HomeEditController.boardClicked(_:)))
+        
         
     }
     
+    func boardClicked(btn: UIButton){
+        
+        print(#function)
+        
+    }
+
     private func setNaviUI(){
         
         self.title = "回答"
@@ -87,7 +100,7 @@ class HomeEditController: UIViewController {
         
         vc.linkStr = linkTF.text
         
-        vc.timeStr = timeLabel.text
+        vc.timeStr = timeTF.text
 
         navigationController?.pushViewController(vc, animated: true)
 
@@ -115,7 +128,12 @@ class HomeEditController: UIViewController {
     
     func tapActionClicked(){
         
+        answerTV.resignFirstResponder()
+        
         linkTF.resignFirstResponder()
+
+        timeTF.resignFirstResponder()
+
         
     }
    
@@ -132,7 +150,7 @@ class HomeEditController: UIViewController {
             
             look.linkStr = linkTF.text
             
-            look.timeStr = timeLabel.text
+            look.timeStr = timeTF.text
         }
     }
     
@@ -143,7 +161,7 @@ class HomeEditController: UIViewController {
     }
     @IBAction func cleanTwoClicked(sender: AnyObject) {
         
-        timeLabel.text = ""
+        timeTF.text = ""
         
     }
  

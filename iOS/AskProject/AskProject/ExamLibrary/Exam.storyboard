@@ -726,15 +726,6 @@
                                             <constraint firstAttribute="height" constant="19" id="ewp-hs-1Rc"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016/09/15  时长5：00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqc-ve-ECP">
-                                        <rect key="frame" x="42" y="10" width="465" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="yer-vQ-A5r"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTX-1d-MkP">
                                         <rect key="frame" x="517" y="11" width="17" height="17"/>
                                         <constraints>
@@ -746,16 +737,28 @@
                                             <action selector="cleanTwoClicked:" destination="bev-dQ-8Vg" eventType="touchUpInside" id="B98-fL-eDy"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2016/09/15  时长5：00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0PL-Aa-AzB">
+                                        <rect key="frame" x="42" y="10" width="465" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="5R0-DN-peI"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="bev-dQ-8Vg" id="eBY-Px-r4u"/>
+                                        </connections>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99607843139999996" green="0.76078431369999999" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="1Lr-w9-WHt"/>
                                     <constraint firstItem="CEt-VK-ucb" firstAttribute="centerY" secondItem="s47-7k-J4r" secondAttribute="centerY" id="7XV-yo-wzM"/>
-                                    <constraint firstItem="uqc-ve-ECP" firstAttribute="leading" secondItem="CEt-VK-ucb" secondAttribute="trailing" constant="10" id="AC7-y6-Pq7"/>
+                                    <constraint firstItem="FTX-1d-MkP" firstAttribute="leading" secondItem="0PL-Aa-AzB" secondAttribute="trailing" constant="10" id="JEF-XA-dSq"/>
                                     <constraint firstItem="CEt-VK-ucb" firstAttribute="leading" secondItem="s47-7k-J4r" secondAttribute="leading" constant="10" id="SsE-kC-CkP"/>
+                                    <constraint firstItem="0PL-Aa-AzB" firstAttribute="centerY" secondItem="s47-7k-J4r" secondAttribute="centerY" id="elh-SQ-20O"/>
                                     <constraint firstAttribute="trailing" secondItem="FTX-1d-MkP" secondAttribute="trailing" constant="20" id="kdY-2g-Xym"/>
-                                    <constraint firstItem="uqc-ve-ECP" firstAttribute="centerY" secondItem="s47-7k-J4r" secondAttribute="centerY" id="n5X-ao-zXg"/>
-                                    <constraint firstItem="FTX-1d-MkP" firstAttribute="leading" secondItem="uqc-ve-ECP" secondAttribute="trailing" constant="10" id="vKc-gP-Spu"/>
+                                    <constraint firstItem="0PL-Aa-AzB" firstAttribute="leading" secondItem="CEt-VK-ucb" secondAttribute="trailing" constant="10" id="ppd-QO-LNz"/>
                                     <constraint firstItem="FTX-1d-MkP" firstAttribute="centerY" secondItem="s47-7k-J4r" secondAttribute="centerY" id="xHu-ow-I0Y"/>
                                 </constraints>
                             </view>
@@ -862,7 +865,7 @@
                         <outlet property="answerTV" destination="Pd6-Hp-9bp" id="vEO-Np-Z72"/>
                         <outlet property="linkTF" destination="5k3-oO-ZBQ" id="e5L-0O-61G"/>
                         <outlet property="questionTV" destination="Dhw-fU-3Zw" id="qHu-Rf-Yry"/>
-                        <outlet property="timeLabel" destination="uqc-ve-ECP" id="7YA-td-d9V"/>
+                        <outlet property="timeTF" destination="0PL-Aa-AzB" id="hCL-AY-AEw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZFY-Kh-UC3" userLabel="First Responder" sceneMemberID="firstResponder"/>

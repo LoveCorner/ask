@@ -40,9 +40,20 @@ class AnswerQuestionController: BaseController,UITextViewDelegate {
         //3.初始化导航条
         setNaviUI()
         
-
+        //设置键盘
+        
+        answerTV.inputAccessoryView = UIView.createBoardView(self, action: #selector(AnswerQuestionController.boardClicked(_:)))
+        
+        
         
     }
+    
+    func boardClicked(btn: UIButton){
+        
+        print(#function)
+        
+    }
+
     private func setNaviUI(){
     
             navigationItem.leftBarButtonItem = UIBarButtonItem.createBarButtonItem("darkcancel",target: self,action: #selector(AnswerQuestionController.leftButtonClicked))

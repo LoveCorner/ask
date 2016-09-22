@@ -44,6 +44,7 @@
 		456B72251D87EFA9006740D2 /* HomeAnswerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B72241D87EFA9006740D2 /* HomeAnswerController.swift */; };
 		456B72281D87EFCE006740D2 /* AnswerDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B72261D87EFCE006740D2 /* AnswerDetailController.swift */; };
 		456B722B1D880C70006740D2 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456B722A1D880C70006740D2 /* AnswerCell.swift */; };
+		45746C3E1D93EFB2008E0AE6 /* InputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45746C3D1D93EFB2008E0AE6 /* InputAccessoryView.swift */; };
 		4579FC031D8F794B006503AF /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4579FC021D8F794B006503AF /* UIButton+Extension.swift */; };
 		4579FC051D8F8994006503AF /* Exam.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4579FC041D8F8994006503AF /* Exam.storyboard */; };
 		4579FC071D8F99BF006503AF /* VoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4579FC061D8F99BF006503AF /* VoiceController.swift */; };
@@ -125,6 +126,7 @@
 		456B72241D87EFA9006740D2 /* HomeAnswerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeAnswerController.swift; sourceTree = "<group>"; };
 		456B72261D87EFCE006740D2 /* AnswerDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerDetailController.swift; sourceTree = "<group>"; };
 		456B722A1D880C70006740D2 /* AnswerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
+		45746C3D1D93EFB2008E0AE6 /* InputAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputAccessoryView.swift; sourceTree = "<group>"; };
 		4579FC021D8F794B006503AF /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		4579FC041D8F8994006503AF /* Exam.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Exam.storyboard; sourceTree = "<group>"; };
 		4579FC061D8F99BF006503AF /* VoiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceController.swift; sourceTree = "<group>"; };
@@ -468,6 +470,7 @@
 				4579FC021D8F794B006503AF /* UIButton+Extension.swift */,
 				45C2959F1D8E731100D2F367 /* NagivationBar.category.swift */,
 				452333481D86B34500031B0A /* AlertView+Category.swift */,
+				45746C3D1D93EFB2008E0AE6 /* InputAccessoryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -647,6 +650,7 @@
 				457AB3281D7D44DA007C7E13 /* AppDelegate.swift in Sources */,
 				45041D441D815BE6005D7DDB /* SearchController.swift in Sources */,
 				456B72251D87EFA9006740D2 /* HomeAnswerController.swift in Sources */,
+				45746C3E1D93EFB2008E0AE6 /* InputAccessoryView.swift in Sources */,
 				455B7F341D88F54D004FF211 /* EditExamController.swift in Sources */,
 				451D108A1D7D5D0700D74664 /* AddController.swift in Sources */,
 				45C295981D8E3ECE00D2F367 /* BaseController.swift in Sources */,

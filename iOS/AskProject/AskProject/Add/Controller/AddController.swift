@@ -34,6 +34,17 @@ class AddController: UIViewController,UITextViewDelegate {
         
         //2.手势回收键盘
         tapUI()
+        //3.设置键盘
+        contentTV.inputAccessoryView = UIView.createBoardView(self, action: #selector(AddController.boardClicked(_:)))
+        
+       
+        
+        
+    }
+    
+    func boardClicked(btn: UIButton){
+        
+        print(#function)
         
     }
     

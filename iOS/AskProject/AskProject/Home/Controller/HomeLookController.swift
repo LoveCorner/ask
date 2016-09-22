@@ -29,8 +29,8 @@ class HomeLookController: UIViewController {
     
     @IBOutlet weak var linkLabel: UILabel!
     
-    @IBOutlet weak var timeLabel: UILabel!
     
+    @IBOutlet weak var timeLabel: UILabel!
     
     override func viewWillAppear(animated: Bool) {
         

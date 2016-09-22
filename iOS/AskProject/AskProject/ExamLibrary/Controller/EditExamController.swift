@@ -21,8 +21,7 @@ class EditExamController: UIViewController {
     
     
     
-    @IBOutlet weak var timeLabel: UILabel!
-    
+    @IBOutlet weak var timeTF: UITextField!
     
     override func viewWillAppear(animated: Bool) {
         
@@ -52,9 +51,23 @@ class EditExamController: UIViewController {
         tapUI()
         
         questionTV.text = questionStr
+        //设置键盘
+        questionTV.inputAccessoryView = UIView.createBoardView(self, action: #selector(EditExamController.boardClicked(_:)))
         
+        answerTV.inputAccessoryView = UIView.createBoardView(self, action: #selector(EditExamController.boardClicked(_:)))
+
+        linkTF.inputAccessoryView = UIView.createBoardView(self, action: #selector(EditExamController.boardClicked(_:)))
+        
+        timeTF.inputAccessoryView = UIView.createBoardView(self, action: #selector(EditExamController.boardClicked(_:)))
+
+
     }
     
+    func boardClicked(btn: UIButton){
+        
+        print(#function)
+        
+    }
     private func tapUI(){
         
         let tap = UITapGestureRecognizer.init(target: self, action: #selector(EditExamController.tapActionClicked))
@@ -65,7 +78,14 @@ class EditExamController: UIViewController {
     
     func tapActionClicked(){
         
+        questionTV.resignFirstResponder()
+        
+        answerTV.resignFirstResponder()
+
         linkTF.resignFirstResponder()
+
+        timeTF.resignFirstResponder()
+
         
     }
     @IBAction func closeClicked(sender: AnyObject) {
@@ -107,7 +127,7 @@ class EditExamController: UIViewController {
             
             look.linkStr = linkTF.text
             
-            look.timeStr = timeLabel.text
+            look.timeStr = timeTF.text
         }
     }
    
@@ -123,7 +143,7 @@ class EditExamController: UIViewController {
     }
     @IBAction func cleanTwoClicked(sender: AnyObject) {
         
-        timeLabel.text = ""
+        timeTF.text = ""
         
     }
 }

@@ -9,14 +9,12 @@
 import UIKit
 
 class CareQuestionController: BaseController,UITableViewDelegate,UITableViewDataSource{
-    
-    var selectPath: NSIndexPath!
-    
+        
     @IBOutlet weak var careTableView: UITableView!
     
     override func viewDidLoad() {
         
-        self.dataArr.addObjectsFromArray(["在ios8以前，我们实现tableview中滑动显示删除，置顶，更多等等的按钮时，都需要自己去实现，在ios8中系统已经写好了，只要一个代理方法和一个类就行了","在ios8以前，我们实现tableview中滑动显示删除，置顶，更多等等的按钮时，都需要自己去实现，在ios8中系统已经写好了，只要一个代理方法和一个类就行了","在ios8以前，我们实现tableview中滑动显示删除，置顶，更多等等的按钮时，都需要自己去实现，在ios8中系统已经写好了，只要一个代理方法和一个类就行了","在ios8以前，我们实现tableview中滑动显示删除，置顶，更多等等的按钮时，都需要自己去实现，在ios8中系统已经写好了，只要一个代理方法和一个类就行了"])
+        self.dataArr.addObjectsFromArray(["在ios8以前，我们实现tableview中滑动显示删除，置顶，更多等等的按钮时，都需要自己去实现，在ios8中系统已经写好了，只要一个代理方法和一个类就行了","在ios8以前，我们实现tableview中滑动显示删除，置顶，更多等等的按钮时，都需要自己去实现，在ios8中系统已经写好了，只要一个代理方法和一个类就行了","在ios8以前，我们实现tableview中滑动显示删除，置顶，更多等等的按钮时，都需要自己去实现，在ios8中系统已经写好了，只要一个代理方法和一个类就行了","在ios8以前，我们实现tableview中滑动显示删除，置顶，更多等等的按钮时，都需要自己去实现，在ios8中系统已经写好了，只要一个代理方法和一个类就行了","在ios8以前，我们实现tableview中滑动显示删除，置顶，更多等等的按钮时，都需要自己去实现，在ios8中系统已经写好了，只要一个代理方法和一个类就行了","在ios8以前，我们实现tableview中滑动显示删除，置顶，更多等等的按钮时，都需要自己去实现，在ios8中系统已经写好了，只要一个代理方法和一个类就行了","在ios8以前，我们实现tableview中滑动显示删除，置顶，更多等等的按钮时，都需要自己去实现，在ios8中系统已经写好了，只要一个代理方法和一个类就行了","在ios8以前，我们实现tableview中滑动显示删除，置顶，更多等等的按钮时，都需要自己去实现，在ios8中系统已经写好了，只要一个代理方法和一个类就行了","在ios8以前，我们实现tableview中滑动显示删除，置顶，更多等等的按钮时，都需要自己去实现，在ios8中系统已经写好了，只要一个代理方法和一个类就行了","在ios8以前，我们实现tableview中滑动显示删除，置顶，更多等等的按钮时，都需要自己去实现，在ios8中系统已经写好了，只要一个代理方法和一个类就行了",])
 
         
     }
@@ -39,21 +37,41 @@ class CareQuestionController: BaseController,UITableViewDelegate,UITableViewData
         
         cell?.questionLabel.text = self.dataArr[indexPath.row] as? String
 
-        cell?.delectBlock = { () in
-            
-            self.dataArr.removeObjectAtIndex(indexPath.row)
-            
-            self.careTableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
-            
-            self.careTableView.reloadData()
-            
+        cell!.delectBlock = { () in
+        
+            if cell?.selectPath == nil {
+                
+                return
+            }
+        self.dataArr.removeObjectAtIndex(cell!.selectPath.row)
+        
+        self.careTableView.deleteRowsAtIndexPaths([cell!.selectPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        
+        self.careTableView.reloadData()
+        
         }
+
         
         return cell!
         
     }
     
-         
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as!CareCell
+        
+        if (cell.isDelect != nil) {
+            
+            cell.selectPath = indexPath
+            
+            cell.delectBtn.hidden = !cell.isDelect
+            
+            
+        }
+        
+        
+        
+    }
     //懒加载
     
     private lazy var dataArr: NSMutableArray = {

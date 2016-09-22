@@ -14,17 +14,38 @@ class CollectQuestionCell: UITableViewCell {
 
     var dltBlock: DelectBlock?
     
+    var selectIndex: NSIndexPath!
+
+    var isHide: Bool!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         
-        
-        delectBtn.hidden = true
+        isHide = false
 
+        delectBtn.hidden = !isHide
         
+        let longPress = UILongPressGestureRecognizer.init(target: self, action:#selector(CollectQuestionCell.longPressTapAction))
+        
+        longPress.minimumPressDuration = 1
+        
+        self.contentView.addGestureRecognizer(longPress)
+
     }
 
+    func longPressTapAction(longPress: UILongPressGestureRecognizer){
+        
+        if  longPress.state == UIGestureRecognizerState.Ended
+        {
+            
+            self.isHide = true
+            
+            self.delectBtn.hidden = !self.isHide
+            
+        }
+        
+    }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -54,6 +75,8 @@ class CollectQuestionCell: UITableViewCell {
       //删除cell和数据
         
         dltBlock!()
+        
+        delectBtn.hidden = self.isHide
         
     }
     

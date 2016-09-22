@@ -16,6 +16,9 @@ class CareCell: UITableViewCell {
     
     var isDelect: Bool!
     
+    var selectPath: NSIndexPath!
+
+    
     @IBOutlet weak var questionLabel: UILabel!
     
 
@@ -29,9 +32,9 @@ class CareCell: UITableViewCell {
     
     override func awakeFromNib() {
         
-        delectBtn.hidden = true
-        
         isDelect = false
+
+        delectBtn.hidden = !isDelect
         
         let longPress = UILongPressGestureRecognizer.init(target: self, action:#selector(CareCell.longPressTapAction))
         
@@ -43,17 +46,19 @@ class CareCell: UITableViewCell {
     func longPressTapAction(longPress: UILongPressGestureRecognizer){
         
         if  longPress.state == UIGestureRecognizerState.Ended{
-
             
-             delectBtn.hidden = false
+            self.isDelect = true
             
+            self.delectBtn.hidden = !self.isDelect
         }
         
     }
     @IBAction func delectClicked(sender: AnyObject) {
         
         delectBlock!()
-        
+                
+        delectBtn.hidden = isDelect
+
     }
     
     
