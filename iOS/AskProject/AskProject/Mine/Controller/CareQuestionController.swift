@@ -18,7 +18,10 @@ class CareQuestionController: BaseController,UITableViewDelegate,UITableViewData
 
         
     }
-    
+    override func viewWillAppear(animated: Bool) {
+        
+        navigationController?.navigationBar.hidden = false
+    }
     
     @IBAction func backClicked(sender: AnyObject) {
         
@@ -69,8 +72,13 @@ class CareQuestionController: BaseController,UITableViewDelegate,UITableViewData
             
         }
         
+        let  story =   UIStoryboard.init(name: "Home", bundle: nil)
         
-        
+        let   detail =  story.instantiateViewControllerWithIdentifier("HomeAnswerController")as!HomeAnswerController
+                    
+        navigationController?.pushViewController(detail, animated: true)
+
+      
     }
     //懒加载
     

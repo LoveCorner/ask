@@ -17,7 +17,7 @@ extension UIView{
         
         backView.backgroundColor = RGBA(199, g: 203, b: 211, a: 0.9)
         
-        let imageName = ["tab_bottom","jian","hao","jian","hao","dot","photo","vico","link"]
+        let imageName = ["tab_bottom","jing","xing","jian","hao","dot","photo","vico","link"]
         
         for  index in 0..<9 {
             

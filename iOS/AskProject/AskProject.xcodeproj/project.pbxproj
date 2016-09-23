@@ -10,15 +10,14 @@
 		45041D401D810CEF005D7DDB /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45041D3F1D810CEF005D7DDB /* SettingController.swift */; };
 		45041D421D810D03005D7DDB /* HeadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45041D411D810D03005D7DDB /* HeadController.swift */; };
 		45041D441D815BE6005D7DDB /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45041D431D815BE6005D7DDB /* SearchController.swift */; };
+		451666811D94C83E0076777F /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451666801D94C83E0076777F /* UIView+AutoLayout.swift */; };
 		451C47ED1D8E9086003B7978 /* HomeEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C47EC1D8E9086003B7978 /* HomeEditController.swift */; };
 		451C47F11D8EA1DF003B7978 /* HomeLookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C47F01D8EA1DF003B7978 /* HomeLookController.swift */; };
 		451D10881D7D5CF600D74664 /* AddController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 451D10871D7D5CF600D74664 /* AddController.storyboard */; };
 		451D108A1D7D5D0700D74664 /* AddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451D10891D7D5D0700D74664 /* AddController.swift */; };
 		451D108C1D7D5EAF00D74664 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451D108B1D7D5EAF00D74664 /* MainTabBar.swift */; };
 		451D10901D7D8ECD00D74664 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451D108F1D7D8ECD00D74664 /* LoginController.swift */; };
-		452333491D86B34500031B0A /* AlertView+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452333481D86B34500031B0A /* AlertView+Category.swift */; };
-		4523334B1D86B87600031B0A /* PresentAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4523334A1D86B87600031B0A /* PresentAlertView.swift */; };
-		4523334D1D86B88200031B0A /* PresentAlertView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4523334C1D86B88200031B0A /* PresentAlertView.storyboard */; };
+		452333491D86B34500031B0A /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452333481D86B34500031B0A /* VisitorView.swift */; };
 		454B22831D90E6FC00398F03 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B22811D90E6FC00398F03 /* SearchCell.swift */; };
 		454B22841D90E6FC00398F03 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 454B22821D90E6FC00398F03 /* SearchCell.xib */; };
 		454B22861D91306A00398F03 /* voicegif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 454B22851D91306A00398F03 /* voicegif.gif */; };
@@ -92,15 +91,14 @@
 		45041D3F1D810CEF005D7DDB /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		45041D411D810D03005D7DDB /* HeadController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadController.swift; sourceTree = "<group>"; };
 		45041D431D815BE6005D7DDB /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		451666801D94C83E0076777F /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		451C47EC1D8E9086003B7978 /* HomeEditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeEditController.swift; sourceTree = "<group>"; };
 		451C47F01D8EA1DF003B7978 /* HomeLookController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLookController.swift; sourceTree = "<group>"; };
 		451D10871D7D5CF600D74664 /* AddController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddController.storyboard; sourceTree = "<group>"; };
 		451D10891D7D5D0700D74664 /* AddController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddController.swift; sourceTree = "<group>"; };
 		451D108B1D7D5EAF00D74664 /* MainTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		451D108F1D7D8ECD00D74664 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		452333481D86B34500031B0A /* AlertView+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlertView+Category.swift"; sourceTree = "<group>"; };
-		4523334A1D86B87600031B0A /* PresentAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PresentAlertView.swift; path = AskProject/Common/View/PresentAlertView.swift; sourceTree = SOURCE_ROOT; };
-		4523334C1D86B88200031B0A /* PresentAlertView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PresentAlertView.storyboard; path = AskProject/Common/View/PresentAlertView.storyboard; sourceTree = SOURCE_ROOT; };
+		452333481D86B34500031B0A /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		454B22811D90E6FC00398F03 /* SearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		454B22821D90E6FC00398F03 /* SearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		454B22851D91306A00398F03 /* voicegif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = voicegif.gif; sourceTree = "<group>"; };
@@ -450,8 +448,6 @@
 		457AB3641D7D4675007C7E13 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4523334A1D86B87600031B0A /* PresentAlertView.swift */,
-				4523334C1D86B88200031B0A /* PresentAlertView.storyboard */,
 				45C295971D8E3ECE00D2F367 /* BaseController.swift */,
 			);
 			path = Controller;
@@ -469,7 +465,7 @@
 			children = (
 				4579FC021D8F794B006503AF /* UIButton+Extension.swift */,
 				45C2959F1D8E731100D2F367 /* NagivationBar.category.swift */,
-				452333481D86B34500031B0A /* AlertView+Category.swift */,
+				452333481D86B34500031B0A /* VisitorView.swift */,
 				45746C3D1D93EFB2008E0AE6 /* InputAccessoryView.swift */,
 			);
 			path = View;
@@ -478,6 +474,7 @@
 		457AB3671D7D4675007C7E13 /* HeaderFile */ = {
 			isa = PBXGroup;
 			children = (
+				451666801D94C83E0076777F /* UIView+AutoLayout.swift */,
 				454EC5011D7EACE600C86EAB /* CommonFile.swift */,
 			);
 			path = HeaderFile;
@@ -603,7 +600,6 @@
 				45C2959C1D8E44FF00D2F367 /* Mine.storyboard in Resources */,
 				45C2959E1D8E450C00D2F367 /* Home.storyboard in Resources */,
 				454EC4F81D7E66E600C86EAB /* MainTabBar.storyboard in Resources */,
-				4523334D1D86B88200031B0A /* PresentAlertView.storyboard in Resources */,
 				457AB3321D7D44DA007C7E13 /* Assets.xcassets in Resources */,
 				457AB32D1D7D44DA007C7E13 /* Main.storyboard in Resources */,
 				456143921D8FE53500D490F1 /* SearchResultCell.xib in Resources */,
@@ -643,7 +639,6 @@
 				45631A231D7FC14A00FB7902 /* MineData.swift in Sources */,
 				4583261B1D83F8C000CF7C2C /* CollectQuestionCell.swift in Sources */,
 				45041D401D810CEF005D7DDB /* SettingController.swift in Sources */,
-				4523334B1D86B87600031B0A /* PresentAlertView.swift in Sources */,
 				458326131D83F89000CF7C2C /* CollectAnswerController.swift in Sources */,
 				456B72161D87EC3B006740D2 /* AddExamController.swift in Sources */,
 				454EC5021D7EACE600C86EAB /* CommonFile.swift in Sources */,
@@ -670,7 +665,8 @@
 				456143911D8FE53500D490F1 /* SearchResultCell.swift in Sources */,
 				457AB3701D7D5040007C7E13 /* MineController.swift in Sources */,
 				45501C711D8518D00080B780 /* MessageController.swift in Sources */,
-				452333491D86B34500031B0A /* AlertView+Category.swift in Sources */,
+				452333491D86B34500031B0A /* VisitorView.swift in Sources */,
+				451666811D94C83E0076777F /* UIView+AutoLayout.swift in Sources */,
 				457AB3301D7D44DA007C7E13 /* AskProject.xcdatamodeld in Sources */,
 				456B72181D87EC3B006740D2 /* ExamDetailController.swift in Sources */,
 				458326151D83F89000CF7C2C /* CareQuestionController.swift in Sources */,

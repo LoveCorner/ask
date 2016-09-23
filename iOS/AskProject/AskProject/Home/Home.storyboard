@@ -6,11 +6,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--首页-->
         <scene sceneID="7x9-S3-kyp">
             <objects>
                 <navigationController id="rEX-IZ-jLh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="home" selectedImage="home_click" id="pPS-Ps-G6X"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="home" selectedImage="home_click" id="pPS-Ps-G6X"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="S1d-hV-IHM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -427,7 +427,7 @@
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gQ7-tN-RMp">
-                                <rect key="frame" x="30" y="136" width="540" height="250"/>
+                                <rect key="frame" x="30" y="136" width="570" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="uKw-Jv-ABA"/>
@@ -448,87 +448,23 @@
                                 <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LKA-oG-338">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDb-Kd-uWj">
-                                        <rect key="frame" x="172" y="177.5" width="256" height="131"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="确认退出编辑吗？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRi-sI-dlv">
-                                                <rect key="frame" x="53" y="39" width="150" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="J8j-uQ-MBM"/>
-                                                    <constraint firstAttribute="width" constant="150" id="cqI-hM-qWe"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bif-LA-RXP">
-                                                <rect key="frame" x="24" y="86" width="95" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="95" id="gQU-IU-Zle"/>
-                                                    <constraint firstAttribute="height" constant="30" id="pE8-9y-9XW"/>
-                                                </constraints>
-                                                <state key="normal" backgroundImage="cancel_bottom"/>
-                                                <connections>
-                                                    <action selector="cancleClicked:" destination="kK6-iM-tIG" eventType="touchUpInside" id="vSn-Zk-dvT"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0su-tv-YrQ">
-                                                <rect key="frame" x="138" y="86" width="95" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="03h-vP-Xqp"/>
-                                                    <constraint firstAttribute="width" constant="95" id="TTk-TH-aNJ"/>
-                                                </constraints>
-                                                <state key="normal" backgroundImage="sure_bottom"/>
-                                                <connections>
-                                                    <action selector="sureClicked:" destination="kK6-iM-tIG" eventType="touchUpInside" id="dFK-IA-NbZ"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="0su-tv-YrQ" firstAttribute="top" secondItem="eRi-sI-dlv" secondAttribute="bottom" constant="27" id="088-9g-X8v"/>
-                                            <constraint firstAttribute="trailing" secondItem="0su-tv-YrQ" secondAttribute="trailing" constant="23" id="BfM-CB-lpj"/>
-                                            <constraint firstAttribute="height" constant="131" id="R6P-AO-jhP"/>
-                                            <constraint firstAttribute="width" constant="256" id="ayR-tf-DnS"/>
-                                            <constraint firstItem="bif-LA-RXP" firstAttribute="top" secondItem="eRi-sI-dlv" secondAttribute="bottom" constant="27" id="bRZ-ub-CYs"/>
-                                            <constraint firstItem="bif-LA-RXP" firstAttribute="leading" secondItem="bDb-Kd-uWj" secondAttribute="leading" constant="24" id="d1I-2N-4Vb"/>
-                                            <constraint firstItem="eRi-sI-dlv" firstAttribute="top" secondItem="bDb-Kd-uWj" secondAttribute="top" constant="39" id="hno-wL-JMf"/>
-                                            <constraint firstItem="eRi-sI-dlv" firstAttribute="centerX" secondItem="bDb-Kd-uWj" secondAttribute="centerX" id="sEP-Es-AQR"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="bDb-Kd-uWj" firstAttribute="centerX" secondItem="LKA-oG-338" secondAttribute="centerX" id="MgX-TW-ILN"/>
-                                    <constraint firstItem="bDb-Kd-uWj" firstAttribute="centerY" secondItem="LKA-oG-338" secondAttribute="centerY" id="nLm-PD-dBh"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gQ7-tN-RMp" firstAttribute="leading" secondItem="a09-mS-5RB" secondAttribute="leadingMargin" constant="10" id="CFz-Ff-vRc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="LKA-oG-338" secondAttribute="trailing" constant="-20" id="IWB-wt-8YD"/>
                             <constraint firstItem="gQ7-tN-RMp" firstAttribute="top" secondItem="60n-se-D7J" secondAttribute="bottom" constant="7" id="Kws-xW-R9g"/>
                             <constraint firstItem="vU5-zv-42D" firstAttribute="leading" secondItem="a09-mS-5RB" secondAttribute="leadingMargin" constant="13" id="LwF-Rx-Ka1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="60n-se-D7J" secondAttribute="trailing" id="Q0H-x3-Obp"/>
-                            <constraint firstItem="bMr-qo-LG0" firstAttribute="top" secondItem="LKA-oG-338" secondAttribute="bottom" id="UbW-xf-tDR"/>
                             <constraint firstItem="vU5-zv-42D" firstAttribute="top" secondItem="60n-se-D7J" secondAttribute="bottom" constant="15" id="c3P-Vb-IeG"/>
                             <constraint firstItem="60n-se-D7J" firstAttribute="leading" secondItem="a09-mS-5RB" secondAttribute="leadingMargin" id="cMC-Dd-Y3U"/>
                             <constraint firstItem="60n-se-D7J" firstAttribute="top" secondItem="aWA-9n-TvZ" secondAttribute="bottom" constant="15" id="iYu-ZX-sL2"/>
-                            <constraint firstItem="LKA-oG-338" firstAttribute="leading" secondItem="a09-mS-5RB" secondAttribute="leadingMargin" constant="-20" id="k9a-IS-qam"/>
-                            <constraint firstItem="LKA-oG-338" firstAttribute="top" secondItem="aWA-9n-TvZ" secondAttribute="bottom" id="qnO-wk-Oq9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gQ7-tN-RMp" secondAttribute="trailing" constant="10" id="vO3-Tk-6qI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gQ7-tN-RMp" secondAttribute="trailing" constant="-20" id="vO3-Tk-6qI"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="answerTV" destination="gQ7-tN-RMp" id="mXf-pI-fZj"/>
-                        <outlet property="backView" destination="LKA-oG-338" id="LGl-MW-AN6"/>
                         <outlet property="placeLabel" destination="vU5-zv-42D" id="p6C-uQ-2CR"/>
                         <outlet property="questionLabel" destination="zmo-gx-WKD" id="WGd-ov-6JW"/>
-                        <outlet property="whiteView" destination="bDb-Kd-uWj" id="xcI-cM-uD6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k7R-Np-9P4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1851,14 +1787,13 @@ Cocoa 本身由 Objective-C 语言写成，Objective-C 又是 C 语言的严格�
         <image name="back" width="11" height="19"/>
         <image name="back_gocus" width="11" height="19"/>
         <image name="bigZan_click" width="46" height="43"/>
-        <image name="cancel_bottom" width="95" height="30"/>
         <image name="cancel_w" width="17" height="17"/>
         <image name="comment_head" width="36" height="36"/>
         <image name="darklink" width="19" height="22"/>
         <image name="enlarge" width="16" height="16"/>
         <image name="focus_click" width="22" height="18"/>
-        <image name="home" width="21" height="39"/>
-        <image name="home_click" width="23" height="39"/>
+        <image name="home" width="21" height="22"/>
+        <image name="home_click" width="23" height="22"/>
         <image name="magnifier" width="19" height="21"/>
         <image name="nav_bg_id" width="375" height="184"/>
         <image name="pinglun" width="17" height="15"/>
@@ -1869,9 +1804,8 @@ Cocoa 本身由 Objective-C 语言写成，Objective-C 又是 C 语言的严格�
         <image name="search" width="56" height="35"/>
         <image name="star" width="20" height="20"/>
         <image name="staticVoice" width="375" height="386"/>
-        <image name="sure_bottom" width="95" height="30"/>
         <image name="systemHead" width="24" height="24"/>
-        <image name="tar_bl" width="125" height="40"/>
+        <image name="tar_bl" width="123" height="40"/>
         <image name="voice" width="22" height="19"/>
         <image name="zan" width="15" height="15"/>
     </resources>

@@ -14,6 +14,11 @@ class CollectAnswerController: BaseController,UITableViewDelegate,UITableViewDat
     
     @IBOutlet weak var collectTableView: UITableView!
     
+    override func viewWillAppear(animated: Bool) {
+        
+        navigationController?.navigationBar.hidden = false
+        
+    }
     override func viewDidLoad() {
    //1.获取数据源
  self.dataArr.addObjectsFromArray(["在ios8以前，我们实现tableview中滑动显示删除，置顶，更多等等的按钮时，都需要自己去实现，在ios8中系统已经写好了，只要一个代理方法和一个类就行了","在ios8以前，我们实现tableview中滑动显示删除，置顶，更多等等的按钮时，都需要自己去实现，在ios8中系统已经写好了，只要一个代理方法和一个类就行了","在ios8以前，我们实现tableview中滑动显示删除，置顶，更多等等的按钮时，都需要自己去实现，在ios8中系统已经写好了，只要一个代理方法和一个类就行了","在ios8以前，我们实现tableview中滑动显示删除，置顶，更多等等的按钮时，都需要自己去实现，在ios8中系统已经写好了，只要一个代理方法和一个类就行了","在ios8以前，我们实现tableview中滑动显示删除，置顶，更多等等的按钮时，都需要自己去实现，在ios8中系统已经写好了，只要一个代理方法和一个类就行了","在ios8以前，我们实现tableview中滑动显示删除，置顶，更多等等的按钮时，都需要自己去实现，在ios8中系统已经写好了，只要一个代理方法和一个类就行了","在ios8以前，我们实现tableview中滑动显示删除，置顶，更多等等的按钮时，都需要自己去实现，在ios8中系统已经写好了，只要一个代理方法和一个类就行了","在ios8以前，我们实现tableview中滑动显示删除，置顶，更多等等的按钮时，都需要自己去实现，在ios8中系统已经写好了，只要一个代理方法和一个类就行了"])
@@ -60,7 +65,12 @@ class CollectAnswerController: BaseController,UITableViewDelegate,UITableViewDat
             
         }
         
+        let  story =   UIStoryboard.init(name: "Home", bundle: nil)
         
+        let   detail =  story.instantiateViewControllerWithIdentifier("AnswerDetailController")as!AnswerDetailController
+        
+        navigationController?.pushViewController(detail, animated: true)
+
         
     }
 

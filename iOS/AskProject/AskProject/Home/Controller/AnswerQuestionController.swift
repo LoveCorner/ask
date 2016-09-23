@@ -8,18 +8,19 @@
 
 import UIKit
 
-class AnswerQuestionController: BaseController,UITextViewDelegate {
+class AnswerQuestionController: BaseController,UITextViewDelegate,VisitorViewDelegate {
     
     
-    @IBOutlet weak var whiteView: UIView!
-    @IBOutlet weak var backView: UIView!
-    @IBOutlet weak var questionLabel: UILabel!
+       @IBOutlet weak var questionLabel: UILabel!
     
     @IBOutlet weak var placeLabel: UILabel!
     
     @IBOutlet weak var answerTV: UITextView!
     
+    var alertView: VisitorView?
     
+    var window: UIWindow!
+
     override func viewDidLoad() {
         
         //1.初始化UI
@@ -31,9 +32,10 @@ class AnswerQuestionController: BaseController,UITextViewDelegate {
         
         self.title = "回答"
         
-        backView.hidden = true
+        //设置弹框
+        window = UIApplication.sharedApplication().windows.last
         
-        whiteView.layer.cornerRadius = 5
+
         //2.回收键盘
         tapUI()
         
@@ -67,7 +69,20 @@ class AnswerQuestionController: BaseController,UITextViewDelegate {
     func leftButtonClicked(){
         
  
-        backView.hidden = false
+        //弹框
+        let customView = VisitorView()
+        
+        customView.delegate = self
+        
+        customView.frame = UIScreen.mainScreen().bounds
+        
+        customView.setupVisitorInfo("确定退出编辑吗？")
+        
+        alertView = customView
+        
+        window?.addSubview(alertView!)
+        
+        
 
     }
     
@@ -77,6 +92,22 @@ class AnswerQuestionController: BaseController,UITextViewDelegate {
  
         
     }
+    
+    func cancelBtnWillClicked(){
+        
+        alertView?.hidden = true
+        
+    }
+    
+    func sureBtnWillClicked(){
+        
+        alertView?.hidden = true
+        //返回上一界面
+        navigationController?.popViewControllerAnimated(true)
+        
+        
+    }
+
     private func tapUI(){
         
         let tap =  UITapGestureRecognizer.init(target: self, action: #selector(LoginController.tapAction))
@@ -99,15 +130,5 @@ class AnswerQuestionController: BaseController,UITextViewDelegate {
   
 
     
-    @IBAction func sureClicked(sender: AnyObject) {
-        
-        navigationController?.popViewControllerAnimated(true)
-
-        
-    }
-    @IBAction func cancleClicked(sender: AnyObject) {
-        
-        backView.hidden = true
-
-    }
+  
 }

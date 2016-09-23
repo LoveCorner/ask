@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class VoiceController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDelegate {
+class VoiceController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDelegate,VisitorViewDelegate {
     //录音
     var recorder: AVAudioRecorder!
     //播放
@@ -19,7 +19,10 @@ class VoiceController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDel
     
     var timer : NSTimer!
 
+    var alertView: VisitorView?
     
+    var window: UIWindow!
+
     @IBOutlet weak var recordBtn: UIButton!
     
     @IBOutlet weak var playBtn: UIButton!
@@ -52,10 +55,10 @@ class VoiceController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDel
         
     }
     private func setUI(){
-        
-        
-        playBtn.enabled = false
-        
+        //设置弹框
+        window = UIApplication.sharedApplication().windows.last
+
+        isEnabled(false)
         playBtn.setBackgroundImage(UIImage(named: "play"), forState: UIControlState.Normal)
         
         playBtn.setBackgroundImage(UIImage(named: "zanting"), forState: UIControlState.Selected)
@@ -101,7 +104,19 @@ class VoiceController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDel
     
     func backClicked(){
         
-        navigationController?.popViewControllerAnimated(true)
+        //弹框
+        let customView = VisitorView()
+        
+        customView.delegate = self
+        
+        customView.frame = UIScreen.mainScreen().bounds
+        
+        customView.setupVisitorInfo("确定退出录音吗？")
+        
+        alertView = customView
+        
+        window?.addSubview(alertView!)
+
  
         
     }
@@ -111,6 +126,21 @@ class VoiceController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDel
         
         
     }
+    func cancelBtnWillClicked(){
+        
+        alertView?.hidden = true
+        
+    }
+    
+    func sureBtnWillClicked(){
+        
+        alertView?.hidden = true
+        //返回上一界面
+        navigationController?.popViewControllerAnimated(true)
+        
+        
+    }
+
     //移除NavBar的线条
     private func moveNavBarLine(){
         
@@ -146,13 +176,13 @@ class VoiceController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDel
             
             isHided(true)
             
-            playBtn.enabled = true
-    
+            isEnabled(true)
+            
             return
         }
        
-            playBtn.enabled = false
-        
+        isEnabled(false)
+
             //准备录音
         if ((recorder?.prepareToRecord()) != nil) {
             
@@ -237,6 +267,10 @@ class VoiceController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDel
    
     @IBAction func playClicked(sender: AnyObject) {
         
+        //关闭定时器
+        timer.fireDate = NSDate.distantFuture()
+        
+
         playBtn.selected = !playBtn.selected
         
         if playBtn.selected {
@@ -281,6 +315,11 @@ class VoiceController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDel
     }
     @IBAction func revoiceClicked(sender: AnyObject) {
         
+        //关闭定时器
+        timer.fireDate = NSDate.distantFuture()
+        
+        isEnabled(false)
+        
        //删除录制文件
         recorder?.deleteRecording()
         
@@ -292,5 +331,13 @@ class VoiceController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDel
         
         second = 0
         
+    }
+    
+    private func isEnabled(able: Bool){
+        
+        playBtn.enabled = able
+        
+        delectBtn.enabled = able
+
     }
 }

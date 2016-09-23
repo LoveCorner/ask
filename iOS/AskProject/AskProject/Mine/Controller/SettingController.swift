@@ -8,14 +8,14 @@
 
 import UIKit
 
-class SettingController: BaseController{
+class SettingController: BaseController,VisitorViewDelegate{
     
     
     @IBOutlet weak var onSwitchMsg: UISwitch!
     
+    var alertView: VisitorView?
     
-    @IBOutlet weak var backView: UIView!
-    @IBOutlet weak var logView: UIView!
+    var window: UIWindow!
     
     override func viewDidLoad() {
         
@@ -27,16 +27,11 @@ class SettingController: BaseController{
     
     private func setUI(){
         
-        backView.hidden = true
-        
-        logView.hidden = true
+        window = UIApplication.sharedApplication().windows.last
 
-        logView.layer.masksToBounds = true
-        
-        logView.layer.cornerRadius = 5
         
     }
-
+   
     @IBAction func backClicked(sender: AnyObject) {
         
         navigationController?.popViewControllerAnimated(true)
@@ -49,50 +44,51 @@ class SettingController: BaseController{
         
     }
     
-    @IBAction func pushMessageClicked(sender: AnyObject) {
+       @IBAction func logoutClicked(sender: AnyObject) {
+        //弹框
+        let customView = VisitorView()
         
+        customView.delegate = self
         
-    }
-    
-    @IBAction func logoutClicked(sender: AnyObject) {
+        customView.frame = UIScreen.mainScreen().bounds
+                
+        customView.setupVisitorInfo("确定退出账号吗？")
         
-        backView.hidden = false
+        alertView = customView
+        
+        window?.addSubview(alertView!)
 
-        logView.hidden = false
-
     }
     
-    
-//    @IBAction func personMessageClicked(sender: AnyObject) {
-//        
-//        pushControllerUI("PersonMessageController")
-//        
-//    }
-    private func pushControllerUI(name:String){
+    func cancelBtnWillClicked(){
         
-        let  story =   UIStoryboard.init(name: name, bundle: nil)
-        
-        let   vc =  story.instantiateViewControllerWithIdentifier(name)
-        
-        navigationController?.pushViewController(vc, animated: true)
-        
-        
-    }
-    @IBAction func cancleClicked(sender: AnyObject) {
-        
-        backView.hidden = true
-        
-        logView.hidden = true
-
+        alertView?.hidden = true
         
     }
     
-    
-    @IBAction func sureClicked(sender: AnyObject) {
+    func sureBtnWillClicked(){
         
+        alertView?.hidden = true
         //退出  回到登录界面
         self.dismissViewControllerAnimated(false, completion: nil)
         
         
     }
-}
+//    @IBAction func personMessageClicked(sender: AnyObject) {
+//        
+//        pushControllerUI("PersonMessageController")
+//        
+//    }
+//    private func pushControllerUI(name:String){
+//        
+//        let  story =   UIStoryboard.init(name: name, bundle: nil)
+//        
+//        let   vc =  story.instantiateViewControllerWithIdentifier(name)
+//        
+//        navigationController?.pushViewController(vc, animated: true)
+//        
+//        
+//    }
+  
+    
+   }

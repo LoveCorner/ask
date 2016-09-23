@@ -9,7 +9,7 @@
 import UIKit
 
 class HomeAnswerController: UIViewController,UITableViewDataSource,UITableViewDelegate {
-    
+        
     @IBOutlet weak var careBtn: UIButton!
     
     @IBOutlet weak var questionLabel: UILabel!

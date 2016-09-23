@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddController: UIViewController,UITextViewDelegate {
+class AddController: UIViewController,UITextViewDelegate,VisitorViewDelegate {
     
     
     @IBOutlet weak var lineView: UIView!
@@ -17,8 +17,10 @@ class AddController: UIViewController,UITextViewDelegate {
     
     @IBOutlet weak var placeLabel: UILabel!
     
-    @IBOutlet weak var backView: UIView!
+    var alertView: VisitorView?
     
+    var window: UIWindow!
+
     
     override func viewWillAppear(animated: Bool) {
         
@@ -28,7 +30,7 @@ class AddController: UIViewController,UITextViewDelegate {
     
     override func viewDidLoad() {
         
-        //1.隐藏backView
+        //1.设置弹框
         
         backViewUI()
         
@@ -36,8 +38,6 @@ class AddController: UIViewController,UITextViewDelegate {
         tapUI()
         //3.设置键盘
         contentTV.inputAccessoryView = UIView.createBoardView(self, action: #selector(AddController.boardClicked(_:)))
-        
-       
         
         
     }
@@ -50,10 +50,8 @@ class AddController: UIViewController,UITextViewDelegate {
     
     private func backViewUI(){
         
-        backView.hidden = true
-        
-        backView.layer.cornerRadius = 5
-        
+        window = UIApplication.sharedApplication().windows.last
+
         
     }
     private func tapUI(){
@@ -88,36 +86,38 @@ class AddController: UIViewController,UITextViewDelegate {
     @IBAction func cancleClicked(sender: AnyObject) {
         
                
-        backColorUI(false, viewBackColor: RGBA(157, g: 157, b: 157, a: 0.83), lineColor: RGBA(157, g: 157, b: 157, a: 1), contentAlpha: 0)
+        //弹框
+        let customView = VisitorView()
         
+        customView.delegate = self
         
-    }
-    
-    @IBAction func exitClicked(sender: AnyObject) {
+        customView.frame = UIScreen.mainScreen().bounds
         
-       
-        backColorUI(true, viewBackColor: UIColor.whiteColor(), lineColor: RGB(0xededed), contentAlpha: 1)
-
-    }
-    
-    private func backColorUI(isHide: Bool,viewBackColor: UIColor, lineColor: UIColor,contentAlpha: CGFloat){
+        customView.setupVisitorInfo("确定退出编辑吗？")
         
-        backView.hidden = isHide
+        alertView = customView
         
-        view.backgroundColor = viewBackColor
-        
-        contentTV.alpha = contentAlpha
-        
-        lineView.backgroundColor = lineColor
+        window?.addSubview(alertView!)
 
         
     }
     
-    @IBAction func sureClicked(sender: AnyObject) {
+    func cancelBtnWillClicked(){
         
+        alertView?.hidden = true
+        
+    }
+    
+    func sureBtnWillClicked(){
+        
+        alertView?.hidden = true
+        //返回上一界面
         self.dismissViewControllerAnimated(false, completion: nil)
         
+        
     }
+   
+    
     @IBAction func releaseClicked(sender: AnyObject) {
         
         //网络提交请求

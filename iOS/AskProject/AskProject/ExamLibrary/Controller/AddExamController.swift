@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddExamController: BaseController,UITextFieldDelegate,UITextViewDelegate {
+class AddExamController: BaseController,UITextFieldDelegate,UITextViewDelegate,VisitorViewDelegate {
     
     
     @IBOutlet weak var questionTF: UITextField!
@@ -21,9 +21,12 @@ class AddExamController: BaseController,UITextFieldDelegate,UITextViewDelegate {
     
     @IBOutlet weak var placeLabel: UILabel!
     
-    @IBOutlet weak var backView: UIView!
     
+    var alertView: VisitorView?
     
+    var window: UIWindow!
+    
+
     override func viewDidLoad() {
         
         //1.初始化UI
@@ -35,14 +38,11 @@ class AddExamController: BaseController,UITextFieldDelegate,UITextViewDelegate {
     
     private func setUI(){
         
-        //1.1隐藏backView
-        
-        backView.hidden = true
-        
-        backView.layer.cornerRadius = 5
-        
+        //1.1弹框设置
+        window = UIApplication.sharedApplication().windows.last
+
         leftViewUI(questionTF)
-        //1.2设置
+        //1.2设置键盘
         questionTF.inputAccessoryView = UIView.createBoardView(self, action: #selector(AddExamController.boardButtonClicked))
         
         answerTV.inputAccessoryView = UIView.createBoardView(self, action: #selector(AddExamController.boardButtonClicked))
@@ -94,40 +94,45 @@ class AddExamController: BaseController,UITextFieldDelegate,UITextViewDelegate {
         
         return true
     }
-    @IBAction func cancleClicked(sender: AnyObject) {
-        
-
-        backColorUI(true, viewBackColor: UIColor.whiteColor(), questionAlpha: 1.0, answerAlpha: 1.0)
-
-    }
-    private func backColorUI(isHide: Bool,viewBackColor: UIColor,questionAlpha: CGFloat,answerAlpha: CGFloat){
-        
-        backView.hidden = isHide
-        
-        view.backgroundColor = viewBackColor
-        
-        questionTF.alpha = questionAlpha
-        
-        answerTV.alpha = answerAlpha
-        
-    }
-    @IBAction func sureClicked(sender: AnyObject) {
-        
-        navigationController?.popViewControllerAnimated(true)
- 
-        
-    }
+    
     
     @IBAction func exitClicked(sender: AnyObject) {
         
-        backColorUI(false, viewBackColor: RGBA(157, g: 157, b: 157, a: 0.83), questionAlpha: 0, answerAlpha: 0)
-        
+              
         questionTF.resignFirstResponder()
         
         answerTV.resignFirstResponder()
+        //弹框
+        let customView = VisitorView()
+        
+        customView.delegate = self
+        
+        customView.frame = UIScreen.mainScreen().bounds
+        
+        customView.setupVisitorInfo("确定退出编辑吗？")
+        
+        alertView = customView
+        
+        window?.addSubview(alertView!)
 
 
     }
+    func cancelBtnWillClicked(){
+        
+        alertView?.hidden = true
+        
+    }
+    
+    func sureBtnWillClicked(){
+        
+        alertView?.hidden = true
+        //返回上一界面
+        navigationController?.popViewControllerAnimated(true)
+        
+        
+    }
+    
+
     @IBAction func finishClicked(sender: AnyObject) {
         
         navigationController?.popViewControllerAnimated(true)

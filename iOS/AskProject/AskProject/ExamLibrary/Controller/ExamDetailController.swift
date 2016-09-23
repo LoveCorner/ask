@@ -8,9 +8,12 @@
 
 import UIKit
 
-class ExamDetailController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ExamDetailController: UIViewController,UITableViewDelegate,UITableViewDataSource,VisitorViewDelegate {
     
+    var alertView: VisitorView?
     
+    var window: UIWindow!
+
     @IBOutlet weak var examTableView: UITableView!
     
     @IBOutlet weak var bottomView: UIView!
@@ -32,11 +35,8 @@ class ExamDetailController: UIViewController,UITableViewDelegate,UITableViewData
     @IBOutlet weak var zanLabel: UILabel!
     
     
-    @IBOutlet weak var backImage: UIImageView!
-    
-    
-    @IBOutlet weak var recommentLabel: UILabel!
-    
+    @IBOutlet weak var blackView: UIView!
+      
     override func viewWillAppear(animated: Bool) {
         
         //1.隐藏导航栏和标签栏
@@ -54,15 +54,18 @@ class ExamDetailController: UIViewController,UITableViewDelegate,UITableViewData
     
     private func setUI(){
         
+        //2.1弹框设置
+        window = UIApplication.sharedApplication().windows.last
+
         examTableView.registerNib(UINib.init(nibName: "CommentCell", bundle: nil), forCellReuseIdentifier: "CommentCell")
 
-        //3.设置阴影
+        //2.2设置阴影
         
         setShadowViewUI(whiteView, size: CGSizeMake(0, 10))
         
         setShadowViewUI(bottomView, size: CGSizeMake(0, 0))
         
-        isHidedOrNot(true)
+        blackView.hidden = true
         
         
     }
@@ -149,25 +152,43 @@ class ExamDetailController: UIViewController,UITableViewDelegate,UITableViewData
 //    }
     @IBAction func recommentClicked(sender: AnyObject) {
         
-        isHidedOrNot(false)
+        //弹框
+        let customView = VisitorView()
+        
+        customView.delegate = self
+        
+        customView.frame = UIScreen.mainScreen().bounds
+        
+        customView.setupVisitorInfo("确定推荐首页吗？")
+        
+        alertView = customView
+        
+        window?.addSubview(alertView!)
+
+       
+        
+    }
+    func cancelBtnWillClicked(){
+        
+        alertView?.hidden = true
+        
+    }
+    
+    func sureBtnWillClicked(){
+        
+        alertView?.hidden = true
+
+        blackView.hidden = false
         
         NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: #selector(ExamDetailController.timerAction), userInfo: nil, repeats: false)
-        
+               
     }
-    
    func timerAction(){
     
-    isHidedOrNot(true)
-
+       blackView.hidden = true
     
     }
-    private func isHidedOrNot(isHide: Bool){
-        
-        recommentLabel.hidden = isHide
-        
-        backImage.hidden = isHide
-        
-    }
+    
     //懒加载
     
     private lazy var dataArr: NSMutableArray = {
