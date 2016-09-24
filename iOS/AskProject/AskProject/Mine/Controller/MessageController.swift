@@ -13,7 +13,12 @@ class MessageController: BaseController,UITableViewDelegate,UITableViewDataSourc
     
     @IBOutlet weak var msgTableView: UITableView!
     
-    
+    override func viewWillAppear(animated: Bool) {
+        
+        //1.隐藏标签栏
+        tabBarController?.tabBar.hidden = true
+        
+    }
     override func viewDidLoad() {
         
         

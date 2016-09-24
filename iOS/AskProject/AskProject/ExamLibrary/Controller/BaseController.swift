@@ -16,8 +16,6 @@ class BaseController: UIViewController {
         //1.移除nav的线，并设置背景图
         
         moveNavBarLine()
-        //2.返回按钮点击不隐藏导航和标签
-        tabBarController?.tabBar.hidden = true
         
         
     }

@@ -15,6 +15,12 @@ class PersonMessageController: BaseController {
     
     @IBOutlet weak var pushSwitch: UISwitch!
     
+    override func viewWillAppear(animated: Bool) {
+        
+        //1.隐藏标签栏
+        tabBarController?.tabBar.hidden = true
+        
+    }
     override func viewDidLoad() {
         
     

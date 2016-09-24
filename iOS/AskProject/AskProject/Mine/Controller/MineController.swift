@@ -181,6 +181,7 @@ class MineController: BaseController,UITableViewDelegate,UITableViewDataSource {
         
         
     }
+
     //懒加载
     
     private lazy var dataArr: NSMutableArray = {

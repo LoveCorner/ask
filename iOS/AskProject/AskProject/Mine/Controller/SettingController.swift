@@ -17,9 +17,15 @@ class SettingController: BaseController,VisitorViewDelegate{
     
     var window: UIWindow!
     
+    override func viewWillAppear(animated: Bool) {
+        
+        //1.隐藏标签栏
+        tabBarController?.tabBar.hidden = true
+
+    }
     override func viewDidLoad() {
         
-      //1.设置UI
+      //2.设置UI
         
         setUI()
         

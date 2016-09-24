@@ -41,6 +41,8 @@ class SetNameController: BaseController {
     override func viewWillAppear(animated: Bool) {
         
         navigationController?.navigationBar.hidden = false
+        
+        tabBarController?.tabBar.hidden = true
     }
     
     private func setBtnUI(){
