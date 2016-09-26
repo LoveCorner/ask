@@ -11,16 +11,13 @@ import UIKit
 class LoginController: UIViewController,UITextFieldDelegate,UIGestureRecognizerDelegate {
 
     
-        
     @IBOutlet weak var userTF: UITextField!
     
     @IBOutlet weak var passwordTF: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        //1.userTF和password左侧视图
+               //1.userTF和password左侧视图
         
         leftViewUI(userTF)
         
@@ -31,6 +28,7 @@ class LoginController: UIViewController,UITextFieldDelegate,UIGestureRecognizerD
         tapUI()
 
     }
+   
     //回收键盘、视图frame和处理手势影响控件问题
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         

@@ -13,24 +13,28 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-        
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+       
+        //设置根控制器
+        self.setWindowUI()
 
+        return true
+    }
+    
+
+       private func setWindowUI(){
         
         window?.backgroundColor = UIColor.whiteColor()
-
+        
         UITabBar.appearance().tintColor = RGB(0xFFC63B)
                 
-        let sb = UIStoryboard.init(name: "LoginController", bundle: nil)
-        
-        let vc = sb.instantiateInitialViewController()
+        let vc = StartAppController()
         
         window?.rootViewController = vc
         
         window?.makeKeyAndVisible()
-
         
-        return true
     }
     
     func applicationWillResignActive(application: UIApplication) {

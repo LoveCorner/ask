@@ -12,7 +12,6 @@ class AnswerDetailController: UIViewController,UITableViewDelegate,UITableViewDa
     
     @IBOutlet weak var answerTableView: UITableView!
     
-    @IBOutlet weak var bottomView: UIView!
     
     @IBOutlet weak var whiteView: UIView!
     @IBOutlet weak var questionLabel: UILabel!
@@ -25,17 +24,21 @@ class AnswerDetailController: UIViewController,UITableViewDelegate,UITableViewDa
     
     @IBOutlet weak var answerLabel: UILabel!
     
-    @IBOutlet weak var uploadImageView: UIImageView!
     
+    @IBOutlet weak var widthContraints: NSLayoutConstraint!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var zanLabel: UILabel!
     
     @IBOutlet weak var starBtn: UIButton!
     
-    @IBOutlet weak var placeLabel: UILabel!
+    var backView:UIView!
+    
+    var placeLabel: UILabel!
     
     
-    @IBOutlet weak var recommentTV: UITextView!
+    var recommentTV: UITextView!
     
     
     @IBOutlet weak var smallView: UIView!
@@ -67,14 +70,99 @@ class AnswerDetailController: UIViewController,UITableViewDelegate,UITableViewDa
         
         setShadowViewUI(whiteView, size: CGSizeMake(0, 10))
         
-        setShadowViewUI(bottomView, size: CGSizeMake(0, 0))
-        
         starBtn.setImage(UIImage(named: "star_click"), forState: UIControlState.Selected)
         
         starBtn.setImage(UIImage(named: "star"), forState: UIControlState.Normal)
         
         //4.手势点击回收键盘
         tapUI()
+        
+        //5.设置表头上图片预览
+        
+        imageViewUI()
+        
+        //6.设置评论view
+        
+        setBottomViewUI()
+    }
+    
+    private func setBottomViewUI(){
+        
+        backView = UIView.init(frame: CGRectMake(0, ScreenHeight()-56, ScreenWidth(), 56))
+        
+//        backView.xmg_AlignVertical(type: XMG_AlignType.BottomCenter, referView: self.view, size: CGSize(width: ScreenWidth(),height: 56))
+        
+        backView.backgroundColor = RGB(0xF5F5F5)
+        
+        setShadowViewUI(backView, size: CGSizeMake(0, 0))
+
+        let imageView = UIImageView.init(frame:CGRectMake(10, 10, 36, 36))
+        //frame: CGRectMake(10, 10, 36, 36)
+//        imageView.xmg_AlignVertical(type: XMG_AlignType.BottomLeft, referView: backView, size: CGSize(width: 36,height: 36), offset:CGPoint( x : 10,y : -10))
+        
+        imageView.image = UIImage(named: "comment_head")
+        
+        backView.addSubview(imageView)
+        
+        recommentTV = UITextView.init(frame: CGRectMake(56, 7, ScreenHeight()-56-90, 42))
+        
+//        recommentTV.xmg_AlignVertical(type: XMG_AlignType.BottomLeft, referView: backView, size: CGSize(width: ScreenWidth()-56-80,height: 42), offset:CGPoint( x : 56,y : 7))
+        
+        recommentTV.backgroundColor = UIColor.whiteColor()
+        
+        recommentTV.delegate = self
+        
+        recommentTV.font = UIFont.systemFontOfSize(14)
+        
+        backView.addSubview(recommentTV)
+        
+        placeLabel = UILabel.init(frame: CGRectMake(14, 10, 100, 20))
+        
+//        placeLabel.xmg_AlignVertical(type: XMG_AlignType.BottomLeft, referView: recommentTV, size: CGSize(width: 100,height: 20), offset:CGPoint( x : 10,y : 10))
+        
+        placeLabel.text = "我来评论"
+        
+        placeLabel.textColor = RGB(0x888888)
+        
+        placeLabel.font = UIFont.systemFontOfSize(15)
+        
+        recommentTV.addSubview(placeLabel)
+        
+        let rightBtn = UIButton.init(type: UIButtonType.Custom)
+        
+        rightBtn.frame = CGRectMake(ScreenWidth()-80, 7, 70, 42)
+        
+//        rightBtn.xmg_AlignVertical(type: XMG_AlignType.BottomRight, referView: recommentTV, size: CGSize(width: 70,height: 42), offset:CGPoint( x : 10,y : 7))
+        
+        rightBtn.setTitle("发送", forState: UIControlState.Normal)
+        
+        rightBtn.backgroundColor = RGB(0xB8B8B8)
+        
+        rightBtn.addTarget(self, action: #selector(AnswerDetailController.commentAction), forControlEvents: UIControlEvents.TouchUpInside)
+        
+        backView.addSubview(rightBtn)
+        
+        self.view.addSubview(backView)
+    }
+    
+    func commentAction(){
+        
+        
+        
+    }
+    private func imageViewUI(){
+        //从网络获取图片
+        for index in 0..<6 {
+            
+            let imageView = UIImageView.init(frame: CGRectMake( CGFloat(index) * scrollView.frame.size.width, 0, scrollView.frame.size.width, 120))
+            
+            imageView.image = UIImage(named: "")
+            
+            scrollView.addSubview(imageView)
+            
+        }
+        
+        self.widthContraints.constant = scrollView.frame.size.width * 6
         
     }
     private func tapUI(){
@@ -167,17 +255,12 @@ class AnswerDetailController: UIViewController,UITableViewDelegate,UITableViewDa
         smallView.hidden = true
         
     }
-    @IBAction func sendClicked(sender: AnyObject) {
-        
-        
-    }
     
     func textViewShouldBeginEditing(textView: UITextView) -> Bool {
         
         placeLabel.text = ""
-        //view  frame变化简单 获取键盘高度 bottonView没有上去
         
-        view.frame = CGRectMake(0, -500, ScreenWidth(), ScreenHeight()+500)
+        backView.frame = CGRectMake(0, -400, ScreenWidth(), 56)
         
         return true
         
