@@ -323,10 +323,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入想要链接的帖子" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o88-N9-rS2">
-                                        <rect key="frame" x="185" y="25" width="200" height="35"/>
+                                        <rect key="frame" x="50" y="25" width="469" height="35"/>
                                         <color key="backgroundColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="qhY-7f-fsu"/>
                                             <constraint firstAttribute="height" constant="35" id="sEb-mi-t2H"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -361,10 +360,11 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="3nv-kt-q9D"/>
+                                    <constraint firstItem="o88-N9-rS2" firstAttribute="leading" secondItem="7y7-6p-Vz0" secondAttribute="trailing" constant="10" id="6Xk-cu-U5Q"/>
                                     <constraint firstAttribute="trailing" secondItem="fcf-gB-MXk" secondAttribute="trailing" constant="10" id="EqV-yu-SjT"/>
                                     <constraint firstItem="7y7-6p-Vz0" firstAttribute="leading" secondItem="Sn6-oW-dz1" secondAttribute="leading" id="LiE-1G-lWg"/>
+                                    <constraint firstItem="fcf-gB-MXk" firstAttribute="leading" secondItem="o88-N9-rS2" secondAttribute="trailing" constant="15" id="am0-dz-JOM"/>
                                     <constraint firstItem="o88-N9-rS2" firstAttribute="top" secondItem="Sn6-oW-dz1" secondAttribute="top" constant="25" id="cb1-V9-S42"/>
-                                    <constraint firstItem="o88-N9-rS2" firstAttribute="centerX" secondItem="Sn6-oW-dz1" secondAttribute="centerX" constant="-15" id="kwh-5G-oeg"/>
                                     <constraint firstItem="7y7-6p-Vz0" firstAttribute="top" secondItem="Sn6-oW-dz1" secondAttribute="top" constant="30" id="waf-Vd-0Nb"/>
                                     <constraint firstItem="fcf-gB-MXk" firstAttribute="top" secondItem="Sn6-oW-dz1" secondAttribute="top" constant="25" id="wtj-fU-qIr"/>
                                 </constraints>
@@ -1272,7 +1272,7 @@ Cocoa 本身由 Objective-C 语言写成，Objective-C 又是 C 语言的严格�
                                                         <action selector="enlargeClicked:" destination="GlM-7c-wRf" eventType="touchUpInside" id="C7g-KD-EKg"/>
                                                     </connections>
                                                 </button>
-                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Esd-Iv-1JQ">
+                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Esd-Iv-1JQ">
                                                     <rect key="frame" x="10" y="147" width="503" height="120"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="82B-bS-hhh">
@@ -1284,6 +1284,7 @@ Cocoa 本身由 Objective-C 语言写成，Objective-C 又是 C 语言的严格�
                                                             </constraints>
                                                         </view>
                                                     </subviews>
+                                                    <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="82B-bS-hhh" secondAttribute="bottom" id="HUG-tQ-nwT"/>
                                                         <constraint firstItem="82B-bS-hhh" firstAttribute="top" secondItem="Esd-Iv-1JQ" secondAttribute="top" id="VXK-fh-BHc"/>

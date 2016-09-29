@@ -11,7 +11,7 @@ import UIKit
 class AnswerQuestionController: BaseController,UITextViewDelegate,VisitorViewDelegate {
     
     
-       @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var questionLabel: UILabel!
     
     @IBOutlet weak var placeLabel: UILabel!
     
@@ -20,6 +20,7 @@ class AnswerQuestionController: BaseController,UITextViewDelegate,VisitorViewDel
     var alertView: VisitorView?
     
     var window: UIWindow!
+
 
     override func viewDidLoad() {
         

@@ -17,7 +17,7 @@ class BaseController: UIViewController {
         
         moveNavBarLine()
         
-        
+        tabBarController?.tabBar.hidden = true
     }
     
     //移除NavBar的线条

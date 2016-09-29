@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class AnswerDetailController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextViewDelegate {
     
@@ -81,73 +82,139 @@ class AnswerDetailController: UIViewController,UITableViewDelegate,UITableViewDa
         
         imageViewUI()
         
+
         //6.设置评论view
         
         setBottomViewUI()
-    }
+        
+        }
     
+    func keyboardWillAppear(nofi: NSNotification){
+        
+        let dic = nofi.userInfo
+        
+        let aValue = dic![UIKeyboardFrameEndUserInfoKey]
+        
+        let rect = aValue?.CGRectValue()
+        
+        let height = rect?.size.height
+        
+        backView.frame = CGRectMake(0, ScreenHeight()-height!-56, ScreenWidth(), 56)
+        
+
+        
+    }
+    func keyboardWillDisappear(){
+        
+        backView.frame = CGRectMake(0, ScreenHeight()-56, ScreenWidth(), 56)
+        
+    }
     private func setBottomViewUI(){
         
-        backView = UIView.init(frame: CGRectMake(0, ScreenHeight()-56, ScreenWidth(), 56))
+        backView = UIView.init()
         
-//        backView.xmg_AlignVertical(type: XMG_AlignType.BottomCenter, referView: self.view, size: CGSize(width: ScreenWidth(),height: 56))
-        
-        backView.backgroundColor = RGB(0xF5F5F5)
+        backView.frame = CGRectMake(0, ScreenHeight()-56, ScreenWidth(), 56)
+
+        view.addSubview(backView)
+
+        backView.backgroundColor = RGB(0xF6F6F6)
         
         setShadowViewUI(backView, size: CGSizeMake(0, 0))
-
-        let imageView = UIImageView.init(frame:CGRectMake(10, 10, 36, 36))
-        //frame: CGRectMake(10, 10, 36, 36)
-//        imageView.xmg_AlignVertical(type: XMG_AlignType.BottomLeft, referView: backView, size: CGSize(width: 36,height: 36), offset:CGPoint( x : 10,y : -10))
+        
+        let imageView = UIImageView.init()
         
         imageView.image = UIImage(named: "comment_head")
-        
+
         backView.addSubview(imageView)
+
+        imageView.snp_makeConstraints { (make) in
+            
+            make.top.equalTo(backView).offset(10)
+            
+            make.left.equalTo(backView).offset(10)
+            
+            make.width.equalTo(36)
+            
+            make.height.equalTo(36)
+            
+        }
         
-        recommentTV = UITextView.init(frame: CGRectMake(56, 7, ScreenHeight()-56-90, 42))
         
-//        recommentTV.xmg_AlignVertical(type: XMG_AlignType.BottomLeft, referView: backView, size: CGSize(width: ScreenWidth()-56-80,height: 42), offset:CGPoint( x : 56,y : 7))
+        let rightBtn = UIButton.init(type: UIButtonType.Custom)
+        
+        backView.addSubview(rightBtn)
+
+        rightBtn.snp_makeConstraints { (make) in
+            
+            make.right.equalTo(backView).offset(-10)
+            
+            make.centerY.equalTo(backView)
+            
+            make.width.equalTo(70)
+            
+            make.height.equalTo(42)
+            
+        }
+        
+        rightBtn.setTitleColor(RGB(0xb8b8b8), forState: UIControlState.Normal)
+        
+        rightBtn.setTitle("发送", forState: UIControlState.Normal)
+        
+        rightBtn.backgroundColor = RGB(0xEAEAEA)
+        
+        rightBtn.addTarget(self, action: #selector(AnswerDetailController.commentAction), forControlEvents: UIControlEvents.TouchUpInside)
+        
+
+        recommentTV = UITextView.init()
+        
+        backView.addSubview(recommentTV)
+
+        recommentTV.snp_makeConstraints { (make) in
+            
+            make.centerY.equalTo(backView)
+            
+            make.left.equalTo(imageView.snp_right).offset(10)
+            
+            make.right.equalTo(rightBtn.snp_left).offset(-10)
+            
+            make.height.equalTo(42)
+            
+        }
         
         recommentTV.backgroundColor = UIColor.whiteColor()
         
         recommentTV.delegate = self
         
-        recommentTV.font = UIFont.systemFontOfSize(14)
+        recommentTV.font = UIFont.systemFontOfSize(15)
         
-        backView.addSubview(recommentTV)
         
-        placeLabel = UILabel.init(frame: CGRectMake(14, 10, 100, 20))
+        placeLabel = UILabel.init()
         
-//        placeLabel.xmg_AlignVertical(type: XMG_AlignType.BottomLeft, referView: recommentTV, size: CGSize(width: 100,height: 20), offset:CGPoint( x : 10,y : 10))
-        
+        backView.addSubview(placeLabel)
+
+        placeLabel.snp_makeConstraints { (make) in
+            
+            make.left.equalTo(recommentTV).offset(10)
+            
+            make.top.equalTo(recommentTV).offset(11)
+            
+            make.height.equalTo(20)
+            
+            make.width.equalTo(100)
+            
+        }
         placeLabel.text = "我来评论"
         
         placeLabel.textColor = RGB(0x888888)
         
         placeLabel.font = UIFont.systemFontOfSize(15)
         
-        recommentTV.addSubview(placeLabel)
         
-        let rightBtn = UIButton.init(type: UIButtonType.Custom)
-        
-        rightBtn.frame = CGRectMake(ScreenWidth()-80, 7, 70, 42)
-        
-//        rightBtn.xmg_AlignVertical(type: XMG_AlignType.BottomRight, referView: recommentTV, size: CGSize(width: 70,height: 42), offset:CGPoint( x : 10,y : 7))
-        
-        rightBtn.setTitle("发送", forState: UIControlState.Normal)
-        
-        rightBtn.backgroundColor = RGB(0xB8B8B8)
-        
-        rightBtn.addTarget(self, action: #selector(AnswerDetailController.commentAction), forControlEvents: UIControlEvents.TouchUpInside)
-        
-        backView.addSubview(rightBtn)
-        
-        self.view.addSubview(backView)
     }
     
     func commentAction(){
         
-        
+        print(#function)
         
     }
     private func imageViewUI(){
@@ -156,7 +223,7 @@ class AnswerDetailController: UIViewController,UITableViewDelegate,UITableViewDa
             
             let imageView = UIImageView.init(frame: CGRectMake( CGFloat(index) * scrollView.frame.size.width, 0, scrollView.frame.size.width, 120))
             
-            imageView.image = UIImage(named: "")
+            imageView.image = UIImage(named: "collect_title")
             
             scrollView.addSubview(imageView)
             
@@ -177,7 +244,7 @@ class AnswerDetailController: UIViewController,UITableViewDelegate,UITableViewDa
         
         recommentTV.resignFirstResponder()
         
-        view.frame = CGRectMake(0, 0, ScreenWidth(), ScreenHeight())
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AnswerDetailController.keyboardWillDisappear), name: UIKeyboardDidHideNotification, object: nil)
         
         
     }
@@ -259,9 +326,10 @@ class AnswerDetailController: UIViewController,UITableViewDelegate,UITableViewDa
     func textViewShouldBeginEditing(textView: UITextView) -> Bool {
         
         placeLabel.text = ""
-        
-        backView.frame = CGRectMake(0, -400, ScreenWidth(), 56)
-        
+        //7.获取键盘高度
+
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AnswerDetailController.keyboardWillAppear), name: UIKeyboardWillShowNotification, object: nil)
+
         return true
         
     }
