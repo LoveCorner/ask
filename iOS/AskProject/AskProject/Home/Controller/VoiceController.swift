@@ -67,7 +67,7 @@ class VoiceController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDel
         do{
             
             //kAudioFormatMPEG4AAC录音格式  kAudioFormatMPEGLayer3 mp3格式,AVEncoderBitRateKey:128000
-            recorder = try AVAudioRecorder.init(URL: self.url, settings: [AVFormatIDKey:NSNumber(int:Int32(kAudioFormatMPEG4AAC)),AVNumberOfChannelsKey:NSNumber(int:1),AVSampleRateKey:NSNumber(float: Float(44100.0)),AVLinearPCMBitDepthKey:NSNumber(unsignedInt:16),AVEncoderAudioQualityKey:NSNumber(int:Int32( AVAudioQuality.Medium.rawValue))])
+            recorder = try AVAudioRecorder.init(URL: self.url, settings: [AVFormatIDKey:NSNumber(int:Int32(kAudioFormatMPEG4AAC)),AVNumberOfChannelsKey:NSNumber(int:1),AVSampleRateKey:NSNumber(float: Float(44100.0)),AVLinearPCMBitDepthKey:NSNumber(unsignedInt:32),AVEncoderAudioQualityKey:NSNumber(int:Int32( AVAudioQuality.Medium.rawValue))])
             //开启音量检测
             recorder?.meteringEnabled = true
     
@@ -163,14 +163,8 @@ class VoiceController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDel
         
         if !recordBtn.selected {
             //删除录音文件和终止录音
-//            recorder?.deleteRecording()
- 
             recorder?.stop()
             
-            //取消定时器
-//            timer.invalidate()
-//            
-//            timer = nil
             //关闭定时器
             timer.fireDate = NSDate.distantFuture()
             
@@ -270,7 +264,6 @@ class VoiceController: UIViewController,AVAudioRecorderDelegate,AVAudioPlayerDel
         //关闭定时器
         timer.fireDate = NSDate.distantFuture()
         
-
         playBtn.selected = !playBtn.selected
         
         if playBtn.selected {

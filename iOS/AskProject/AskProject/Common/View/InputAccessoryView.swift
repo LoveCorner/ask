@@ -44,6 +44,46 @@ extension UIView{
 
         }
         
+        func keyboardButtonClicked(btn: UIButton){
+            
+            switch  btn.tag {
+            case 100:
+               
+                
+                break
+            case 101:
+  
+                
+                break
+            case 102:
+
+                
+                break
+            case 103:
+
+                break
+            case 104:
+
+                break
+            case 105:
+
+                break
+            case 106:
+
+                break
+            case 107:
+
+                
+                break
+            case 108:
+
+                break
+            default:
+                
+                break
+            }
+            
+        }
     
         return backView
         

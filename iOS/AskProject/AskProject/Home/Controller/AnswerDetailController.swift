@@ -248,6 +248,12 @@ class AnswerDetailController: UIViewController,UITableViewDelegate,UITableViewDa
         
         
     }
+    //移除通知
+    deinit{
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+        
+    }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return 2

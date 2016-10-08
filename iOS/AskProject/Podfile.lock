@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (3.5.0)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - SnapKit (0.22.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.0)
+  - SDWebImage
+  - SnapKit (~> 0.22.0)
+
+SPEC CHECKSUMS:
+  Alamofire: b70a7352335f8ea5babd0a923eb7e8eacc67b877
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SnapKit: 0dd2fd157330f1ea11fd84da13e6be8a7a22bae0
+
+PODFILE CHECKSUM: e4f1c97223e2d35e7f72fea4f583a24973306e81
+
+COCOAPODS: 1.0.1

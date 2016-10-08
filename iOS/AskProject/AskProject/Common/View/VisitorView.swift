@@ -116,15 +116,12 @@ class VisitorView: UIView {
     
     func cancelBtnClicked(){
         
-//        print(#function)
         //不用判断
         delegate?.cancelBtnWillClicked()
         
     }
     
     func sureBtnClicked(){
-        
-//        print(#function)
         
         delegate?.sureBtnWillClicked()
         
